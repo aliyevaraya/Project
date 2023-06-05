@@ -288,13 +288,15 @@ footer .footer-bottom .copyright p {
 }
 #hero-banner .hero-banner .hero-banner-img {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 #hero-banner .hero-banner .hero-banner-img img {
-  width: 80%;
+  width: 100%;
 }
 #hero-banner .hero-banner .hero-banner-text {
-  padding: 10% 0 15% 0;
+  padding-top: 10%;
 }
 #hero-banner .hero-banner .hero-banner-text span {
   color: rgb(183, 71, 42);
@@ -304,10 +306,29 @@ footer .footer-bottom .copyright p {
 }
 #hero-banner .hero-banner .hero-banner-text h1 {
   font-weight: bold;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 #hero-banner .hero-banner .hero-banner-text p {
   color: rgb(119, 127, 130);
   padding-right: 2.5rem;
   line-height: 2rem;
+}
+
+#products .products .product-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#products .products .product-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid rgb(183, 71, 42);
+  padding: 10px;
+}
+#products .products h5 {
+  margin-top: 20px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

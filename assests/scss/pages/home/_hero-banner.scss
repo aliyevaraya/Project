@@ -2,14 +2,14 @@
   .hero-banner {
     padding: 10% 0;
     .hero-banner-img {
-        display: flex;
-        justify-content: center;
+      @include flexbox;
+      height: 100%;
       img {
-        width: 80%;
+        width: 100%;
       }
     }
     .hero-banner-text {
-      padding: 10% 0 15% 0;
+      padding-top: 10%;
       span {
         color: $secondary-color;
       }
@@ -18,7 +18,7 @@
       }
       h1{
         font-weight: bold;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
       }
       p{
         color: $grey-color;
