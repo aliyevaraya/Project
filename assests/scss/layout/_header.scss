@@ -116,16 +116,16 @@ header {
     // background-image: url(./images/header-bg.jpg);
     background-color: $dark-color;
     height: 90vh;
-    position: relative;
     .title {
-      transform: rotate(-4deg);
+      height: 100%;
       @include flexbox;
       flex-direction: column;
       justify-content: center;
-      position: absolute;
-      top: 25%;
-      left: 27%;
-    
+      text-align: center;
+      .text {
+        transform: rotate(-4deg);
+      }
+
       h1 {
         font-size: 80px;
         color: $white-color;
@@ -189,6 +189,15 @@ header {
         display: block;
       }
     }
+    .header-bg {
+      .title {
+        .text {
+          h1 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
     .header-bottom {
       .content {
         flex-direction: column;
@@ -203,17 +212,25 @@ header {
     .header-top {
       flex-direction: column;
     }
-    .header-bg{
-      .title{
-        left: 5%;
-        margin: 5%;
-        h1{
-          font-size: 40px;
+    .header-bg {
+      .title {
+        .text {
+          h1 {
+            font-size: 30px;
+          }
         }
-        .links{
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
+      }
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .header-bg {
+      .title {
+        .text {
+          .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+          }
         }
       }
     }

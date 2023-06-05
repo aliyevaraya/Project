@@ -1,3 +1,30 @@
-#hero-banner{
-    height: 100vh;
+#hero-banner {
+  .hero-banner {
+    padding: 10% 0;
+    .hero-banner-img {
+        display: flex;
+        justify-content: center;
+      img {
+        width: 80%;
+      }
+    }
+    .hero-banner-text {
+      padding: 10% 0 15% 0;
+      span {
+        color: $secondary-color;
+      }
+      &.num {
+        font-style: italic;
+      }
+      h1{
+        font-weight: bold;
+        margin-bottom: 3rem;
+      }
+      p{
+        color: $grey-color;
+        padding-right: 2.5rem;
+        line-height: 2rem;
+      }
+    }
+  }
 }

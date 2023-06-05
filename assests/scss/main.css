@@ -124,18 +124,18 @@ header .header-nav .menu {
 header .header-bg {
   background-color: #000;
   height: 90vh;
-  position: relative;
 }
 header .header-bg .title {
-  transform: rotate(-4deg);
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
-  top: 25%;
-  left: 27%;
+  text-align: center;
+}
+header .header-bg .title .text {
+  transform: rotate(-4deg);
 }
 header .header-bg .title h1 {
   font-size: 80px;
@@ -186,6 +186,9 @@ header .header-bottom .content .text p {
   header .header-nav .menu {
     display: block;
   }
+  header .header-bg .title .text h1 {
+    font-size: 40px;
+  }
   header .header-bottom .content {
     flex-direction: column;
   }
@@ -198,14 +201,12 @@ header .header-bottom .content .text p {
   header .header-top {
     flex-direction: column;
   }
-  header .header-bg .title {
-    left: 5%;
-    margin: 5%;
+  header .header-bg .title .text h1 {
+    font-size: 30px;
   }
-  header .header-bg .title h1 {
-    font-size: 40px;
-  }
-  header .header-bg .title .links {
+}
+@media only screen and (max-width: 375px) {
+  header .header-bg .title .text .links {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -235,13 +236,13 @@ footer .footer-top .liquer-store .footer-icons {
 }
 footer .footer-top .liquer-store .footer-icons a {
   color: rgb(218, 178, 168);
-  padding: 4% 6%;
+  padding: 11px 18px;
   border-radius: 50%;
   background-color: rgb(183, 71, 42);
 }
 footer .footer-top .footer-col h5 {
   color: #fff;
-  margin-bottom: 15%;
+  margin-bottom: 20px;
 }
 footer .footer-top .footer-col ul {
   padding-left: 0;
@@ -282,6 +283,31 @@ footer .footer-bottom .copyright p {
   margin-bottom: 0;
 }
 
-#hero-banner {
-  height: 100vh;
+#hero-banner .hero-banner {
+  padding: 10% 0;
+}
+#hero-banner .hero-banner .hero-banner-img {
+  display: flex;
+  justify-content: center;
+}
+#hero-banner .hero-banner .hero-banner-img img {
+  width: 80%;
+}
+#hero-banner .hero-banner .hero-banner-text {
+  padding: 10% 0 15% 0;
+}
+#hero-banner .hero-banner .hero-banner-text span {
+  color: rgb(183, 71, 42);
+}
+#hero-banner .hero-banner .hero-banner-text.num {
+  font-style: italic;
+}
+#hero-banner .hero-banner .hero-banner-text h1 {
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+#hero-banner .hero-banner .hero-banner-text p {
+  color: rgb(119, 127, 130);
+  padding-right: 2.5rem;
+  line-height: 2rem;
 }/*# sourceMappingURL=main.css.map */

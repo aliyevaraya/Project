@@ -19,19 +19,16 @@ footer {
         gap: 8%;
         a {
           color: $light-color;
-          padding: 4% 6%;
+          padding: 11px 18px;
           border-radius: 50%;
           background-color: $secondary-color;
-        //   &.fa-facebook-f{
-        //     padding: 6% 14%;
-        //   }
         }
       }
     }
     .footer-col{
         h5{
             color: $white-color;
-            margin-bottom: 15%;
+            margin-bottom: 20px;
         }
         ul{
             padding-left: 0;
