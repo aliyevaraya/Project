@@ -90,8 +90,10 @@ header {
           }
         }
       }
+
       .basket {
         position: relative;
+        margin: 0 15px;
         cursor: pointer;
         .quantity {
           position: absolute;
@@ -104,18 +106,28 @@ header {
         }
       }
     }
+    .menu {
+      display: none;
+      text-transform: uppercase;
+      color: $grey-color;
+    }
   }
   .header-bg {
     // background-image: url(./images/header-bg.jpg);
     background-color: $dark-color;
-    height: 100vh;
+    height: 90vh;
+    position: relative;
     .title {
-      transform: rotate(-5deg);
+      transform: rotate(-4deg);
       @include flexbox;
       flex-direction: column;
       justify-content: center;
+      position: absolute;
+      top: 25%;
+      left: 27%;
+    
       h1 {
-        font-size: 60px;
+        font-size: 80px;
         color: $white-color;
         span {
           -webkit-text-fill-color: transparent;
@@ -166,13 +178,43 @@ header {
     }
   }
   @media only screen and (max-width: 991px) {
+    .header-nav {
+      flex-wrap: wrap;
+      .nav-basket {
+        nav {
+          display: none;
+        }
+      }
+      .menu {
+        display: block;
+      }
+    }
     .header-bottom {
       .content {
-       flex-direction: column;
-       .text{
-        width: 100%;
-        padding-left: 0;
-       }
+        flex-direction: column;
+        .text {
+          width: 100%;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    .header-top {
+      flex-direction: column;
+    }
+    .header-bg{
+      .title{
+        left: 5%;
+        margin: 5%;
+        h1{
+          font-size: 40px;
+        }
+        .links{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
       }
     }
   }

@@ -104,6 +104,7 @@ header .header-nav .nav-basket nav .nav-ul li:hover .dropdown .dropdown-menu .dr
 }
 header .header-nav .nav-basket .basket {
   position: relative;
+  margin: 0 15px;
   cursor: pointer;
 }
 header .header-nav .nav-basket .basket .quantity {
@@ -115,20 +116,29 @@ header .header-nav .nav-basket .basket .quantity {
   border-radius: 50%;
   padding: 2% 25%;
 }
+header .header-nav .menu {
+  display: none;
+  text-transform: uppercase;
+  color: rgb(119, 127, 130);
+}
 header .header-bg {
   background-color: #000;
-  height: 100vh;
+  height: 90vh;
+  position: relative;
 }
 header .header-bg .title {
-  transform: rotate(-5deg);
+  transform: rotate(-4deg);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
+  top: 25%;
+  left: 27%;
 }
 header .header-bg .title h1 {
-  font-size: 60px;
+  font-size: 80px;
   color: #fff;
 }
 header .header-bg .title h1 span {
@@ -167,12 +177,38 @@ header .header-bottom .content .text p {
   line-height: 2rem;
 }
 @media only screen and (max-width: 991px) {
+  header .header-nav {
+    flex-wrap: wrap;
+  }
+  header .header-nav .nav-basket nav {
+    display: none;
+  }
+  header .header-nav .menu {
+    display: block;
+  }
   header .header-bottom .content {
     flex-direction: column;
   }
   header .header-bottom .content .text {
     width: 100%;
     padding-left: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  header .header-top {
+    flex-direction: column;
+  }
+  header .header-bg .title {
+    left: 5%;
+    margin: 5%;
+  }
+  header .header-bg .title h1 {
+    font-size: 40px;
+  }
+  header .header-bg .title .links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
