@@ -17,7 +17,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assests/scss/main.css">
+    <link rel="stylesheet" href="./assests/scss/main.css" />
     <title>Document</title>
   </head>
   <body>
@@ -48,12 +48,12 @@
       </div>
       <div class="header-nav">
         <div class="logo">
-          <h3>liquor <span>store</span></h3>
+          <h4>liquor <span>store</span></h4>
         </div>
-        <div class="nav">
+        <div class="nav-basket">
           <nav>
             <ul class="nav-ul">
-              <li><a href="./index.html">Home</a></li>
+              <li><a class="active" href="./index.html">Home</a></li>
               <li><a href="./index.html">About</a></li>
               <li>
                 <div class="dropdown">
@@ -65,15 +65,13 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Dropdown link
+                    Products
                   </a>
 
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="#">Products</a></li>
                     <li>
-                      <a class="dropdown-item" href="#"
-                        >Single Product action</a
-                      >
+                      <a class="dropdown-item" href="#">Single Product</a>
                     </li>
                     <li><a class="dropdown-item" href="#">Cart</a></li>
                     <li><a class="dropdown-item" href="#">Checkout</a></li>
@@ -85,60 +83,68 @@
             </ul>
           </nav>
           <div class="basket">
-            <img src="./assests/images/shopping-bag.png" alt="basket" />
-            <span>0</span>
+            <img src="./assests/images/shopping-bag (2).png" alt="basket" />
+            <span class="quantity">0</span>
           </div>
         </div>
       </div>
       <div class="header-bg">
-        <div class="title">
-          <h1>Good Drink for Good Moments.</h1>
-          <a href="./prducts.html">Shop Now</a>
-          <a href="./blog.html">Read more</a>
+        <div class="container">
+          <div class="title">
+            <h1>
+              <span>Good</span> Drink <span>for Good</span> <br />
+              Moments <span>.</span>
+            </h1>
+            <div class="links">
+              <a href="./prducts.html">Shop Now</a>
+              <a class="read-more" href="./blog.html">Read more</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="header-bottom">
-       <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="col-5 img">
-                  <img src="./assests/images/support.png" alt="" />
-                </div>
-                <div class="col-7 text">
-                  <h5>ONLINE SUPPORT 24/7</h5>
-                  <p>
-                    A small river named Duden flows by their place and supplies it
-                    with the necessary regelialia.
-                  </p>
-                </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 d-flex content">
+              <div class="col-4 img">
+                <img src="./assests/images/support (2).png" alt="" />
               </div>
-              <div class="col-md-4">
-                <div class="col-5 img">
-                  <img src="./assests/images/cashback.png" alt="" />
-                </div>
-                <div class="col-7 text">
-                  <h5>MONEY BACK GUARANTEE</h5>
-                  <p>
-                    A small river named Duden flows by their place and supplies it
-                    with the necessary regelialia.
-                  </p>
-                </div>
+              <div class="col-8 text">
+                <h5>ONLINE SUPPORT 24/7</h5>
+                <p>
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </p>
               </div>
-              <div class="col-md-4">
-                <div class="col-5 img">
-                  <img src="./assests/images/free-delivery.png" alt="" />
-                </div>
-                <div class="col-7 text">
-                  <h5>FREE SHIPPING & RETURN</h5>
-                  <p>
-                    A small river named Duden flows by their place and supplies it
-                    with the necessary regelialia.
-                  </p>
-                </div>
+            </div>
+            <div class="col-md-4 d-flex content cash-back">
+              <div class="col-4 img">
+                <img src="./assests/images/cashback (2).png" alt="" />
               </div>
+              <div class="col-8 text">
+                <h5>MONEY BACK GUARANTEE</h5>
+                <p>
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex content delivery">
+              <div class="col-4 img">
+                <img src="./assests/images/free-delivery (2).png" alt="" />
+              </div>
+              <div class="col-8 text">
+                <h5>FREE SHIPPING & RETURN</h5>
+                <p>
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
       </div>
     </header>
+
   </body>
 </html>

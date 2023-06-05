@@ -8,20 +8,26 @@
   font-family: "Spectral", serif;
 }
 
+header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
+  padding: 10px 25px;
+  background-color: rgb(162, 63, 37);
+  color: #fff;
+  border-radius: 3px;
+}
+
 header .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(162, 63, 37);
-  padding: 5px 0;
   font-size: 11px;
+  padding: 0.3% 10%;
 }
 header .header-top .top-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  margin-left: 10rem;
 }
 header .header-top .top-left .phone a {
   color: rgb(218, 178, 168);
@@ -34,7 +40,6 @@ header .header-top .top-right {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  margin-right: 10rem;
 }
 header .header-top .top-right .icons {
   display: flex;
@@ -48,4 +53,124 @@ header .header-top .top-right .registr a {
   font-size: 13px;
   color: rgb(218, 178, 168);
   margin-left: 10px;
+}
+header .header-nav {
+  background-color: rgb(5, 5, 5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 10%;
+}
+header .header-nav .logo h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+header .header-nav .logo h4 span {
+  color: rgb(119, 127, 130);
+}
+header .header-nav .nav-basket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+header .header-nav .nav-basket nav .nav-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  gap: 3rem;
+}
+header .header-nav .nav-basket nav .nav-ul li a {
+  text-transform: uppercase;
+  color: rgb(119, 127, 130);
+  font-size: 14px;
+}
+header .header-nav .nav-basket nav .nav-ul li a.active {
+  color: #fff;
+}
+header .header-nav .nav-basket nav .nav-ul li a:hover {
+  color: rgb(162, 63, 37);
+}
+header .header-nav .nav-basket nav .nav-ul li:hover .dropdown .dropdown-menu {
+  display: block;
+  line-height: 1.5rem;
+}
+header .header-nav .nav-basket nav .nav-ul li:hover .dropdown .dropdown-menu .dropdown-item {
+  font-size: 14px;
+  color: rgb(119, 127, 130);
+}
+header .header-nav .nav-basket .basket {
+  position: relative;
+  cursor: pointer;
+}
+header .header-nav .nav-basket .basket .quantity {
+  position: absolute;
+  bottom: 20%;
+  left: 55%;
+  color: rgb(119, 127, 130);
+  background-color: rgba(51, 51, 51, 0.6);
+  border-radius: 50%;
+  padding: 2% 25%;
+}
+header .header-bg {
+  background-color: #000;
+}
+header .header-bg .title {
+  transform: rotate(-5deg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+header .header-bg .title h1 {
+  font-size: 60px;
+  color: #fff;
+}
+header .header-bg .title h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+}
+header .header-bg .title .links {
+  margin-top: 30px;
+}
+header .header-bg .title .links a.read-more {
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: 0.2s;
+}
+header .header-bottom {
+  background-color: rgb(183, 71, 42);
+}
+header .header-bottom .content {
+  color: #fff;
+}
+header .header-bottom .content.delivery {
+  background-color: rgb(162, 63, 37);
+}
+header .header-bottom .content.cash-back {
+  background-image: linear-gradient(90deg, rgb(162, 63, 37), rgb(183, 71, 42));
+}
+header .header-bottom .content .img {
+  position: relative;
+}
+header .header-bottom .content .img img {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+}
+header .header-bottom .content .text {
+  padding: 10% 5% 0 0;
+}
+header .header-bottom .content .text p {
+  color: rgb(226, 200, 186);
+  line-height: 2rem;
+}
+
+#hero-banner {
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

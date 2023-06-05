@@ -2,45 +2,168 @@ header {
   .header-top {
     @include flexbox;
     background-color: $primary-color;
-    padding: 5px 0;
     font-size: 11px;
+    padding: .3% 10%;
     .top-left {
       @include flexbox;
       gap: 15px;
-      margin-left: 10rem;
       .phone {
         a {
-          color: $grey-color;
+          color: $light-color;
         }
       }
       .email {
         a {
+          color: $light-color;
+        }
+      }
+    }
+    .top-right {
+      @include flexbox;
+      gap: 30px;
+      .icons {
+        display: flex;
+        gap: 10px;
+        a {
+          .fa-brands {
+            color: $white-color;
+          }
+        }
+      }
+      .registr {
+        a {
+          text-transform: uppercase;
+          font-size: 13px;
+          color: $light-color;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .header-nav {
+    background-color: rgb(5, 5, 5);
+    @include flexbox;
+    padding: 2% 10%;
+    .logo {
+      h4 {
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        color: $white-color;
+        span {
           color: $grey-color;
         }
       }
     }
-    .top-right{
-        @include flexbox;
-        gap: 30px;
-        margin-right: 10rem;
-        .icons{
-            display: flex;
-            gap: 10px;
-            a{
-                .fa-brands{
-                    color: $white-color;
+    .nav-basket {
+      @include flexbox;
+      gap: 20px;
+      nav {
+        .nav-ul {
+          @include flexbox;
+          margin-bottom: 0;
+          gap: 3rem;
+          li {
+            a {
+              text-transform: uppercase;
+              color: $grey-color;
+              font-size: 14px;
+              &.active{
+                color: $white-color;
+              }
+              &:hover {
+                color: $primary-color;
+              }
+            }
+            &:hover {
+              .dropdown {
+                .dropdown-menu {
+                  display: block;
+                  line-height: 1.5rem;
+                  .dropdown-item {
+                    font-size: 14px;
+                    color: $grey-color;
+                  }
                 }
+              }
             }
+          }
         }
-        .registr{
-            a{
-                text-transform: uppercase;
-                font-size: 13px;
-                color: $grey-color;
-                margin-left: 10px;
-            }
+      }
+      .basket {
+        position: relative;
+        cursor: pointer;
+        .quantity {
+          position: absolute;
+          bottom: 20%;
+          left: 55%;
+          color: $grey-color;
+          background-color: rgba(51, 51, 51, 0.6);
+          border-radius: 50%;
+          padding: 2% 25%;
         }
+      }
     }
   }
-  
+  .header-bg {
+    // background-image: url(./images/header-bg.jpg);
+    background-color: $dark-color;
+    .title {
+      transform: rotate(-5deg);
+      @include flexbox;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      h1 {
+        font-size: 60px;
+        color: $white-color;
+        span {
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 1px;
+        }
+      }
+      .links {
+        margin-top: 30px;
+        a {
+          @extend %primary-btn;
+          &.read-more {
+            border: 1px solid $white-color;
+            background-color: transparent;
+            transition: .2s;
+            &:hover {
+              @extend %primary-btn;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header-bottom{
+    background-color: $secondary-color;
+    .content{
+      color: $white-color;
+      &.delivery{
+        background-color: $primary-color;
+      }
+      &.cash-back{
+        background-image: linear-gradient(90deg,$primary-color, $secondary-color
+        );
+      }
+      .img{
+       position: relative;
+       img{
+        position: absolute;
+        left: 30%;
+        top: 30%;
+       }
+      }
+      .text{
+        padding: 10% 5% 0 0;
+        p{
+          color: rgb(226,200,186);
+          line-height: 2rem;
+        }
+      }
+    }
+  }
 }
