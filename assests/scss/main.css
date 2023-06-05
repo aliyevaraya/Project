@@ -117,6 +117,7 @@ header .header-nav .nav-basket .basket .quantity {
 }
 header .header-bg {
   background-color: #000;
+  height: 100vh;
 }
 header .header-bg .title {
   transform: rotate(-5deg);
@@ -125,7 +126,6 @@ header .header-bg .title {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
 }
 header .header-bg .title h1 {
   font-size: 60px;
@@ -156,19 +156,94 @@ header .header-bottom .content.cash-back {
   background-image: linear-gradient(90deg, rgb(162, 63, 37), rgb(183, 71, 42));
 }
 header .header-bottom .content .img {
-  position: relative;
-}
-header .header-bottom .content .img img {
-  position: absolute;
-  left: 30%;
-  top: 30%;
+  margin-top: 10%;
 }
 header .header-bottom .content .text {
-  padding: 10% 5% 0 0;
+  padding: 5%;
+  width: 70%;
 }
 header .header-bottom .content .text p {
   color: rgb(226, 200, 186);
   line-height: 2rem;
+}
+@media only screen and (max-width: 991px) {
+  header .header-bottom .content {
+    flex-direction: column;
+  }
+  header .header-bottom .content .text {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+footer .footer-top {
+  background-color: rgb(26, 26, 26);
+  padding-top: 5%;
+}
+footer .footer-top .liquer-store {
+  color: rgb(245, 251, 251);
+}
+footer .footer-top .liquer-store h5 {
+  text-transform: uppercase;
+  margin-bottom: 10%;
+}
+footer .footer-top .liquer-store h5 span {
+  color: rgb(119, 127, 130);
+}
+footer .footer-top .liquer-store p {
+  width: 60%;
+}
+footer .footer-top .liquer-store .footer-icons {
+  display: flex;
+  gap: 8%;
+}
+footer .footer-top .liquer-store .footer-icons a {
+  color: rgb(218, 178, 168);
+  padding: 4% 6%;
+  border-radius: 50%;
+  background-color: rgb(183, 71, 42);
+}
+footer .footer-top .footer-col h5 {
+  color: #fff;
+  margin-bottom: 15%;
+}
+footer .footer-top .footer-col ul {
+  padding-left: 0;
+}
+footer .footer-top .footer-col ul li {
+  line-height: 40px;
+}
+footer .footer-top .footer-col ul li a {
+  color: rgb(119, 127, 130);
+}
+footer .footer-top .footer-col .contact {
+  display: flex;
+  gap: 7%;
+}
+footer .footer-top .footer-col .contact a {
+  color: rgb(119, 127, 130);
+}
+footer .footer-top .footer-col .contact a .fa-map {
+  color: #fff;
+}
+footer .footer-top .footer-col .contact span {
+  color: rgb(119, 127, 130);
+}
+footer .footer-top .footer-col .contact.contact {
+  margin: 8% 0;
+}
+footer .footer-bottom {
+  background-color: #000;
+  padding: 2% 0;
+  color: rgb(119, 127, 130);
+}
+footer .footer-bottom .copyright {
+  display: flex;
+  align-items: center;
+}
+footer .footer-bottom .copyright p {
+  font-size: 13px;
+  margin-bottom: 0;
 }
 
 #hero-banner {

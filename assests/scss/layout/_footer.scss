@@ -1,0 +1,73 @@
+footer {
+  .footer-top {
+    background-color: rgb(26, 26, 26);
+    padding-top: 5%;
+    .liquer-store {
+      color: rgb(245, 251, 251);
+      h5 {
+        text-transform: uppercase;
+        margin-bottom: 10%;
+        span {
+          color: $grey-color;
+        }
+      }
+      p{
+        width: 60%;
+      }
+      .footer-icons {
+        display: flex;
+        gap: 8%;
+        a {
+          color: $light-color;
+          padding: 4% 6%;
+          border-radius: 50%;
+          background-color: $secondary-color;
+        }
+      }
+    }
+    .footer-col{
+        h5{
+            color: $white-color;
+            margin-bottom: 15%;
+        }
+        ul{
+            padding-left: 0;
+            li{
+                line-height: 40px;
+                a{
+                    color: $grey-color;
+                }
+            }
+        }
+        .contact{
+            display: flex;
+            gap: 7%;
+            a{
+                color: $grey-color;
+                .fa-map{
+                    color: $white-color;
+                }
+            }
+            span{
+                color: $grey-color;
+            }
+            &.contact{
+                margin: 8% 0;
+            }
+        }
+    }
+  }
+  .footer-bottom {
+    background-color: $dark-color;
+    padding: 2% 0;
+    color: $grey-color;
+    .copyright {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

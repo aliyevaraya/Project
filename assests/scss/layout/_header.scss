@@ -3,7 +3,7 @@ header {
     @include flexbox;
     background-color: $primary-color;
     font-size: 11px;
-    padding: .3% 10%;
+    padding: 0.3% 10%;
     .top-left {
       @include flexbox;
       gap: 15px;
@@ -68,7 +68,7 @@ header {
               text-transform: uppercase;
               color: $grey-color;
               font-size: 14px;
-              &.active{
+              &.active {
                 color: $white-color;
               }
               &:hover {
@@ -108,12 +108,12 @@ header {
   .header-bg {
     // background-image: url(./images/header-bg.jpg);
     background-color: $dark-color;
+    height: 100vh;
     .title {
       transform: rotate(-5deg);
       @include flexbox;
       flex-direction: column;
       justify-content: center;
-      height: 100vh;
       h1 {
         font-size: 60px;
         color: $white-color;
@@ -129,7 +129,7 @@ header {
           &.read-more {
             border: 1px solid $white-color;
             background-color: transparent;
-            transition: .2s;
+            transition: 0.2s;
             &:hover {
               @extend %primary-btn;
             }
@@ -138,31 +138,41 @@ header {
       }
     }
   }
-  .header-bottom{
+  .header-bottom {
     background-color: $secondary-color;
-    .content{
+    .content {
       color: $white-color;
-      &.delivery{
+      &.delivery {
         background-color: $primary-color;
       }
-      &.cash-back{
-        background-image: linear-gradient(90deg,$primary-color, $secondary-color
+      &.cash-back {
+        background-image: linear-gradient(
+          90deg,
+          $primary-color,
+          $secondary-color
         );
       }
-      .img{
-       position: relative;
-       img{
-        position: absolute;
-        left: 30%;
-        top: 30%;
-       }
+      .img {
+        margin-top: 10%;
       }
-      .text{
-        padding: 10% 5% 0 0;
-        p{
-          color: rgb(226,200,186);
+      .text {
+        padding: 5%;
+        width: 70%;
+        p {
+          color: rgb(226, 200, 186);
           line-height: 2rem;
         }
+      }
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .header-bottom {
+      .content {
+       flex-direction: column;
+       .text{
+        width: 100%;
+        padding-left: 0;
+       }
       }
     }
   }
