@@ -122,7 +122,7 @@ header .header-nav .menu {
   color: rgb(119, 127, 130);
 }
 header .header-bg {
-  background-color: #000;
+  background-color: black;
   height: 90vh;
 }
 header .header-bg .title {
@@ -270,7 +270,7 @@ footer .footer-top .footer-col .contact.contact {
   margin: 8% 0;
 }
 footer .footer-bottom {
-  background-color: #000;
+  background-color: black;
   padding: 2% 0;
   color: rgb(119, 127, 130);
 }
@@ -403,10 +403,48 @@ footer .footer-bottom .copyright p {
 #our-offering .our-offering .our-offering-body .prod {
   margin-bottom: 3rem;
 }
+#our-offering .our-offering .our-offering-body .prod .img {
+  position: relative;
+}
+#our-offering .our-offering .our-offering-body .prod .img .opacity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+#our-offering .our-offering .our-offering-body .prod .img .opacity .opacity-icons {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#our-offering .our-offering .our-offering-body .prod .img .opacity:hover {
+  background-color: black;
+  opacity: 0.7;
+}
+#our-offering .our-offering .our-offering-body .prod .img .opacity:hover .opacity-icons {
+  opacity: 1;
+}
+#our-offering .our-offering .our-offering-body .prod .img .opacity:hover .opacity-icons .icon {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 25px;
+}
 #our-offering .our-offering .our-offering-body .prod .img img {
-  height: 450px;
+  height: 400px;
   width: 100%;
   border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 #our-offering .our-offering .our-offering-body .prod .detail {
   text-align: center;
