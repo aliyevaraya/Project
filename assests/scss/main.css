@@ -201,6 +201,12 @@ header .header-bottom .content .text p {
   header .header-top {
     flex-direction: column;
   }
+  header .header-top .top-left {
+    gap: 4rem;
+  }
+  header .header-top .top-right {
+    gap: 4rem;
+  }
   header .header-bg .title .text h1 {
     font-size: 30px;
   }

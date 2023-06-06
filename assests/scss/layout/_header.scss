@@ -211,6 +211,12 @@ header {
   @media only screen and (max-width: 576px) {
     .header-top {
       flex-direction: column;
+      .top-left {
+        gap: 4rem;
+      }
+      .top-right {
+        gap: 4rem;
+      }
     }
     .header-bg {
       .title {
