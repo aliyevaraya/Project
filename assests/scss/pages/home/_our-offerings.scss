@@ -1,0 +1,74 @@
+#our-offering {
+  padding: 5%;
+  .our-offering {
+    .our-offering-title {
+      text-align: center;
+      h6 {
+        font-style: italic;
+        color: $secondary-color;
+      }
+      h1 {
+        margin-bottom: 4%;
+      }
+    }
+    .our-offering-body {
+      .prod {
+        margin-bottom: 3rem;
+        .img {
+          img {
+            height: 450px;
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+        .detail {
+          text-align: center;
+          padding-top: 2rem;
+          position: relative;
+          .add-info {
+            position: absolute;
+            top: 1%;
+            left: 2%;
+            padding: 0 13px;
+            background-color: $secondary-color;
+            color: $white-color;
+            font-weight: lighter;
+            font-size: 14px;
+            &.best-seller {
+              background-color: rgb(254, 152, 1);
+            }
+            &.new-arrival {
+              background-color: rgb(1, 210, 142);
+            }
+          }
+          span {
+            font-style: italic;
+            color: $secondary-color;
+          }
+          .prices {
+            .price {
+              font-style: italic;
+              &.old-price {
+                color: $grey-color;
+                opacity: 0.6;
+                text-decoration: line-through !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .view-more {
+      text-align: center;
+      margin-top: 2rem;
+      a {
+        background-color: $secondary-color;
+        padding: .3rem 4.3rem;
+        color: $white-color;
+        .arrow{
+            margin-left: 8px;
+        }
+      }
+    }
+  }
+}
