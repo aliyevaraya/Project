@@ -314,18 +314,24 @@ footer .footer-bottom .copyright p {
   line-height: 2rem;
 }
 
-#products .product {
+#products .products {
   display: flex;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
 }
-#products .product .product-img {
+#products .products .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+#products .products .product .product-img {
   text-align: center;
   width: 240px;
   position: relative;
 }
-#products .product .product-img .border-opacity {
+#products .products .product .product-img .border-opacity {
   transition: all 0.6s ease;
   position: absolute;
   left: 23%;
@@ -335,7 +341,7 @@ footer .footer-bottom .copyright p {
   height: 130px;
   width: 130px;
 }
-#products .product .product-img .border-opacity:hover {
+#products .products .product .product-img .border-opacity:hover {
   height: 90px;
   width: 90px;
   left: 31%;
@@ -343,13 +349,40 @@ footer .footer-bottom .copyright p {
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
 }
-#products .product .product-img img {
+#products .products .product .product-img img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
   padding: 10px;
 }
-#products .product h5 {
+#products .products .product h5 {
   margin-top: 20px;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  #products .products .product .product-img .border-opacity {
+    left: 20%;
+  }
+  #products .products .product .product-img .border-opacity:hover {
+    left: 29%;
+    top: 11%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #products .products .product .product-img .border-opacity {
+    left: 23%;
+  }
+  #products .products .product .product-img .border-opacity:hover {
+    left: 31%;
+    top: 12%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #products .products .product .product-img .border-opacity {
+    left: 16%;
+  }
+  #products .products .product .product-img .border-opacity:hover {
+    left: 28%;
+    top: 11%;
+  }
 }/*# sourceMappingURL=main.css.map */
