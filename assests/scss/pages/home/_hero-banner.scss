@@ -3,27 +3,50 @@
     padding: 10% 0;
     .hero-banner-img {
       @include flexbox;
-      height: 100%;
       img {
         width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: 50% 50%;
       }
     }
     .hero-banner-text {
-      padding-top: 10%;
+      padding-top: 8%;
       span {
         color: $secondary-color;
       }
       &.num {
         font-style: italic;
       }
-      h1{
+      h1 {
         font-weight: bold;
-        margin-bottom: 2.5rem;
+        margin: .5rem 0 2.5rem 0;
       }
-      p{
+      p {
         color: $grey-color;
-        padding-right: 2.5rem;
+        padding-right: 10%;
         line-height: 2rem;
+      }
+    }
+    @media only screen and (max-width:1200px) {
+      .hero-banner-text{
+        p{
+          padding-right: 5%;
+        }
+      }
+    }
+    @media only screen and (max-width:991px) {
+      .hero-banner-img{
+        img{
+          height: 700px;
+        }
+      }
+    }
+    @media only screen and (max-width:767px) {
+      .hero-banner-img{
+        img{
+          height: 450px;
+        }
       }
     }
   }

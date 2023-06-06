@@ -28,21 +28,9 @@
             height: 100%;
             width: 100%;
             transition: all 0.5s ease;
-            .opacity-icons{
-                opacity: 0;
-                transition: opacity .3s;
-            }
-            &:hover {
-              background-color: $dark-color;
-              opacity: 0.7;
-              .opacity-icons{
-                opacity: 1;
-                .icon{
-                    color: $white-color;
-                    border: 1px solid $white-color;
-                    padding: 25px;
-                }
-              }
+            .opacity-icons {
+              opacity: 0;
+              transition: opacity 0.3s;
             }
           }
           img {
@@ -50,7 +38,7 @@
             width: 100%;
             border-radius: 5px;
             object-fit: cover;
-            object-position:50% 50%;
+            object-position: 50% 50%;
           }
         }
         .detail {
@@ -84,6 +72,20 @@
                 color: $grey-color;
                 opacity: 0.6;
                 text-decoration: line-through !important;
+              }
+            }
+          }
+        }
+        &:hover {
+          .opacity {
+            background-color: $dark-color;
+            opacity: 0.7;
+            .opacity-icons {
+              opacity: 1;
+              .icon {
+                color: $white-color;
+                border: 1px solid $white-color;
+                padding: 25px;
               }
             }
           }

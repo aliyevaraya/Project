@@ -290,13 +290,17 @@ footer .footer-bottom .copyright p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
 }
 #hero-banner .hero-banner .hero-banner-img img {
   width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 #hero-banner .hero-banner .hero-banner-text {
-  padding-top: 10%;
+  padding-top: 8%;
 }
 #hero-banner .hero-banner .hero-banner-text span {
   color: rgb(183, 71, 42);
@@ -306,12 +310,27 @@ footer .footer-bottom .copyright p {
 }
 #hero-banner .hero-banner .hero-banner-text h1 {
   font-weight: bold;
-  margin-bottom: 2.5rem;
+  margin: 0.5rem 0 2.5rem 0;
 }
 #hero-banner .hero-banner .hero-banner-text p {
   color: rgb(119, 127, 130);
-  padding-right: 2.5rem;
+  padding-right: 10%;
   line-height: 2rem;
+}
+@media only screen and (max-width: 1200px) {
+  #hero-banner .hero-banner .hero-banner-text p {
+    padding-right: 5%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #hero-banner .hero-banner .hero-banner-img img {
+    height: 700px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #hero-banner .hero-banner .hero-banner-img img {
+    height: 450px;
+  }
 }
 
 #products .products {
@@ -425,18 +444,6 @@ footer .footer-bottom .copyright p {
   opacity: 0;
   transition: opacity 0.3s;
 }
-#our-offering .our-offering .our-offering-body .prod .img .opacity:hover {
-  background-color: black;
-  opacity: 0.7;
-}
-#our-offering .our-offering .our-offering-body .prod .img .opacity:hover .opacity-icons {
-  opacity: 1;
-}
-#our-offering .our-offering .our-offering-body .prod .img .opacity:hover .opacity-icons .icon {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 25px;
-}
 #our-offering .our-offering .our-offering-body .prod .img img {
   height: 400px;
   width: 100%;
@@ -478,6 +485,18 @@ footer .footer-bottom .copyright p {
   color: rgb(119, 127, 130);
   opacity: 0.6;
   text-decoration: line-through !important;
+}
+#our-offering .our-offering .our-offering-body .prod:hover .opacity {
+  background-color: black;
+  opacity: 0.7;
+}
+#our-offering .our-offering .our-offering-body .prod:hover .opacity .opacity-icons {
+  opacity: 1;
+}
+#our-offering .our-offering .our-offering-body .prod:hover .opacity .opacity-icons .icon {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 25px;
 }
 #our-offering .our-offering .view-more {
   text-align: center;
