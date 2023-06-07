@@ -60,6 +60,9 @@ header .header-bg {
   background-attachment: fixed;
   height: 100vh;
 }
+header .header-bg.about-bg {
+  height: 70vh;
+}
 header .header-bg .header-nav {
   display: flex;
   justify-content: space-between;
@@ -127,13 +130,33 @@ header .header-bg .header-nav .menu {
   color: rgb(119, 127, 130);
 }
 header .header-bg .title {
-  height: 100%;
+  height: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+header .header-bg .title.about {
+  justify-content: flex-end;
+}
+header .header-bg .title.about h1 {
+  font-size: 55px;
+}
+header .header-bg .title.about .about-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.7s;
+  margin-right: 10px;
+}
+header .header-bg .title.about .about-links a .fa-chevron-right {
+  color: rgba(255, 255, 255, 0.7);
+}
+header .header-bg .title.about .about-links a:hover {
+  color: rgb(183, 71, 42);
+}
+header .header-bg .title.about .about-links a:hover .fa-chevron-right {
+  color: rgb(183, 71, 42);
 }
 header .header-bg .title .text {
   transform: rotate(-4deg);
@@ -571,4 +594,89 @@ footer .footer-bottom .copyright p {
   #blog .blog .blog-img img {
     height: 250px;
   }
+}
+
+#happy-clients {
+  background-image: url("../images/bg_4.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+}
+#happy-clients .opacity {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#happy-clients .opacity .happy-clients .happy-clients-title {
+  padding: 3rem 0;
+  color: #fff;
+  text-align: center;
+}
+#happy-clients .opacity .happy-clients .owl-carousel {
+  position: relative;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .item {
+  border: 1px solid rgb(119, 127, 130);
+  padding: 1.5rem;
+  margin: 30px 20px 0 0;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .item .fa-quote-left {
+  background-color: rgb(183, 71, 42);
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 4%;
+  left: 5%;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .item p {
+  color: #fff;
+  font-style: italic;
+  line-height: 26px;
+  margin-bottom: 2.5rem;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .item .client {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .item .client img {
+  width: 90px;
+  border-radius: 50%;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .item .client .client-info {
+  color: #fff;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .owl-dots .owl-dot {
+  border: 1px solid rgb(119, 127, 130);
+  border-radius: 50%;
+  margin: 2rem 0.2rem;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .owl-dots .owl-dot span {
+  width: 1px;
+  height: 1px;
+  display: block;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+#happy-clients .opacity .happy-clients .owl-carousel .owl-dots .owl-dot.active {
+  background-color: rgb(183, 71, 42);
+}
+
+#statics {
+  padding: 3rem 0;
+  background-color: rgb(245, 244, 240);
+}
+#statics h4 {
+  color: rgb(183, 71, 42);
+  font-size: 35px;
+  font-style: italic;
+  text-align: center;
+}
+#statics span {
+  text-align: center;
+  color: rgb(119, 127, 130);
 }/*# sourceMappingURL=main.css.map */

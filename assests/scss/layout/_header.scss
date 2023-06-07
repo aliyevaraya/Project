@@ -46,6 +46,9 @@ header {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+    &.about-bg {
+      height: 70vh;
+    }
     .header-nav {
       @include flexbox;
       padding: 2% 10%;
@@ -118,11 +121,33 @@ header {
       }
     }
     .title {
-      height: 100%;
+      height: 70%;
       @include flexbox;
       flex-direction: column;
       justify-content: center;
       text-align: center;
+      &.about {
+        justify-content: flex-end;
+        h1 {
+          font-size: 55px;
+        }
+        .about-links {
+          a {
+            color: rgba($white-color,.7);
+            transition: all 0.7s;
+            margin-right: 10px;
+            .fa-chevron-right {
+              color: rgba($white-color,.7);
+            }
+            &:hover {
+              color: $secondary-color;
+              .fa-chevron-right {
+                color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
       .text {
         transform: rotate(-4deg);
       }
@@ -150,6 +175,11 @@ header {
         }
       }
     }
+    // .header-title-nav {
+    //   height: 100%;
+    //   @include flexbox;
+    //   justify-content: center;
+    // }
   }
   .header-bottom {
     background-color: $secondary-color;

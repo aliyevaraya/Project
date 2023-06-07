@@ -1,0 +1,71 @@
+#happy-clients {
+    background-image: url("../images/bg_4.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  .opacity {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(black, 0.7);
+    .happy-clients {
+      .happy-clients-title {
+        padding: 3rem 0;
+        color: $white-color;
+        text-align: center;
+      }
+      .owl-carousel {
+        position: relative;
+        .item {
+          border: 1px solid $grey-color;
+          padding: 1.5rem;
+          margin: 30px 20px 0 0;
+          .fa-quote-left {
+            background-color: $secondary-color;
+            padding: 10px;
+            border-radius: 50%;
+            color: $white-color;
+            font-size: 20px;
+            position: absolute;
+            top: 4%;
+            left: 5%;
+          }
+          p {
+            color: $white-color;
+            font-style: italic;
+            line-height: 26px;
+            margin-bottom: 2.5rem;
+          }
+          .client {
+            @include flexbox;
+            justify-content: flex-start;
+            gap: 20px;
+            img {
+              width: 90px;
+              border-radius: 50%;
+            }
+            .client-info {
+              color: $white-color;
+            }
+          }
+        }
+        .owl-dots {
+          .owl-dot {
+            border: 1px solid $grey-color;
+            border-radius: 50%;
+            margin: 2rem .2rem;
+            span {
+              width: 1px;
+              height: 1px;
+              display: block;
+              transition: all 0.2s ease;
+              background-color: transparent;
+            }
+            &.active {
+              background-color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
