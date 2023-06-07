@@ -515,4 +515,59 @@ footer .footer-bottom .copyright p {
 }
 #our-offering .our-offering .view-more a .arrow {
   margin-left: 8px;
+}
+
+#blog {
+  padding: 3rem 0;
+}
+#blog .blog-title {
+  text-align: center;
+}
+#blog .blog-title h6 {
+  font-style: italic;
+  color: rgb(183, 71, 42);
+}
+#blog .blog-title h1 {
+  margin-bottom: 4%;
+}
+#blog .blog {
+  display: flex;
+}
+#blog .blog .blog-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+#blog .blog .blog-content {
+  background-color: rgb(245, 244, 240);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+#blog .blog .blog-content .date {
+  color: rgb(119, 127, 130);
+}
+#blog .blog .blog-content p {
+  line-height: 30px;
+  color: rgb(119, 127, 130);
+}
+#blog .blog .blog-content a {
+  color: rgb(183, 71, 42);
+  display: flex;
+  align-items: center;
+}
+#blog .blog .blog-content a .arrow {
+  margin-left: 10px;
+}
+@media only screen and (max-width: 991px) {
+  #blog .blog {
+    flex-direction: column;
+  }
+  #blog .blog .blog-img img {
+    height: 250px;
+  }
 }/*# sourceMappingURL=main.css.map */
