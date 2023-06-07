@@ -52,6 +52,37 @@ header {
     .header-nav {
       @include flexbox;
       padding: 2% 10%;
+      &.fixed-nav {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        background-color: $white-color;
+        padding: 1.5% 10%;
+        transition: all .3s;
+        .logo {
+          h4 {
+            color: $dark-color;
+            span{
+              color: $secondary-color;
+            }
+          }
+        }
+        .nav-basket {
+          nav {
+            .nav-ul {
+              li {
+                a {
+                  color: $grey-color;
+                  &.active {
+                    color: $secondary-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
       .logo {
         h4 {
           text-transform: uppercase;
@@ -133,11 +164,11 @@ header {
         }
         .about-links {
           a {
-            color: rgba($white-color,.7);
+            color: rgba($white-color, 0.7);
             transition: all 0.7s;
             margin-right: 10px;
             .fa-chevron-right {
-              color: rgba($white-color,.7);
+              color: rgba($white-color, 0.7);
             }
             &:hover {
               color: $secondary-color;

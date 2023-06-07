@@ -6,6 +6,7 @@
   list-style: none;
   text-decoration: none !important;
   font-family: "Spectral", serif;
+  scroll-behavior: smooth;
 }
 
 header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
@@ -68,6 +69,27 @@ header .header-bg .header-nav {
   justify-content: space-between;
   align-items: center;
   padding: 2% 10%;
+}
+header .header-bg .header-nav.fixed-nav {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5% 10%;
+  transition: all 0.3s;
+}
+header .header-bg .header-nav.fixed-nav .logo h4 {
+  color: black;
+}
+header .header-bg .header-nav.fixed-nav .logo h4 span {
+  color: rgb(183, 71, 42);
+}
+header .header-bg .header-nav.fixed-nav .nav-basket nav .nav-ul li a {
+  color: rgb(119, 127, 130);
+}
+header .header-bg .header-nav.fixed-nav .nav-basket nav .nav-ul li a.active {
+  color: rgb(183, 71, 42);
 }
 header .header-bg .header-nav .logo h4 {
   text-transform: uppercase;
