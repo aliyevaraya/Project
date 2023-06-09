@@ -3,7 +3,9 @@
     background-color: $primary-color;
     color: $white-color;
     border-radius: 3px;
+    border: 1px solid transparent;
     text-align: center;
+    transition: all .3s;
 }
 %count-btn{
     padding:5px 15px;
