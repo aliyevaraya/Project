@@ -47,9 +47,26 @@
         @extend %primary-btn;
         padding: 15px 35px;
         font-weight: lighter;
-        text-align: center;
+    }
+  }
+  @media only screen and (max-width:476px) {
+    .prod-info{
+        .score{
+            flex-direction: column;
+        }
+        .btns{
+            display: flex;
+            flex-direction: column;
+            .add-cart{
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+        }
     }
   }
 }
 
 
+#desc{
+    margin: 3rem;
+}
