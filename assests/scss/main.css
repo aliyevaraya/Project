@@ -925,7 +925,11 @@ footer .footer-bottom .copyright p {
 }
 
 #desc {
-  margin: 3rem;
+  margin: 3rem 0;
+}
+#desc .btns {
+  display: flex;
+  gap: 20px;
 }
 #desc .btns button {
   background-color: rgb(242, 242, 242);
@@ -937,9 +941,6 @@ footer .footer-bottom .copyright p {
 #desc .btns button:hover {
   background-color: rgb(183, 71, 42);
   color: #fff;
-}
-#desc .btns button.manf {
-  margin: 0 2rem;
 }
 #desc .content {
   padding: 2rem 4rem 2rem 2rem;
@@ -987,4 +988,32 @@ footer .footer-bottom .copyright p {
 }
 #desc .give-review .stars .fa-star {
   color: rgb(183, 71, 42);
+}
+@media only screen and (max-width: 991px) {
+  #desc .give-review {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #desc .btns {
+    flex-direction: column;
+  }
+  #desc .content {
+    padding: 1rem;
+  }
+  #desc .give-review {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #desc .content.review-content .review {
+    flex-direction: column;
+    align-items: center;
+  }
+  #desc .content.review-content .review .comment {
+    padding-right: 0.5rem;
+  }
+  #desc .content.review-content .review .comment .user {
+    padding-right: 0.3rem;
+  }
 }/*# sourceMappingURL=main.css.map */

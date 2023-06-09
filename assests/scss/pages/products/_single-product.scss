@@ -67,8 +67,10 @@
 }
 
 #desc {
-  margin: 3rem;
+  margin: 3rem 0;
   .btns {
+    display: flex;
+    gap: 20px;
     button {
       @extend %primary-btn;
       background-color: rgb(242, 242, 242);
@@ -80,9 +82,6 @@
         background-color: $secondary-color;
         color: $white-color;
       }
-      &.manf {
-        margin: 0 2rem;
-      }
     }
   }
   .content {
@@ -92,7 +91,7 @@
       margin-bottom: 2rem;
     }
     &.review-content {
-        padding-right: 2rem;
+      padding-right: 2rem;
       .review {
         display: flex;
         gap: 20px;
@@ -128,6 +127,38 @@
       .fa-star {
         color: $secondary-color;
       }
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .give-review {
+      flex-direction: column;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .btns {
+      flex-direction: column;
+    }
+    .content {
+      padding: 1rem;
+    }
+    .give-review {
+      flex-direction: row;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+   .content{
+    &.review-content {
+        .review {
+          flex-direction: column;
+          align-items: center;
+          .comment{
+              padding-right: .5rem;
+              .user{
+                 padding-right: .3rem;
+              }
+          }
+        }
+   }
     }
   }
 }
