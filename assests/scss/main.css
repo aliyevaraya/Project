@@ -9,11 +9,17 @@
   scroll-behavior: smooth;
 }
 
-header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
+#product-single .prod-info .buy, #product-single .prod-info .add-cart, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
   padding: 10px 25px;
   background-color: rgb(162, 63, 37);
   color: #fff;
   border-radius: 3px;
+}
+
+#product-single .prod-info button {
+  padding: 5px 15px;
+  border: 1px solid rgb(119, 127, 130);
+  font-weight: bold;
 }
 
 header .header-top {
@@ -88,7 +94,7 @@ header .header-bg .header-nav.fixed-nav .logo h4 span {
 header .header-bg .header-nav.fixed-nav .nav-basket nav .nav-ul li a {
   color: rgb(119, 127, 130);
 }
-header .header-bg .header-nav.fixed-nav .nav-basket nav .nav-ul li a.active {
+header .header-bg .header-nav.fixed-nav .nav-basket nav .nav-ul li.active a {
   color: rgb(183, 71, 42);
 }
 header .header-bg .header-nav .logo h4 {
@@ -118,11 +124,11 @@ header .header-bg .header-nav .nav-basket nav .nav-ul li a {
   color: rgb(119, 127, 130);
   font-size: 14px;
 }
-header .header-bg .header-nav .nav-basket nav .nav-ul li a.active {
-  color: #fff;
-}
 header .header-bg .header-nav .nav-basket nav .nav-ul li a:hover {
   color: rgb(162, 63, 37);
+}
+header .header-bg .header-nav .nav-basket nav .nav-ul li.active a {
+  color: #fff;
 }
 header .header-bg .header-nav .nav-basket nav .nav-ul li:hover .dropdown .dropdown-menu {
   display: block;
@@ -854,4 +860,53 @@ footer .footer-bottom .copyright p {
 #products nav .pagination .page-item.active .page-link {
   background-color: rgb(183, 71, 42);
   color: #fff;
+}
+
+#product-single {
+  padding: 4rem 0;
+}
+#product-single .prod-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+#product-single .prod-info {
+  padding: 2rem 3rem 2rem 2rem;
+}
+#product-single .prod-info .score {
+  display: flex;
+  gap: 2rem;
+}
+#product-single .prod-info .score .fa-star {
+  color: rgb(183, 71, 42);
+}
+#product-single .prod-info h3 {
+  margin: 2rem 0;
+}
+#product-single .prod-info p {
+  color: rgb(119, 127, 130);
+  line-height: 30px;
+  margin-bottom: 2rem !important;
+  font-size: 15px;
+}
+#product-single .prod-info input {
+  padding: 5px 15px;
+  text-align: center;
+  width: 100px;
+}
+#product-single .prod-info .pieces {
+  margin: 1rem 0;
+}
+#product-single .prod-info .add-cart {
+  padding: 15px 40px;
+  margin-right: 10px;
+  font-weight: lighter;
+}
+#product-single .prod-info .buy {
+  padding: 15px 35px;
+  font-weight: lighter;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
