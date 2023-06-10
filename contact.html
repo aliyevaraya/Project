@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assests/scss/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-top">
+        <div class="top-left">
+          <div class="phone">
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+            <a href="tel: ">+00 1234 567</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+            <a href="mailto:">youremail@email.com</a>
+          </div>
+        </div>
+        <div class="top-right">
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+          </div>
+          <div class="registr">
+            <a href="./sign-up.html">sign up</a>
+            <a href="./log-in.html">Log in</a>
+          </div>
+        </div>
+      </div>
+      <div class="header-bg bg">
+        <div class="header-nav">
+          <div class="logo">
+            <h4>liquor <span>store</span></h4>
+          </div>
+          <div class="nav-basket">
+            <nav>
+              <ul class="nav-ul">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li>
+                  <div class="dropdown">
+                    <a
+                      class="dropdown-toggle"
+                      href="#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Products
+                    </a>
+
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuLink"
+                    >
+                      <li>
+                        <a class="dropdown-item" href="./prducts.html"
+                          >Products</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./single-product.html"
+                          >Single Product</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./cart.html">Cart</a>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Checkout</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="./our-team.html">Our Team</a></li>
+                <li class="active"><a href="./contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="basket">
+              <img src="./assests/images/shopping-bag (2).png" alt="basket" />
+              <span class="number">0</span>
+            </div>
+          </div>
+          <span class="menu">Menu</span>
+        </div>
+        <div class="about title">
+          <div class="about-links">
+            <a href="./index.html"
+              >HOME<i class="fa-solid fa-chevron-right"></i
+            ></a>
+            <a href="./our-team.html"
+              >CONTACT <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
+          <h1>Contact</h1>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 d-flex content">
+              <div class="img">
+                <img src="./assests/images/support (2).png" alt="" />
+              </div>
+              <div class="text">
+                <h5>ONLINE SUPPORT 24/7</h5>
+                <p>
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex content cash-back">
+              <div class="img">
+                <img src="./assests/images/cashback (2).png" alt="" />
+              </div>
+              <div class="text">
+                <h5>MONEY BACK GUARANTEE</h5>
+                <p>
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex content delivery">
+              <div class="img">
+                <img src="./assests/images/free-delivery (2).png" alt="" />
+              </div>
+              <div class="text">
+                <h5>FREE SHIPPING & RETURN</h5>
+                <p>
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="contact-icons">
+        <div class="container">
+            <div class="row contact-icons justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="icon">
+                        <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="icon">
+                        <a href="#"><i class="fa-solid fa-phone"></i></i></a>
+                        <p><span>Phone:</span> <a href="tel:"> + 1235 2355 98</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="icon">
+                        <a href="#"><i class="fa-solid fa-paper-plane"></i></i></a>
+                        <p><span>Email:</span> <a href="#"> info@yoursite.com</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="icon">
+                        <a href="#"><i class="fa-solid fa-earth-americas"></i></i></a>
+                        <p><span>Website:</span><a href="#"> yoursite.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div class="liquer-store footer-col">
+                <h5>liquor <span>store</span></h5>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries.
+                </p>
+                <div class="footer-icons">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>My Accounts</h5>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>My Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Log In</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>My Order</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Register</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>Information</h5>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>About us</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Catalog</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Contact us</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Term & Conditions</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>Quick Link</h5>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>New User</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Help Center</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Report Spam</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Faq's</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>Have a Questions?</h5>
+                <div class="map contact">
+                  <a href="#"><i class="fa-solid fa-map"></i></a>
+                  <span>
+                    203 Fake St. Mountain View, San Francisco, California, USA
+                  </span>
+                </div>
+                <div class="phone contact">
+                  <a href="#"><i class="fa-solid fa-phone"></i></a>
+                  <a href="tel: ">+2 392 3929 210</a>
+                </div>
+                <div class="email contact">
+                  <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+                  <a href="mailto:">youremail@email.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="copyright">
+            <p>
+              Copyright ©2023 All rights reserved | This template is made with
+              by <i class="fa-solid fa-heart"></i> Colorlib.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assests/js/header.js"></script>
+  </body>
+</html>
