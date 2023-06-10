@@ -1248,4 +1248,22 @@ footer .footer-bottom .copyright p {
 }
 #cart-total .total-price a:hover {
   opacity: 1;
+}
+
+#billing {
+  padding: 4rem 0;
+}
+#billing .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 1rem 0;
+}
+#billing .detail label {
+  color: rgb(162, 63, 37);
+  font-size: 18px;
+}
+#billing .detail input {
+  padding: 15px;
+  border: 1px solid rgb(218, 178, 168);
 }/*# sourceMappingURL=main.css.map */

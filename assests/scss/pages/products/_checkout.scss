@@ -1,0 +1,17 @@
+#billing{
+    padding: 4rem 0;
+    .detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin: 1rem 0;
+        label{
+            color: $primary-color;
+            font-size: 18px;
+        }
+        input{
+            padding: 15px;
+            border: 1px solid $light-color;
+        }
+    }
+}
