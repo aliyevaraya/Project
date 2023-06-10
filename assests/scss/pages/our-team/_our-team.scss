@@ -1,1 +1,86 @@
-
+#our-team {
+    padding: 4rem 0;
+    .our-team-title {
+      text-align: center;
+      margin-bottom: 5rem;
+      p {
+        color: $grey-color;
+      }
+    }
+    .team-member {
+      .team-member-img {
+        position: relative;
+        .img {
+          img {
+            width: 100%;
+          }
+        }
+        .hover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          @include flexbox;
+          justify-content: center;
+          background-color: rgba($dark-color, 0.4);
+          opacity: 0;
+          transition: opacity 0.6s ease;
+          .social-icons {
+              @include flexbox;
+              gap: 20px;
+            a {
+              position: relative;
+              opacity: 0;
+              transform: translateY(-20px);
+              color: $white-color;
+              display: inline-block;
+              font-size: 20px;
+              transition: opacity 0.3s ease-out, transform 0.4s ease-in-out;
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                display: block;
+                width: 0;
+                border: 1px solid transparent;
+                transition: width 0.3s ease-out;
+              }
+              &:hover::before {
+                width: 100%;
+                border: 1px solid $white-color;
+              }
+            }
+          }
+        }
+        &:hover {
+          .hover {
+            opacity: 1;
+            .social-icons {
+              a {
+                opacity: 1;
+                transform: translateY(0);
+                &:nth-child(1) {
+                  transition-delay: 50ms;
+                }
+                &:nth-child(2) {
+                  transition-delay: 0.15s;
+                }
+                &:nth-child(3) {
+                  transition-delay: 0.2s;
+                }
+              }
+            }
+          }
+        }
+      }
+      .team-member-info {
+        text-align: center;
+        padding: 20px;
+        p {
+          color: $grey-color;
+        }
+      }
+    }
+  }
