@@ -1016,4 +1016,47 @@ footer .footer-bottom .copyright p {
   #desc .content.review-content .review .comment {
     padding-right: 0.4rem;
   }
+}
+
+#my-cart {
+  margin: 5rem 0;
+}
+#my-cart .table-scroll {
+  overflow-x: scroll;
+}
+#my-cart .table-scroll .my-cart {
+  min-width: 1200px;
+  width: 100%;
+}
+#my-cart .table-scroll .my-cart thead {
+  background-color: rgb(162, 63, 37);
+}
+#my-cart .table-scroll .my-cart thead tr th {
+  padding: 30px;
+  color: #fff;
+  font-size: 20px;
+}
+#my-cart .table-scroll .my-cart tbody tr td {
+  padding: 10px;
+}
+#my-cart .table-scroll .my-cart tbody tr td .check {
+  accent-color: rgb(183, 71, 42);
+}
+#my-cart .table-scroll .my-cart tbody tr td img {
+  width: 100px;
+  height: 100px;
+}
+#my-cart .table-scroll .my-cart tbody tr td .product p {
+  color: rgb(119, 127, 130);
+}
+#my-cart .table-scroll .my-cart tbody tr td .price {
+  color: rgb(119, 127, 130);
+}
+#my-cart .table-scroll .my-cart tbody tr td .input-number {
+  width: 60px;
+  padding: 10px;
+  border: 1px solid rgb(218, 178, 168);
+}
+#my-cart .table-scroll .my-cart tbody tr td .fa-xmark {
+  color: rgb(183, 71, 42);
 }/*# sourceMappingURL=main.css.map */

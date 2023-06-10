@@ -1,2 +1,51 @@
+#my-cart {
+    margin: 5rem 0;
+   .table-scroll{
+      overflow-x: scroll;
+      .my-cart {
+          min-width: 1200px;
+          width: 100%;
+          thead {
+            background-color: $primary-color;
+            tr {
+              th {
+                padding: 30px ;
+                color: $white-color;
+                font-size: 20px;
+              }
+            }
+          }
+          tbody{
+              tr{
+                  td{
+                      padding: 10px;
+                      .check{
+                          accent-color: $secondary-color;
+                      }
+                      img{
+                          width: 100px;
+                          height: 100px;
+                      }
+                      .product{
+                          p{
+                              color: $grey-color;
+                          }
+                      }
+                      .price{
+                          color: $grey-color;
+                      }
+                      .input-number{
+                          width: 60px;
+                          padding: 10px;
+                          border: 1px solid $light-color;
+                      }
+                      .fa-xmark{
+                          color: $secondary-color;
+                      }
+                  }
+              }
+          }
+        }
+   }
 
-
+}
