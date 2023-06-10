@@ -68,6 +68,7 @@ header .header-top .top-right .registr a {
 header .header-bg {
   background-image: url("../images/header-bg.jpg") !important;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   height: 100vh;
 }
