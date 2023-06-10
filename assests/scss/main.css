@@ -9,14 +9,14 @@
   scroll-behavior: smooth;
 }
 
-#desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
+#cart-total .total-price a, #desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
   padding: 10px 25px;
   background-color: rgb(162, 63, 37);
   color: #fff;
   border-radius: 3px;
   border: 1px solid transparent;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 #product-single .prod-info button {
@@ -1059,4 +1059,45 @@ footer .footer-bottom .copyright p {
 }
 #my-cart .table-scroll .my-cart tbody tr td .fa-xmark {
   color: rgb(183, 71, 42);
+}
+
+#cart-total {
+  margin-bottom: 5rem;
+  background-image: url("../images/whisky.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#cart-total .total-price {
+  padding: 2rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#cart-total .total-price h4 {
+  color: #fff;
+  font-weight: bolder;
+}
+#cart-total .total-price ul {
+  padding-left: 0;
+}
+#cart-total .total-price ul li {
+  font-size: 20px;
+  color: #fff;
+  margin: 2rem 0;
+  border-bottom: 1px solid rgb(184, 153, 94);
+}
+#cart-total .total-price ul li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cart-total .total-price ul li div .all {
+  font-weight: bold;
+  font-size: 22px;
+}
+#cart-total .total-price a {
+  background-color: rgb(181, 114, 23);
+  opacity: 0.8;
+}
+#cart-total .total-price a:hover {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */

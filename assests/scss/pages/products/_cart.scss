@@ -1,51 +1,90 @@
 #my-cart {
-    margin: 5rem 0;
-   .table-scroll{
-      overflow-x: scroll;
-      .my-cart {
-          min-width: 1200px;
-          width: 100%;
-          thead {
-            background-color: $primary-color;
-            tr {
-              th {
-                padding: 30px ;
-                color: $white-color;
-                font-size: 20px;
-              }
-            }
-          }
-          tbody{
-              tr{
-                  td{
-                      padding: 10px;
-                      .check{
-                          accent-color: $secondary-color;
-                      }
-                      img{
-                          width: 100px;
-                          height: 100px;
-                      }
-                      .product{
-                          p{
-                              color: $grey-color;
-                          }
-                      }
-                      .price{
-                          color: $grey-color;
-                      }
-                      .input-number{
-                          width: 60px;
-                          padding: 10px;
-                          border: 1px solid $light-color;
-                      }
-                      .fa-xmark{
-                          color: $secondary-color;
-                      }
-                  }
-              }
+  margin: 5rem 0;
+  .table-scroll {
+    overflow-x: scroll;
+    .my-cart {
+      min-width: 1200px;
+      width: 100%;
+      thead {
+        background-color: $primary-color;
+        tr {
+          th {
+            padding: 30px;
+            color: $white-color;
+            font-size: 20px;
           }
         }
-   }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 10px;
+            .check {
+              accent-color: $secondary-color;
+            }
+            img {
+              width: 100px;
+              height: 100px;
+            }
+            .product {
+              p {
+                color: $grey-color;
+              }
+            }
+            .price {
+              color: $grey-color;
+            }
+            .input-number {
+              width: 60px;
+              padding: 10px;
+              border: 1px solid $light-color;
+            }
+            .fa-xmark {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+#cart-total {
+  margin-bottom: 5rem;
+  background-image: url("../images/whisky.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .total-price {
+    padding: 2rem 1.5rem;
+    background-color: rgba($dark-color,.5);
+    h4 {
+      color: $white-color;
+      font-weight: bolder;
+    }
+    ul {
+      padding-left: 0;
+      li {
+        font-size: 20px;
+        color: $white-color;
+        margin: 2rem 0;
+        border-bottom: 1px solid rgb(184,153,94);
+        div {
+          @include flexbox;
+          .all {
+            font-weight: bold;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    a {
+      @extend %primary-btn;
+      background-color: rgb(181,114,23);
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
