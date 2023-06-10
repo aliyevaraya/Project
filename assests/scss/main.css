@@ -71,7 +71,7 @@ header .header-bg {
   height: 100vh;
 }
 header .header-bg.bg {
-  height: 70vh;
+  height: 60vh;
 }
 header .header-bg .header-nav {
   display: flex;
@@ -969,10 +969,13 @@ footer .footer-bottom .copyright p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 2rem;
+}
+#desc .content.review-content .review .comment .user h6 {
+  margin-bottom: 0;
 }
 #desc .content.review-content .review .comment .user span {
   color: rgb(119, 127, 130);
+  padding-left: 5px;
 }
 #desc .content.review-content .review .comment .stars {
   color: rgb(183, 71, 42);
@@ -1011,9 +1014,6 @@ footer .footer-bottom .copyright p {
     align-items: center;
   }
   #desc .content.review-content .review .comment {
-    padding-right: 0.5rem;
-  }
-  #desc .content.review-content .review .comment .user {
-    padding-right: 0.3rem;
+    padding-right: 0.4rem;
   }
 }/*# sourceMappingURL=main.css.map */

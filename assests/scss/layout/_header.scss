@@ -47,7 +47,7 @@ header {
     background-attachment: fixed;
     height: 100vh;
     &.bg {
-      height: 70vh;
+      height: 60vh;
     }
     .header-nav {
       @include flexbox;

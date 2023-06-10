@@ -105,9 +105,12 @@
           padding-right: 2rem;
           .user {
             @include flexbox;
-            padding-right: 2rem;
+            h6{
+              margin-bottom: 0;
+            }
             span {
               color: $grey-color;
+              padding-left: 5px;
             }
           }
           .stars {
@@ -152,10 +155,7 @@
           flex-direction: column;
           align-items: center;
           .comment{
-              padding-right: .5rem;
-              .user{
-                 padding-right: .3rem;
-              }
+            padding-right: .4rem;
           }
         }
    }
