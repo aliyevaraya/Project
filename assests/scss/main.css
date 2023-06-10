@@ -7,9 +7,10 @@
   text-decoration: none !important;
   font-family: "Spectral", serif;
   scroll-behavior: smooth;
+  outline: none;
 }
 
-#cart-total .total-price a, #desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
+#cart-total .total-price a, #desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, #contact-icons .map .contact-us .input-text .submit, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
   padding: 10px 25px;
   background-color: rgb(162, 63, 37);
   color: #fff;
@@ -795,6 +796,7 @@ footer .footer-bottom .copyright p {
 
 #contact-icons {
   padding: 3rem 0;
+  background-color: rgb(245, 244, 240);
 }
 #contact-icons .contact-icons .icon {
   display: flex;
@@ -822,6 +824,37 @@ footer .footer-bottom .copyright p {
 }
 #contact-icons .contact-icons .icon p a {
   color: rgb(162, 63, 37);
+}
+#contact-icons .map {
+  padding: 5rem 0;
+}
+#contact-icons .map .contact-us {
+  background-color: #fff;
+  padding: 2rem;
+}
+#contact-icons .map .contact-us .input-text {
+  display: flex;
+  flex-direction: column;
+  margin: 1.3rem 0;
+}
+#contact-icons .map .contact-us .input-text label {
+  color: rgb(183, 71, 42);
+  font-size: 18px;
+  font-weight: bold;
+}
+#contact-icons .map .contact-us .input-text input {
+  border: none;
+  border-bottom: 1px solid rgb(218, 178, 168);
+  padding: 20px 0;
+}
+#contact-icons .map .contact-us .input-text textarea {
+  border: none;
+  border-bottom: 1px solid rgb(218, 178, 168);
+  padding-top: 0.5rem;
+  color: rgb(119, 127, 130);
+}
+#contact-icons .map .contact-us .input-text .submit {
+  max-width: 250px;
 }
 
 #products {
