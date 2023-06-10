@@ -1,0 +1,30 @@
+#contact-icons{
+    padding: 3rem 0;
+    .contact-icons{
+        .icon{
+            @include flexbox;
+            flex-direction: column;
+            text-align: center;
+            .fa-solid{
+                font-size: 25px;
+                color: $white-color;
+                padding: 35px 40px;
+                border-radius: 50%;
+                background-color: $secondary-color;
+                margin-bottom: 1rem;
+            }
+            p{
+                color: $grey-color;
+                width: 250px;
+                span{
+                    font-weight: bolder;
+                    color: $dark-color;
+                    font-size: 18px;
+                }
+                a{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

@@ -793,6 +793,37 @@ footer .footer-bottom .copyright p {
   color: rgb(119, 127, 130);
 }
 
+#contact-icons {
+  padding: 3rem 0;
+}
+#contact-icons .contact-icons .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#contact-icons .contact-icons .icon .fa-solid {
+  font-size: 25px;
+  color: #fff;
+  padding: 35px 40px;
+  border-radius: 50%;
+  background-color: rgb(183, 71, 42);
+  margin-bottom: 1rem;
+}
+#contact-icons .contact-icons .icon p {
+  color: rgb(119, 127, 130);
+  width: 250px;
+}
+#contact-icons .contact-icons .icon p span {
+  font-weight: bolder;
+  color: black;
+  font-size: 18px;
+}
+#contact-icons .contact-icons .icon p a {
+  color: rgb(162, 63, 37);
+}
+
 #products {
   padding: 3rem 0;
 }
