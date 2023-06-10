@@ -4,7 +4,7 @@ margin:10,
 nav:false,
 autoplay:true,
 autoplayTimeout:3000 ,
-dots:true,
+dotsEach:1,
 singleItem: true,
 responsive:{
   0:{

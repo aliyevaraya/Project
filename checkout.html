@@ -168,58 +168,88 @@
     <!-- BILLING DETAILS -->
     <section id="billing">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-2"></div>
-          <div class="col-lg-8">
-            <form action="">
-              <div class="row">
-                <h3>Billing Details</h3>
-                <div class="col-md-6 detail">
-                  <label for="name">First Name</label>
-                  <input type="text" id="name" />
-                </div>
-                <div class="col-md-6 detail">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" />
-                </div>
-                <div class="col-md-12 detail">
-                  <label for="state">State / Country</label>
-                  <input type="text" id="state" placeholder="Japan" />
-                </div>
-                <div class="col-md-6 detail">
-                  <label for="street">Street Address</label>
-                  <input
-                    type="text"
-                    id="street"
-                    placeholder="House number and street name"
-                  />
-                </div>
-                <div class="col-md-6 detail">
-                  <input
-                    type="text"
-                    placeholder="Apartment, suite, unit etc: (optional)"
-                  />
-                </div>
-                <div class="col-md-6 detail">
-                  <label for="town">Town / City</label>
-                  <input type="text" id="town" />
-                </div>
-                <div class="col-md-6 detail">
-                  <label for="zip">Postcode / ZIP*</label>
-                  <input type="text" id="zip" />
-                </div>
-                <div class="col-md-6 detail">
-                  <label for="phone">Phone</label>
-                  <input type="text" id="phone" />
-                </div>
-                <div class="col-md-6 detail">
-                  <label for="email">Email Address</label>
-                  <input type="email" id="email" />
-                </div>
-              </div>
-            </form>
+        <form action="">
+          <div class="row">
+            <h3>Billing Details</h3>
+            <div class="col-md-6 detail">
+              <label for="name">First Name</label>
+              <input type="text" id="name" />
+            </div>
+            <div class="col-md-6 detail">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" />
+            </div>
+            <div class="col-md-12 detail">
+              <label for="state">State / Country</label>
+              <input type="text" id="state" placeholder="Japan" />
+            </div>
+            <div class="col-md-6 detail">
+              <label for="street">Street Address</label>
+              <input
+                type="text"
+                id="street"
+                placeholder="House number and street name"
+              />
+            </div>
+            <div class="col-md-6 detail">
+              <input
+                type="text"
+                placeholder="Apartment, suite, unit etc: (optional)"
+              />
+            </div>
+            <div class="col-md-6 detail">
+              <label for="town">Town / City</label>
+              <input type="text" id="town" />
+            </div>
+            <div class="col-md-6 detail">
+              <label for="zip">Postcode / ZIP*</label>
+              <input type="text" id="zip" />
+            </div>
+            <div class="col-md-6 detail">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" />
+            </div>
+            <div class="col-md-6 detail">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" />
+            </div>
           </div>
-          <div class="col-lg-2"></div>
+        </form>
+        <div class="row">
+            <div class="payment col-lg-6 col-md-12 mt-5">
+                <h4>Payment Method</h4>
+                <div class="method">
+                  <input type="radio" id="bank" />
+                  <label for="bank">Direct Bank Transfer</label>
+                </div>
+                <div class="method">
+                  <input type="radio" id="check" />
+                  <label for="check">Check Payment</label>
+                </div>
+                <div class="method">
+                  <input type="radio" id="paypal" />
+                  <label for="paypal">Paypal</label>
+                </div>
+                <div class="accept method">
+                  <input type="checkbox" id="agree" />
+                  <label for="agree"
+                    >I have read and accept the terms and conditions</label
+                  >
+                </div>
+                <a href="#" class="order">Place an order</a>
+              </div>
+              <div class="col-lg-6 col-md-12 onway mt-5">
+                <div class="loop-wrapper ">
+                    <div class="mountain"></div>
+                    <div class="hill"></div>
+                    <div class="tree"></div>
+                    <div class="tree"></div>
+                    <div class="tree"></div>
+                    <div class="rock"></div>
+                    <div class="truck"></div>
+                    <div class="wheels"></div>
+                  </div>
+              </div> 
         </div>
       </div>
     </section>
