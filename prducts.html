@@ -88,7 +88,11 @@
                       <li>
                         <a class="dropdown-item" href="./cart.html">Cart</a>
                       </li>
-                      <li><a class="dropdown-item" href="./checkout.html">Checkout</a></li>
+                      <li>
+                        <a class="dropdown-item" href="./checkout.html"
+                          >Checkout</a
+                        >
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -163,7 +167,7 @@
     <section id="products">
       <div class="container">
         <div class="row">
-          <div class="col-lg-9 row prods">
+          <div class="col-lg-9 row prods card-content">
             <div class="select">
               <span>Select Types of Products</span>
               <select name="" id="">
@@ -410,6 +414,16 @@
                 </div>
               </div>
             </div>
+            <nav>
+              <ul class="pagination pagination-sm">
+                <li class="page-item previous-page">
+                  <a class="page-link" href="#"> &lt; </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link next-page" href="#"> &gt; </a>
+                </li>
+              </ul>
+            </nav>
           </div>
           <div class="col-lg-3 types-blogs">
             <div class="types">
@@ -485,25 +499,6 @@
             </div>
           </div>
         </div>
-        <nav aria-label="...">
-          <ul class="pagination pagination-sm">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&lt;</span>
-              </a>
-            </li>
-            <li class="page-item active" aria-current="page">
-              <span class="page-link">1</span>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&gt;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </section>
     <!-- FOOTER -->
@@ -519,9 +514,15 @@
                   countries.
                 </p>
                 <div class="footer-icons">
-                  <a href="#" class="tw"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#" class="in"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="tw"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                  <a href="#" class="fb"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="in"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -651,15 +652,28 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./assests/js/header.js"></script>
+    <script src="./assests/js/product.js"></script>
     <script>
       ScrollReveal({
         distance: "60px",
         duration: 2000,
         delay: 200,
       });
-      ScrollReveal().reveal(".title,.content,#products,#footer", { delay: 100, origin: "bottom" });
-      ScrollReveal().reveal(".cash-back,.prod,.types-blogs,.tw", { delay: 130, origin: "bottom" });
+      ScrollReveal().reveal(".title,.content,#products,#footer", {
+        delay: 100,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".cash-back,.types-blogs,.tw", {
+        delay: 130,
+        origin: "bottom",
+      });
       ScrollReveal().reveal(".delivery,.fb", { delay: 150, origin: "bottom" });
       ScrollReveal().reveal(".in", { delay: 180, origin: "bottom" });
     </script>
