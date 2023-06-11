@@ -73,7 +73,7 @@ header .header-bg {
   height: 100vh;
 }
 header .header-bg.bg {
-  height: 60vh;
+  height: 50vh;
 }
 header .header-bg .header-nav {
   display: flex;

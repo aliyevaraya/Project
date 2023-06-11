@@ -32,6 +32,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assests/scss/main.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Document</title>
   </head>
   <body>
@@ -568,5 +569,16 @@
     <script src="./assests/js/owl.js"></script>
     <script src="./assests/js/about.js"></script>
     <script src="./assests/js/header.js"></script>
+    <script>
+      ScrollReveal({
+        distance: "60px",
+        duration: 2000,
+        delay: 200,
+      });
+      ScrollReveal().reveal(".title,.content,.blog-title,.happy-clients,.statics,#footer", { delay: 100, origin: "bottom" });
+      ScrollReveal().reveal(".cash-back,.blog,.tw", { delay: 130, origin: "bottom" });
+      ScrollReveal().reveal(".delivery,.fb", { delay: 150, origin: "bottom" });
+      ScrollReveal().reveal(".in", { delay: 180, origin: "bottom" });
+    </script>
   </body>
 </html>

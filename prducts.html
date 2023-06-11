@@ -18,6 +18,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assests/scss/main.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Document</title>
   </head>
   <body>
@@ -651,5 +652,16 @@
       </div>
     </footer>
     <script src="./assests/js/header.js"></script>
+    <script>
+      ScrollReveal({
+        distance: "60px",
+        duration: 2000,
+        delay: 200,
+      });
+      ScrollReveal().reveal(".title,.content,#products,#footer", { delay: 100, origin: "bottom" });
+      ScrollReveal().reveal(".cash-back,.prod,.types-blogs,.tw", { delay: 130, origin: "bottom" });
+      ScrollReveal().reveal(".delivery,.fb", { delay: 150, origin: "bottom" });
+      ScrollReveal().reveal(".in", { delay: 180, origin: "bottom" });
+    </script>
   </body>
 </html>
