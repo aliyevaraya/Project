@@ -1483,4 +1483,23 @@ footer .footer-bottom .copyright p {
 #detail .prod-detail .title p {
   color: rgb(119, 127, 130);
   font-style: italic;
+}
+
+#related {
+  padding: 3rem;
+}
+#related h1 {
+  font-size: 45px;
+  color: rgb(162, 63, 37);
+}
+#related .related .related-img img {
+  width: 100%;
+}
+#related .related .related-info {
+  text-align: center;
+  font-style: italic;
+}
+#related .related .related-info h4 {
+  text-transform: uppercase;
+  color: rgb(218, 178, 168);
 }/*# sourceMappingURL=main.css.map */

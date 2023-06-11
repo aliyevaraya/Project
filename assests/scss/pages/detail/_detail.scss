@@ -27,3 +27,26 @@
         }
        }
 }
+
+#related{
+    padding: 3rem;
+    h1{
+        font-size: 45px;
+        color: $primary-color;
+    }
+.related{
+    .related-img{
+        img{
+            width: 100%;
+        }
+    }
+    .related-info{
+        text-align: center;
+        font-style: italic;
+        h4{
+            text-transform: uppercase;
+            color: $light-color;
+        }
+    }
+}
+}
