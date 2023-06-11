@@ -1,52 +1,51 @@
-#detail{
-    padding: 3rem;
-       .prod-detail{
-        @include flexbox;
-        justify-content: center;
-        gap: 20px;
-        .img{
-            width: 200px;
-            height: 200px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                border-radius: 30%;
-            }
-        }
-        .title{
-            h4{
-                color: $secondary-color;
-                font-weight: bold;
-            }
-            p{
-                color: $grey-color;
-                font-style: italic;
-            }
-        }
-       }
+#detail {
+  padding: 4rem;
+  .detail-img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 30%;
+    }
+  }
+  .prod-detail {
+    @include flexbox;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    height: 100%;
+      h4 {
+        color: $secondary-color;
+        font-weight: bold;
+      }
+      p {
+        color: $grey-color;
+        font-style: italic;
+      }
+  }
 }
 
-#related{
-    padding: 3rem;
-    h1{
-        font-size: 45px;
-        color: $primary-color;
+#related {
+  padding: 3rem;
+  h1 {
+    font-size: 45px;
+    color: $primary-color;
+  }
+  .related {
+    .related-img {
+      img {
+        width: 100%;
+      }
     }
-.related{
-    .related-img{
-        img{
-            width: 100%;
-        }
+    .related-info {
+      text-align: center;
+      font-style: italic;
+      h4 {
+        text-transform: uppercase;
+        color: $light-color;
+      }
     }
-    .related-info{
-        text-align: center;
-        font-style: italic;
-        h4{
-            text-transform: uppercase;
-            color: $light-color;
-        }
-    }
-}
+  }
 }
