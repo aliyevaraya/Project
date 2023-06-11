@@ -1451,4 +1451,36 @@ footer .footer-bottom .copyright p {
   100% {
     transform: translateX(-2000px);
   }
+}
+
+#detail {
+  padding: 3rem;
+}
+#detail .prod-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#detail .prod-detail .img {
+  width: 200px;
+  height: 200px;
+}
+#detail .prod-detail .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 30%;
+}
+#detail .prod-detail .title h4 {
+  color: rgb(183, 71, 42);
+  font-weight: bold;
+}
+#detail .prod-detail .title p {
+  color: rgb(119, 127, 130);
+  font-style: italic;
 }/*# sourceMappingURL=main.css.map */
