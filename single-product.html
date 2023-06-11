@@ -223,11 +223,11 @@
     <section id="desc">
       <div class="container">
         <div class="btns">
-          <button class="desc">Description</button>
-          <button class="manf">Manufacturer</button>
-          <button class="review">Reviews</button>
+          <button class="desc active-btn" onclick="showDescContent(this)">Description</button>
+          <button class="manf" onclick="showManfContent(this)">Manufacturer</button>
+          <button class="review" onclick="showReviewContent(this)">Reviews</button>
         </div>
-        <div class="desc-content content">
+        <div class="desc-content text">
           <h3>Bacardi 151 Degree</h3>
           <p>
             On her way she met a copy. The copy warned the Little Blind Text,
@@ -240,7 +240,7 @@
             agency, where they abused her for their.
           </p>
         </div>
-        <div class="manf-content content">
+        <div class="manf-content text">
           <h3>Manufactured By Liquor Store</h3>
           <p>
             On her way she met a copy. The copy warned the Little Blind Text,
@@ -253,7 +253,7 @@
             agency, where they abused her for their.
           </p>
         </div>
-        <div class="review-content content row align-items-baseline">
+        <div class="review-content text row align-items-baseline">
           <div class="col-md-8">
             <h3>23 Reviews</h3>
             <div class="review">
@@ -527,6 +527,7 @@
       </div>
     </footer>
     <script src="./assests/js/header.js"></script>
+    <script src="./assests/js/single-product.js"></script>
     <script>
       ScrollReveal({
         distance: "60px",
@@ -535,7 +536,7 @@
       });
       ScrollReveal().reveal(".title,.content,#footer", { delay: 100, origin: "bottom" });
       ScrollReveal().reveal(".cash-back,#product-single,.tw", { delay: 130, origin: "bottom" });
-      ScrollReveal().reveal(".delivery,,#desc.fb", { delay: 150, origin: "bottom" });
+      ScrollReveal().reveal(".delivery,.btns,.fb", { delay: 150, origin: "bottom" });
       ScrollReveal().reveal(".in", { delay: 180, origin: "bottom" });
     </script>
   </body>

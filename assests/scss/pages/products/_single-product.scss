@@ -78,13 +78,17 @@
       padding: 15px 25px;
       font-size: 25px;
       margin-bottom: 2rem;
-      &:hover {
+      &.active-btn {
         background-color: $secondary-color;
+        color: $white-color;
+      }
+      &:hover {
+        background-color: $primary-color;
         color: $white-color;
       }
     }
   }
-  .content {
+  .text {
     padding: 2rem 4rem 2rem 2rem;
     background-color: $bg-color;
     h3 {
@@ -105,7 +109,7 @@
           padding-right: 2rem;
           .user {
             @include flexbox;
-            h6{
+            h6 {
               margin-bottom: 0;
             }
             span {
@@ -141,7 +145,7 @@
     .btns {
       flex-direction: column;
     }
-    .content {
+    .text {
       padding: 1rem;
     }
     .give-review {
@@ -149,16 +153,16 @@
     }
   }
   @media only screen and (max-width: 767px) {
-   .content{
-    &.review-content {
+    .text {
+      &.review-content {
         .review {
           flex-direction: column;
           align-items: center;
-          .comment{
-            padding-right: .4rem;
+          .comment {
+            padding-right: 0.4rem;
           }
         }
-   }
+      }
     }
   }
 }

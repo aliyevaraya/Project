@@ -60,11 +60,11 @@ header {
         width: 100%;
         background-color: $white-color;
         padding: 1.5% 10%;
-        transition: all .3s;
+        transition: all 0.3s;
         .logo {
           h4 {
             color: $dark-color;
-            span{
+            span {
               color: $secondary-color;
             }
           }
@@ -77,7 +77,7 @@ header {
                   color: $grey-color;
                 }
                 &.active {
-                  a{
+                  a {
                     color: $secondary-color;
                   }
                 }
@@ -115,9 +115,9 @@ header {
                 }
               }
               &.active {
-               a{
-                color: $white-color;
-               }
+                a {
+                  color: $white-color;
+                }
               }
               &:hover {
                 .dropdown {
@@ -242,16 +242,31 @@ header {
       }
     }
   }
-  @media only screen and (max-width: 991px) {
-    .header-nav {
-      flex-wrap: wrap;
-      .nav-basket {
-        nav {
-          display: none;
+  @media only screen and (max-width: 1024px) {
+    .header-bg {
+      .header-nav {
+        flex-wrap: wrap;
+        .nav-basket {
+          nav {
+            display: none;
+          }
+        }
+        .menu {
+          display: block;
         }
       }
-      .menu {
-        display: block;
+      &.bg {
+        .header-nav {
+          flex-wrap: wrap;
+          .nav-basket {
+            nav {
+              display: none;
+            }
+          }
+          .menu {
+            display: block;
+          }
+        }
       }
     }
     .header-bg {
