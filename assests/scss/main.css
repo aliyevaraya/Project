@@ -1456,16 +1456,21 @@ footer .footer-bottom .copyright p {
 #detail {
   padding: 4rem;
 }
-#detail .detail-img img {
+#detail .detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#detail .detail .detail-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border-radius: 30%;
+  border-radius: 20%;
 }
-#detail .prod-detail {
+#detail .detail .detail-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1475,13 +1480,26 @@ footer .footer-bottom .copyright p {
   gap: 20px;
   height: 100%;
 }
-#detail .prod-detail h4 {
+#detail .detail .detail-info h4 {
   color: rgb(183, 71, 42);
   font-weight: bold;
 }
-#detail .prod-detail p {
+#detail .detail .detail-info p {
   color: rgb(119, 127, 130);
   font-style: italic;
+  padding: 0 1rem;
+}
+@media only screen and (max-width: 767px) {
+  #detail .detail {
+    flex-direction: column;
+  }
+  #detail .detail .detail-img {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  #detail .detail .detail-info p {
+    padding: 0.3rem;
+  }
 }
 
 #related {
