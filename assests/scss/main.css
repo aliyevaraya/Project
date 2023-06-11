@@ -148,7 +148,7 @@ header .header-bg .header-nav .nav-basket .basket {
   margin: 0 15px;
   cursor: pointer;
 }
-header .header-bg .header-nav .nav-basket .basket .quantity {
+header .header-bg .header-nav .nav-basket .basket .number {
   position: absolute;
   bottom: 20%;
   left: 55%;
