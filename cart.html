@@ -88,7 +88,16 @@
                       <li>
                         <a class="dropdown-item" href="./cart.html">Cart</a>
                       </li>
-                      <li><a class="dropdown-item" href="./checkout.html">Checkout</a></li>
+                      <li>
+                        <a class="dropdown-item" href="./checkout.html"
+                          >Checkout</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./favorites.html"
+                          >Favorites</a
+                        >
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -160,259 +169,303 @@
     </header>
     <!-- MY CART -->
     <section id="my-cart">
-        <div class="container">
-          <div class="table-scroll">
-            <table class="my-cart">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" class="check"></td>
-                        <td><img src="./assests/images/kind-2.jpg" alt="" srcset=""></td>
-                        <td><div class="product">
-                            <h4>Jim Beam Kentucky Straight</h4>
-                            <p>Fugiat voluptates quasi nemo, ipsa perferendis</p>
-                        </div></td>
-                        <td class="price">$44.99</td>
-                        <td><input type="number" class="input-number" value="1" min="1" max="50"></td>
-                        <td class="price">$89.98</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" class="check"></td>
-                        <td><img src="./assests/images/kind-1.jpg" alt="" srcset=""></td>
-                        <td><div class="product">
-                            <h4>Jim Beam Kentucky Straight</h4>
-                            <p>Fugiat voluptates quasi nemo, ipsa perferendis</p>
-                        </div></td>
-                        <td class="price">$44.99</td>
-                        <td><input type="number" class="input-number" value="1" min="1" max="50"></td>
-                        <td class="price">$89.98</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" class="check"></td>
-                        <td><img src="./assests/images/kind-4.jpg" alt="" srcset=""></td>
-                        <td><div class="product">
-                            <h4>Jim Beam Kentucky Straight</h4>
-                            <p>Fugiat voluptates quasi nemo, ipsa perferendis</p>
-                        </div></td>
-                        <td class="price">$44.99</td>
-                        <td><input type="number" class="input-number" value="1" min="1" max="50"></td>
-                        <td class="price">$89.98</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                    </tr>
-                </tbody>
-            </table>
-          </div>
+      <div class="container">
+        <div class="table-scroll">
+          <table class="my-cart">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="check" /></td>
+                <td>
+                  <img src="./assests/images/kind-2.jpg" alt="" srcset="" />
+                </td>
+                <td>
+                  <div class="product">
+                    <h4>Jim Beam Kentucky Straight</h4>
+                    <p>Fugiat voluptates quasi nemo, ipsa perferendis</p>
+                  </div>
+                </td>
+                <td class="price">$44.99</td>
+                <td>
+                  <input
+                    type="number"
+                    class="input-number"
+                    value="1"
+                    min="1"
+                    max="50"
+                  />
+                </td>
+                <td class="price">$89.98</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="check" /></td>
+                <td>
+                  <img src="./assests/images/kind-1.jpg" alt="" srcset="" />
+                </td>
+                <td>
+                  <div class="product">
+                    <h4>Jim Beam Kentucky Straight</h4>
+                    <p>Fugiat voluptates quasi nemo, ipsa perferendis</p>
+                  </div>
+                </td>
+                <td class="price">$44.99</td>
+                <td>
+                  <input
+                    type="number"
+                    class="input-number"
+                    value="1"
+                    min="1"
+                    max="50"
+                  />
+                </td>
+                <td class="price">$89.98</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="check" /></td>
+                <td>
+                  <img src="./assests/images/kind-4.jpg" alt="" srcset="" />
+                </td>
+                <td>
+                  <div class="product">
+                    <h4>Jim Beam Kentucky Straight</h4>
+                    <p>Fugiat voluptates quasi nemo, ipsa perferendis</p>
+                  </div>
+                </td>
+                <td class="price">$44.99</td>
+                <td>
+                  <input
+                    type="number"
+                    class="input-number"
+                    value="1"
+                    min="1"
+                    max="50"
+                  />
+                </td>
+                <td class="price">$89.98</td>
+                <td><i class="fa-solid fa-xmark"></i></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </section>
     <!-- CART-TOTAL -->
     <section id="cart-total">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-sm-4">
-                </div>
-                <div class="col-lg-4 col-sm-8">
-                   <div class="total-price">
-                    <h4>Cart Totals</h4>
-                    <ul>
-                        <li>
-                           <div>
-                            <span>Subtotal</span>
-                            <span>$20.60</span>
-                           </div>
-                        </li>
-                        <li>
-                           <div>
-                            <span>Delivery</span>
-                            <span>$0.00</span>
-                           </div>
-                        </li>
-                        <li>
-                           <div>
-                            <span>Discount</span>
-                            <span>$3.00</span>
-                           </div>
-                        </li>
-                        <li>
-                           <div>
-                            <h5>TOTAL</h5>
-                            <span class="all">$17.60</span>
-                           </div>
-                        </li>
-                    </ul>
-                    <a href="#">Proceed to Checkout</a>
-                   </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-sm-4"></div>
+          <div class="col-lg-4 col-sm-8">
+            <div class="total-price">
+              <h4>Cart Totals</h4>
+              <ul>
+                <li>
+                  <div>
+                    <span>Subtotal</span>
+                    <span>$20.60</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <span>Delivery</span>
+                    <span>$0.00</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <span>Discount</span>
+                    <span>$3.00</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h5>TOTAL</h5>
+                    <span class="all">$17.60</span>
+                  </div>
+                </li>
+              </ul>
+              <a href="#">Proceed to Checkout</a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-       <!-- FOOTER -->
-       <footer id="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="liquer-store footer-col">
-                  <h5>liquor <span>store</span></h5>
-                  <p>
-                    Far far away, behind the word mountains, far from the
-                    countries.
-                  </p>
-                  <div class="footer-icons">
-                    <a href="#" class="tw"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="in"><i class="fa-brands fa-instagram"></i></a>
-                  </div>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div class="liquer-store footer-col">
+                <h5>liquor <span>store</span></h5>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries.
+                </p>
+                <div class="footer-icons">
+                  <a href="#" class="tw"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                  <a href="#" class="fb"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="in"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <div class="footer-col">
-                  <h5>My Accounts</h5>
-                  <ul>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>My Account</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Log In</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>My Order</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Register</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>My Accounts</h5>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>My Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Log In</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>My Order</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Register</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <div class="footer-col">
-                  <h5>Information</h5>
-                  <ul>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>About us</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Catalog</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Contact us</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Term & Conditions</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>Information</h5>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>About us</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Catalog</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Contact us</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Term & Conditions</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <div class="footer-col">
-                  <h5>Quick Link</h5>
-                  <ul>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>New User</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Help Center</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Report Spam</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-solid fa-angle-right"></i>
-                        <span>Faq's</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>Quick Link</h5>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>New User</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Help Center</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Report Spam</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-angle-right"></i>
+                      <span>Faq's</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="footer-col">
-                  <h5>Have a Questions?</h5>
-                  <div class="map contact">
-                    <a href="#"><i class="fa-solid fa-map"></i></a>
-                    <span>
-                      203 Fake St. Mountain View, San Francisco, California, USA
-                    </span>
-                  </div>
-                  <div class="phone contact">
-                    <a href="#"><i class="fa-solid fa-phone"></i></a>
-                    <a href="tel: ">+2 392 3929 210</a>
-                  </div>
-                  <div class="email contact">
-                    <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
-                    <a href="mailto:">youremail@email.com</a>
-                  </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div class="footer-col">
+                <h5>Have a Questions?</h5>
+                <div class="map contact">
+                  <a href="#"><i class="fa-solid fa-map"></i></a>
+                  <span>
+                    203 Fake St. Mountain View, San Francisco, California, USA
+                  </span>
+                </div>
+                <div class="phone contact">
+                  <a href="#"><i class="fa-solid fa-phone"></i></a>
+                  <a href="tel: ">+2 392 3929 210</a>
+                </div>
+                <div class="email contact">
+                  <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+                  <a href="mailto:">youremail@email.com</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="copyright">
-              <p>
-                Copyright ©2023 All rights reserved | This template is made with
-                by <i class="fa-solid fa-heart"></i> Colorlib.com
-              </p>
-            </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="copyright">
+            <p>
+              Copyright ©2023 All rights reserved | This template is made with
+              by <i class="fa-solid fa-heart"></i> Colorlib.com
+            </p>
           </div>
         </div>
-      </footer>
-      <script src="./assests/js/header.js"></script>
-      <script>
-        ScrollReveal({
-          distance: "60px",
-          duration: 2000,
-          delay: 200,
-        });
-        ScrollReveal().reveal(".title,.content,#my-cart,#cart-total,#footer", { delay: 100, origin: "bottom" });
-        ScrollReveal().reveal(".cash-back,.tw", { delay: 130, origin: "bottom" });
-        ScrollReveal().reveal(".delivery,.fb", { delay: 150, origin: "bottom" });
-        ScrollReveal().reveal(".in", { delay: 180, origin: "bottom" });
-      </script>
-    </body>
-  </html>
+      </div>
+    </footer>
+    <script src="./assests/js/header.js"></script>
+    <script>
+      ScrollReveal({
+        distance: "60px",
+        duration: 2000,
+        delay: 200,
+      });
+      ScrollReveal().reveal(".title,.content,#my-cart,#cart-total,#footer", {
+        delay: 100,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".cash-back,.tw", { delay: 130, origin: "bottom" });
+      ScrollReveal().reveal(".delivery,.fb", { delay: 150, origin: "bottom" });
+      ScrollReveal().reveal(".in", { delay: 180, origin: "bottom" });
+    </script>
+  </body>
+</html>

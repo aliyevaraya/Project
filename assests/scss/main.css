@@ -102,6 +102,9 @@ header .header-bg .header-nav.fixed-nav .nav-basket nav .nav-ul li a {
 header .header-bg .header-nav.fixed-nav .nav-basket nav .nav-ul li.active a {
   color: rgb(183, 71, 42);
 }
+header .header-bg .header-nav.fixed-nav .nav-basket .basket .number {
+  color: rgb(245, 244, 240);
+}
 header .header-bg .header-nav .logo h4 {
   text-transform: uppercase;
   font-weight: bold;

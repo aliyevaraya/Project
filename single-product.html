@@ -88,7 +88,16 @@
                       <li>
                         <a class="dropdown-item" href="./cart.html">Cart</a>
                       </li>
-                      <li><a class="dropdown-item" href="./checkout.html">Checkout</a></li>
+                      <li>
+                        <a class="dropdown-item" href="./checkout.html"
+                          >Checkout</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./favorites.html"
+                          >Favorites</a
+                        >
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -211,10 +220,10 @@
               <button class="plus"><i class="fa-solid fa-plus"></i></button>
             </div>
             <p class="pieces">80 pieces available</p>
-           <div class="btns ">
-            <a href="./cart.html" class="add-cart">Add to Cart</a>
-            <a href="./cart.html" class="buy">Buy now</a>
-           </div>
+            <div class="btns">
+              <a href="./cart.html" class="add-cart">Add to Cart</a>
+              <a href="./cart.html" class="buy">Buy now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -223,9 +232,15 @@
     <section id="desc">
       <div class="container">
         <div class="btns">
-          <button class="desc active-btn" onclick="showDescContent(this)">Description</button>
-          <button class="manf" onclick="showManfContent(this)">Manufacturer</button>
-          <button class="review" onclick="showReviewContent(this)">Reviews</button>
+          <button class="desc active-btn" onclick="showDescContent(this)">
+            Description
+          </button>
+          <button class="manf" onclick="showManfContent(this)">
+            Manufacturer
+          </button>
+          <button class="review" onclick="showReviewContent(this)">
+            Reviews
+          </button>
         </div>
         <div class="desc-content text">
           <h3>Bacardi 151 Degree</h3>
@@ -258,7 +273,7 @@
             <h3>23 Reviews</h3>
             <div class="review">
               <img src="./assests/images/person_1.jpg" alt="" />
-              <div  class="comment">
+              <div class="comment">
                 <div class="user">
                   <h6>Jacob Webb</h6>
                   <span class="date"> 25 April 2020</span>
@@ -394,9 +409,15 @@
                   countries.
                 </p>
                 <div class="footer-icons">
-                  <a href="#" class="tw"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#" class="in"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="tw"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                  <a href="#" class="fb"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="in"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -534,9 +555,18 @@
         duration: 2000,
         delay: 200,
       });
-      ScrollReveal().reveal(".title,.content,#footer", { delay: 100, origin: "bottom" });
-      ScrollReveal().reveal(".cash-back,#product-single,.tw", { delay: 130, origin: "bottom" });
-      ScrollReveal().reveal(".delivery,.btns,.fb", { delay: 150, origin: "bottom" });
+      ScrollReveal().reveal(".title,.content,#footer", {
+        delay: 100,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".cash-back,#product-single,.tw", {
+        delay: 130,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".delivery,.btns,.fb", {
+        delay: 150,
+        origin: "bottom",
+      });
       ScrollReveal().reveal(".in", { delay: 180, origin: "bottom" });
     </script>
   </body>
