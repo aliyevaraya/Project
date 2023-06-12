@@ -1,0 +1,21 @@
+#favs {
+  padding: 4rem;
+  .favs {
+    @include flexbox;
+    flex-wrap: wrap;
+    .fav {
+        margin-bottom: 2rem ;
+      .fav-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      .fav-content{
+        text-align: center;
+        .remove{
+            @extend %primary-btn;
+        }
+      }
+    }
+  }
+}

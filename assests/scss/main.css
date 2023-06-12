@@ -10,7 +10,7 @@
   outline: none;
 }
 
-#billing .payment .order, #cart-total .total-price a, #desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, #contact-icons .map .contact-us .input-text .submit, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
+#favs .favs .fav .fav-content .remove, #billing .payment .order, #cart-total .total-price a, #desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, #contact-icons .map .contact-us .input-text .submit, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
   padding: 10px 25px;
   background-color: rgb(162, 63, 37);
   color: #fff;
@@ -1522,4 +1522,26 @@ footer .footer-bottom .copyright p {
 #related .related .related-info h4 {
   text-transform: uppercase;
   color: rgb(218, 178, 168);
+}
+
+#favs {
+  padding: 4rem;
+}
+#favs .favs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#favs .favs .fav {
+  margin-bottom: 2rem;
+}
+#favs .favs .fav .fav-img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#favs .favs .fav .fav-content {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
