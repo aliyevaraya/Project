@@ -166,6 +166,63 @@ header .header-bg .header-nav .menu {
   text-transform: uppercase;
   color: rgb(119, 127, 130);
 }
+header .header-bg #my-cart {
+  position: fixed;
+  z-index: 1;
+  top: 3%;
+  right: -100%;
+  height: 60vh;
+  width: 300px;
+  background-color: rgb(245, 244, 240);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+header .header-bg #my-cart .close-cart {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  color: rgb(245, 244, 240);
+  border-bottom-left-radius: 8px;
+  background-color: black;
+}
+header .header-bg #my-cart .my-cart {
+  padding-left: 0.5rem !important;
+}
+header .header-bg #my-cart .my-cart .incart {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-bg #my-cart .my-cart .incart .cart-info {
+  display: flex;
+  gap: 1rem;
+}
+header .header-bg #my-cart .my-cart .incart .cart-info .img {
+  width: 40px;
+  height: 100%;
+}
+header .header-bg #my-cart .my-cart .incart .cart-info .img img {
+  width: 100%;
+  border-radius: 20%;
+}
+header .header-bg #my-cart .my-cart .incart .cart-info .info {
+  color: rgba(0, 0, 0, 0.8);
+}
+header .header-bg #my-cart .my-cart .incart .remove-cart {
+  color: rgb(183, 71, 42);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(218, 178, 168);
+}
+header .header-bg #my-cart .view-all {
+  color: rgb(183, 71, 42);
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  padding: 1.5rem 0;
+}
 header .header-bg .popup {
   position: absolute;
   width: 60%;
