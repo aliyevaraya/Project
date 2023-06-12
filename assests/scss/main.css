@@ -10,7 +10,7 @@
   outline: none;
 }
 
-#favs .favs .fav .fav-content .remove, #billing .payment .order, #cart-total .total-price a, #desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, #contact-icons .map .contact-us .input-text .submit, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a {
+#favs .favs .fav .fav-content .remove, #billing .payment .order, #cart-total .total-price a, #desc .btns button, #product-single .prod-info .buy, #product-single .prod-info .add-cart, #contact-icons .map .contact-us .input-text .submit, header .header-bg .title .links a.read-more:hover, header .header-bg .title .links a, header .header-bg .popup .form-box .login-btn, header .header-bg .popup .form-box.register .register-btn {
   padding: 10px 25px;
   background-color: rgb(162, 63, 37);
   color: #fff;
@@ -70,10 +70,11 @@ header .header-bg {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
   height: 100vh;
 }
 header .header-bg.bg {
-  height: 50vh;
+  height: 80vh;
 }
 header .header-bg .header-nav {
   display: flex;
@@ -84,7 +85,7 @@ header .header-bg .header-nav {
 header .header-bg .header-nav.fixed-nav {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   background-color: #fff;
   padding: 1.5% 10%;
@@ -164,6 +165,111 @@ header .header-bg .header-nav .menu {
   display: none;
   text-transform: uppercase;
   color: rgb(119, 127, 130);
+}
+header .header-bg .popup {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  top: 18%;
+  left: 20%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+header .header-bg .popup .close-popup {
+  font-size: 20px;
+  padding: 10px 15px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(183, 71, 42);
+  border-bottom-left-radius: 45%;
+}
+header .header-bg .popup .form-box {
+  width: 70%;
+  padding: 1.5rem;
+}
+header .header-bg .popup .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+header .header-bg .popup .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(1000px);
+}
+header .header-bg .popup .form-box.register .register-btn {
+  margin: 1rem 0;
+}
+header .header-bg .popup .form-box.register .agree {
+  color: rgb(218, 178, 168);
+}
+header .header-bg .popup .form-box h2 {
+  font-weight: bolder;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+header .header-bg .popup .form-box .input-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid rgb(218, 178, 168);
+  margin: 30px 0;
+  color: rgb(245, 244, 240);
+}
+header .header-bg .popup .form-box .input-box input {
+  border: none;
+  background-color: rgb(94, 90, 84);
+  color: rgb(245, 244, 240);
+}
+header .header-bg .popup .form-box .remember-forget {
+  color: rgb(245, 244, 240);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-bg .popup .form-box .remember-forget input {
+  accent-color: rgb(162, 63, 37);
+}
+header .header-bg .popup .form-box .remember-forget a {
+  color: rgb(245, 244, 240);
+}
+header .header-bg .popup .form-box .remember-forget a:hover {
+  text-decoration: underline !important;
+}
+header .header-bg .popup .form-box .login-btn {
+  padding: 5px 15px;
+  margin: 0.5rem 0;
+}
+header .header-bg .popup .form-box .login-register {
+  text-align: center;
+  color: #fff;
+}
+header .header-bg .popup .form-box .login-register a {
+  color: rgb(218, 178, 168);
+}
+header .header-bg .popup.active .login {
+  transition: none;
+  transform: translateX(-1000px);
+}
+header .header-bg .popup.active .register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
 }
 header .header-bg .title {
   height: 70%;
@@ -264,6 +370,14 @@ header .header-bottom .content .text p {
     padding-left: 0;
   }
 }
+@media only screen and (max-width: 767px) {
+  header .header-bg .popup {
+    width: 80%;
+    height: 85%;
+    left: 10%;
+    top: 10%;
+  }
+}
 @media only screen and (max-width: 576px) {
   header .header-top {
     flex-direction: column;
@@ -274,12 +388,21 @@ header .header-bottom .content .text p {
   header .header-top .top-right {
     gap: 4rem;
   }
-  header .header-bg .title .text h1 {
+  header .header-bg .popup {
+    width: 95%;
+    height: 85%;
+    left: 1.5%;
+    top: 13%;
+  }
+  header .header-bg .popup .form-box {
+    width: 100%;
+  }
+  header .header-bg .popup .title .text h1 {
     font-size: 30px;
   }
 }
-@media only screen and (max-width: 375px) {
-  header .header-bg .title .text .links {
+@media only screen and (max-width: 576px) and (max-width: 375px) {
+  header .title .text .links {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -517,6 +640,11 @@ footer .footer-bottom .copyright p {
   opacity: 0;
   transition: opacity 0.3s;
 }
+#our-offering .our-offering .our-offering-body .prod .img .opacity .opacity-icons .icon {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 25px;
+}
 #our-offering .our-offering .our-offering-body .prod .img img {
   height: 400px;
   width: 100%;
@@ -565,11 +693,6 @@ footer .footer-bottom .copyright p {
 }
 #our-offering .our-offering .our-offering-body .prod:hover .opacity .opacity-icons {
   opacity: 1;
-}
-#our-offering .our-offering .our-offering-body .prod:hover .opacity .opacity-icons .icon {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 25px;
 }
 #our-offering .our-offering .view-more {
   text-align: center;

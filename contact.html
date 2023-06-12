@@ -43,8 +43,7 @@
             <a href="#"><i class="fa-brands fa-dribbble"></i></a>
           </div>
           <div class="registr">
-            <a href="./sign-up.html">sign up</a>
-            <a href="./log-in.html">Log in</a>
+            <a href="#" class="btnLogin-popup">Log in</a>
           </div>
         </div>
       </div>
@@ -88,7 +87,16 @@
                       <li>
                         <a class="dropdown-item" href="./cart.html">Cart</a>
                       </li>
-                      <li><a class="dropdown-item" href="./checkout.html">Checkout</a></li>
+                      <li>
+                        <a class="dropdown-item" href="./checkout.html"
+                          >Checkout</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./favorites.html"
+                          >Favorites</a
+                        >
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -102,6 +110,67 @@
             </div>
           </div>
           <span class="menu">Menu</span>
+        </div>
+        <div class="popup">
+          <a href="#" class="icon-close"
+            ><i class="fa-solid fa-xmark close-popup"></i
+          ></a>
+          <div class="form-box login">
+            <h2>Login</h2>
+            <form action="">
+              <div class="input-box">
+                <label for="email">Email</label>
+                <input type="text" id="email" />
+              </div>
+              <div class="input-box">
+                <label for="pw">Password</label>
+                <input type="password" id="pw" />
+              </div>
+              <div class="remember-forget">
+                <label for="remember"
+                  ><input type="checkbox" />Remember me</label
+                >
+                <a href="#">Forgot Password?</a>
+              </div>
+              <button type="submit" class="login-btn">Login</button>
+              <div class="login-register">
+                <p>
+                  Don't have an account?
+                  <a href="#" class="register-link">Register</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="">
+              <div class="input-box">
+                <label for="userName">Username</label>
+                <input type="text" id="userName" />
+              </div>
+              <div class="input-box">
+                <label for="email">Email</label>
+                <input type="text" id="reg-email" />
+              </div>
+              <div class="input-box">
+                <label for="pw">Password</label>
+                <input type="password" id="reg-pw" />
+              </div>
+              <div class="agree">
+                <label
+                  ><input type="checkbox" required /> I agree to the terms &
+                  conditions</label
+                >
+              </div>
+              <button type="submit" class="register-btn">Register</button>
+              <div class="login-register">
+                <p>
+                  Already have an account?
+                  <a href="#" class="login-link">Login</a>
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
         <div class="about title">
           <div class="about-links">
@@ -228,7 +297,13 @@
                 </div>
                 <div class="col-md-12 input-text">
                   <label for="message">Message</label>
-                  <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholder="Message"
+                  ></textarea>
                 </div>
                 <div class="col-md-12 input-text">
                   <button type="submit" class="submit">Send Message</button>
@@ -252,9 +327,15 @@
                   countries.
                 </p>
                 <div class="footer-icons">
-                  <a href="#" class="tw"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#" class="in"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" class="tw"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                  <a href="#" class="fb"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="in"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -391,11 +472,20 @@
         duration: 2000,
         delay: 200,
       });
-      ScrollReveal().reveal(".title,.content,#footer", { delay: 100, origin: "bottom" });
+      ScrollReveal().reveal(".title,.content,#footer", {
+        delay: 100,
+        origin: "bottom",
+      });
       ScrollReveal().reveal(".google-map", { delay: 100, origin: "left" });
       ScrollReveal().reveal(".contact-us", { delay: 100, origin: "right" });
-      ScrollReveal().reveal(".cash-back,.loc,.tw", { delay: 130, origin: "bottom" });
-      ScrollReveal().reveal(".delivery,.tel,.fb", { delay: 150, origin: "bottom" });
+      ScrollReveal().reveal(".cash-back,.loc,.tw", {
+        delay: 130,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".delivery,.tel,.fb", {
+        delay: 150,
+        origin: "bottom",
+      });
       ScrollReveal().reveal(".plane,.in", { delay: 180, origin: "bottom" });
       ScrollReveal().reveal(".earth", { delay: 210, origin: "bottom" });
     </script>
