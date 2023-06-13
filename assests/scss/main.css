@@ -225,7 +225,7 @@ header .header-bg #my-cart .view-all {
 }
 header .header-bg .popup {
   position: absolute;
-  width: 60%;
+  width: 50%;
   height: 80%;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -255,7 +255,7 @@ header .header-bg .popup .close-popup {
   border-bottom-left-radius: 45%;
 }
 header .header-bg .popup .form-box {
-  width: 70%;
+  width: 75%;
   padding: 1.5rem;
 }
 header .header-bg .popup .form-box.login {
@@ -268,7 +268,8 @@ header .header-bg .popup .form-box.register {
   transform: translateX(1000px);
 }
 header .header-bg .popup .form-box.register .register-btn {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  padding: 3px 15px;
 }
 header .header-bg .popup .form-box.register .agree {
   color: rgb(218, 178, 168);

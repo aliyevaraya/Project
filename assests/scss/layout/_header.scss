@@ -219,7 +219,7 @@ header {
     }
     .popup {
       position: absolute;
-      width: 60%;
+      width: 50%;
       height: 80%;
       background: transparent;
       border: 2px solid rgba($white-color, 0.5);
@@ -246,7 +246,7 @@ header {
         border-bottom-left-radius: 45%;
       }
       .form-box {
-        width: 70%;
+        width:75%;
         padding: 1.5rem;
         &.login {
           transition: transform 0.18s ease;
@@ -258,7 +258,8 @@ header {
           transform: translateX(1000px);
           .register-btn {
             @extend %primary-btn;
-            margin: 1rem 0;
+            margin: .5rem 0;
+            padding: 3px 15px;
           }
           .agree {
             color: $light-color;
