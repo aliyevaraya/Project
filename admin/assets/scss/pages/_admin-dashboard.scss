@@ -1,0 +1,61 @@
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  #dashboard {
+    .admin {
+      padding: 2rem 0;
+      @include flexbox;
+      flex-direction: column;
+      background-color: rgb(223, 173, 135, 0.3);
+      .admin-img {
+        width: 80px;
+        height: 80px;
+        img {
+          width: 100%;
+        }
+      }
+      .admin-info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: .5rem;
+        .admin-name {
+          color: $bg-color;
+          font-weight: bold;
+          color: $secondary-color;
+          font-size: 20px;
+          font-style: italic;
+        }
+      }
+    }
+    .sidebar-list {
+      background-image: url("../images/sidebar-bg.jpg");
+      height: 80vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      @include flexbox;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-left: 0;
+      li {
+        padding: 1rem;
+        width: 100%;
+        font-size: 25px;
+        transition: all .3s;
+        &:hover{
+        background-color: rgba($red-color, 0.5);
+        }
+        a {
+          color: $bg-color;
+          i {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
