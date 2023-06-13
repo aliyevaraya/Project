@@ -26,6 +26,68 @@
   font-weight: bold;
 }
 
+.burger-menu {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.burger-menu .burger-menu-close {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+.burger-menu .burger-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.burger-menu .burger-nav ul li {
+  margin: 20px 0;
+}
+.burger-menu .burger-nav ul li a {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(183, 71, 42);
+}
+.burger-menu .burger-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -6px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.burger-menu .burger-nav ul li a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.burger-menu .burger-nav ul li.mobile-dropdown.show .dropdown-menu {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(150px);
+}
+.burger-menu .burger-nav ul li.mobile-dropdown.show .dropdown-menu a {
+  color: rgb(183, 71, 42);
+}
+@media only screen and (max-width: 1024px) {
+  .burger-menu.show-burger {
+    display: block;
+  }
+}
+
 header .header-top {
   display: flex;
   justify-content: space-between;
@@ -85,7 +147,7 @@ header .header-bg .header-nav {
 header .header-bg .header-nav.fixed-nav {
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   background-color: #fff;
   padding: 1.5% 10%;
@@ -462,6 +524,8 @@ header .header-bottom .content .text p {
 @media only screen and (max-width: 576px) and (max-width: 375px) {
   header .title .text .links {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
     gap: 15px;
   }

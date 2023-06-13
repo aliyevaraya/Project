@@ -1,3 +1,70 @@
+.burger-menu {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  background-color: rgba($dark-color, 0.8);
+  .burger-menu-close {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+    font-size: 20px;
+    color: $white-color;
+  }
+  .burger-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    ul {
+      li {
+        margin: 20px 0;
+        a {
+          position: relative;
+          font-size: 25px;
+          font-weight: bold;
+          font-style: italic;
+          color: $secondary-color;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: -6px;
+            height: 3px;
+            background-color: $white-color;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .5s;
+          }
+          &:hover::after{
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+        }
+        &.mobile-dropdown {
+          &.show {
+            .dropdown-menu {
+              display: block;
+              background-color: rgba($white-color, 0.5);
+              transform: translate(150px);
+              a {
+                color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    &.show-burger{
+      display: block;
+    }
+  }
+}
 header {
   .header-top {
     @include flexbox;
@@ -57,7 +124,7 @@ header {
       &.fixed-nav {
         position: fixed;
         top: 0;
-        z-index: 3;
+        z-index: 4;
         width: 100%;
         background-color: $white-color;
         padding: 1.5% 10%;
@@ -171,8 +238,8 @@ header {
       width: 300px;
       background-color: $bg-color;
       text-align: center;
-      transition: all .5s ease-in-out;
-      .close-cart{
+      transition: all 0.5s ease-in-out;
+      .close-cart {
         position: absolute;
         right: 0;
         padding: 5px;
@@ -181,26 +248,26 @@ header {
         background-color: $dark-color;
       }
       .my-cart {
-        padding-left: .5rem !important;
+        padding-left: 0.5rem !important;
         .incart {
           margin-top: 2rem;
           padding: 1rem;
           @include flexbox;
-       .cart-info{
-        display: flex;
-        gap: 1rem;
-        .img {
-          width: 40px;
-          height: 100%;
-          img {
-            width: 100%;
-            border-radius: 20%;
+          .cart-info {
+            display: flex;
+            gap: 1rem;
+            .img {
+              width: 40px;
+              height: 100%;
+              img {
+                width: 100%;
+                border-radius: 20%;
+              }
+            }
+            .info {
+              color: rgba($dark-color, 0.8);
+            }
           }
-        }
-        .info {
-          color: rgba($dark-color, 0.8);
-        }
-       }
           .remove-cart {
             color: $secondary-color;
             padding: 5px;
@@ -209,7 +276,7 @@ header {
           }
         }
       }
-      .view-all{
+      .view-all {
         color: $secondary-color;
         font-weight: bold;
         font-size: 18px;
@@ -246,7 +313,7 @@ header {
         border-bottom-left-radius: 45%;
       }
       .form-box {
-        width:75%;
+        width: 75%;
         padding: 1.5rem;
         &.login {
           transition: transform 0.18s ease;
@@ -258,7 +325,7 @@ header {
           transform: translateX(1000px);
           .register-btn {
             @extend %primary-btn;
-            margin: .5rem 0;
+            margin: 0.5rem 0;
             padding: 3px 15px;
           }
           .agree {
@@ -492,7 +559,7 @@ header {
       .title {
         .text {
           .links {
-            display: flex;
+            @include flexbox;
             flex-direction: column;
             gap: 15px;
           }
