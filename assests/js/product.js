@@ -99,6 +99,7 @@
 // });
 
 //////////
+
 const prods = document.querySelector(".prods");
 const PRODUCTS_URL = "http://localhost:8080/products";
 
