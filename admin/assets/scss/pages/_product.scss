@@ -1,0 +1,13 @@
+.statics{
+    .search-sort{
+        @include flexbox;
+        select{
+            font-style: italic;
+            border: transparent;
+            padding: 5px 30px;
+            &:hover{
+                background-image: linear-gradient(90deg,$secondary-color,$red-color,$primary-color );
+            }
+        }
+    }
+}

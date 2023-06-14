@@ -66,11 +66,7 @@
 }
 #dashboard .statics {
   width: 75%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   background-color: rgb(245, 244, 240);
 }
 #dashboard .statics #cards {
@@ -82,21 +78,107 @@
   justify-content: space-between;
   align-items: center;
 }
-#dashboard .statics #cards .cards .card {
+#dashboard .statics #cards .cards .dash-card {
   padding: 4rem;
   background-color: rgb(118, 32, 49);
   border-radius: 8px;
   color: #fff;
   transition: all 0.5s ease;
 }
-#dashboard .statics #cards .cards .card:hover {
+#dashboard .statics #cards .cards .dash-card:hover {
   transform: scale(1.1);
   background-color: rgba(118, 32, 49, 0.8);
 }
 #dashboard .statics .chart {
-  margin-top: 1.5rem;
+  padding: 2rem;
 }
 #dashboard .statics .chart #barchart {
   width: 700px !important;
   height: 450px !important;
+}
+
+.statics input {
+  border: 1px solid transparent;
+  padding: 5px 25px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in;
+}
+.statics input:hover {
+  border: 1px solid sienna;
+}
+.statics .table-card {
+  margin: 60px 30px;
+}
+.statics .table-card h3 {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.statics .table-card h3::after {
+  content: "";
+  border: 2px solid brown;
+  width: 120px;
+  margin-top: 5px;
+}
+.statics .table-card .table tbody td img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.statics .table-card #card-sec {
+  display: none;
+}
+.statics .table-card #card-sec .card {
+  position: relative;
+  padding: 20px;
+}
+.statics .table-card #card-sec .card .id-date {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.statics .table-card #card-sec .card .id-date .card-id {
+  color: blueviolet;
+}
+.statics .table-card #card-sec .card .id-date .card-date {
+  color: green;
+}
+.statics .table-card #card-sec .card .card-info {
+  display: flex;
+}
+.statics .table-card #card-sec .card .card-info .img-name {
+  display: flex;
+}
+.statics .table-card #card-sec .card .card-info .img-name img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.statics .table-card #card-sec .card .card-info .img-name div {
+  display: flex;
+  flex-direction: column;
+}
+.statics .table-card #card-sec .card .card-info .btns {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  right: 8%;
+  bottom: 5%;
+}
+
+.statics .search-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.statics .search-sort select {
+  font-style: italic;
+  border: transparent;
+  padding: 5px 30px;
+}
+.statics .search-sort select:hover {
+  background-image: linear-gradient(90deg, rgb(60, 22, 23), rgb(118, 32, 49), rgb(223, 173, 135));
 }/*# sourceMappingURL=main.css.map */
