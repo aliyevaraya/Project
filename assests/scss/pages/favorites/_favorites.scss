@@ -2,7 +2,9 @@
   padding: 4rem;
   .favs {
     @include flexbox;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
     .fav {
         margin-bottom: 2rem ;
       .fav-img {

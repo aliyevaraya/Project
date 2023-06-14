@@ -743,30 +743,6 @@ footer .footer-bottom .copyright p {
 #our-offering .our-offering .our-offering-body .prod .img {
   position: relative;
 }
-#our-offering .our-offering .our-offering-body .prod .img .opacity {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-#our-offering .our-offering .our-offering-body .prod .img .opacity .opacity-icons {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-#our-offering .our-offering .our-offering-body .prod .img .opacity .opacity-icons .icon {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 25px;
-}
 #our-offering .our-offering .our-offering-body .prod .img img {
   height: 400px;
   width: 100%;
@@ -1011,7 +987,7 @@ footer .footer-bottom .copyright p {
   transform: translateY(-20px);
   color: #fff;
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   transition: opacity 0.3s ease-out, transform 0.4s ease-in-out;
 }
 #our-team .team-member .team-member-img .hover .social-icons a::before {
@@ -1776,7 +1752,9 @@ footer .footer-bottom .copyright p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 #favs .favs .fav {
   margin-bottom: 2rem;

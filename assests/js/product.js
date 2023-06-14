@@ -102,6 +102,7 @@
 
 const prods = document.querySelector(".prods");
 const PRODUCTS_URL = "http://localhost:8080/products";
+const FAV_URL = "http://localhost:8080/favorites";
 
 let copyArr = [];
 
@@ -150,10 +151,10 @@ getCard();
 async function addFav(id) {
   const res = await axios(`${PRODUCTS_URL}/${id}`);
   const obj = await res.data;
-  let res_fav = await axios(PRODUCTS_URL_FAV);
+  let res_fav = await axios(FAV_URL);
   let data_fav = res_fav.data;
   let bool= data_fav.find(item=>item.id==obj.id);
   if (!bool) {
-    await axios.post(BASE_URL_fav, obj);
+    await axios.post(FAV_URL, obj);
   } else alert("You already add this to Fav");
 }

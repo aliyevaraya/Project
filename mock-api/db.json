@@ -1,229 +1,223 @@
 {
-    "products":[
-        {
-            "id":1,
-            "name": "Brandy",
-            "type": "Rum",
-            "price": 69.00,
-            "newPrice": 49.00,
-            "photo": "./assests/images/prod-5.jpg"
-        },
-        {
-            "id":2,
-            "name": "Brandy",
-            "type": "Rum",
-            "price": 59.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":3,
-            "name": "Brandy",
-            "type": "Rum",
-            "price": 60.00,
-            "newPrice":49.00,
-            "photo": "./assests/images/prod-4.jpg"
-        },
-        {
-            "id":4,
-            "name": "Rum",
-            "type": "Rum",
-            "price": 69.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":5,
-            "name": "Brandy",
-            "type": "Rum",
-            "price": 69.00,
-            "newPrice": 50.00,
-            "photo": "./assests/images/prod-2.jpg"
-        },
-        {
-            "id":6,
-            "name": "Brandy",
-            "type": "Brandy",
-            "price": 69.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":7,
-            "name": "Brandy",
-            "type": "Brandy",
-            "price": 80.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":8,
-            "name": "Gin",
-            "type": "Brandy",
-            "price": 69.00,
-            "photo": "./assests/images/prod-5.jpg"
-        },
-        {
-            "id":9,
-            "name": "Brandy",
-            "type": "Brandy",
-            "price": 69.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":10,
-            "name": "Brandy",
-            "type": "Gin",
-            "price": 49.00,
-            "photo": "./assests/images/prod-2.jpg"
-        },
-        {
-            "id":11,
-            "name": "Brandy",
-            "type": "Gin",
-            "price": 69.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":12,
-            "name": "Brandy",
-            "type": "Gin",
-            "price": 67.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":13,
-            "name": "Brandy",
-            "type": "Gin",
-            "price": 65.00,
-            "photo": "./assests/images/prod-4.jpg"
-        },
-        {
-            "id":14,
-            "name": "Vodka",
-            "type": "Gin",
-            "price": 63.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":15,
-            "name": "Gin",
-            "type": "Gin",
-            "price": 69.00,
-            "photo": "./assests/images/prod-3.jpg"
-        },
-        {
-            "id":16,
-            "name": "Brandy",
-            "type": "Tequila",
-            "price": 62.00,
-            "photo": "./assests/images/prod-1.jpg"
-        },
-        {
-            "id":17,
-            "name": "Brandy",
-            "type": "Tequila",
-            "price": 69.00,
-            "photo": "./assests/images/prod-2.jpg"
-        }
-    ],
-    "blogs":[
-        {
-            "id":1,
-            "title": "lorem",
-            "content":" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, tempore temporibus! Ex fugiat provident delectus impedit natus ea ducimus reprehenderit voluptatem voluptate soluta mollitia animi, autem eligendi eum quaerat enim.",
-            "date": "23 April 2020",
-            "photo":"./assests/images/image_2.jpg"
-
-        },
-        {
-            "id":2,
-            "title": "lorem",
-            "content":" cumque repellat omnis nisi sequi debitis lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,",
-            "date": "23 April 2020",
-            "photo":"./assests/images/image_1.jpg"
-
-        },
-        {
-            "id":3,
-            "title": "lorem",
-            "content":"Lorem ipsum dolor, sit amet consectetur adip cumque repellat omnis nisi sequi debitis lorem",
-            "date": "23 April 2020",
-            "photo":"./assests/images/image_3.jpg"
-
-        },
-        {
-            "id":4,
-            "title": "lorem",
-            "content":" cumque repellatLorem ipsum dolor, sit amet consectetur adip omnis nisi sequi debitis lorem",
-            "date": "23 April 2020",
-            "photo":"./assests/images/image_4.jpg"
-
-        }
-
-    ],
-    "team":[
-        {
-            "id": 1,
-            "name": "AZZURRA MARCIO",
-            "job":"Manager",
-            "photo":"./assests/images/team-2.jpg"
-
-        },
-        {
-            "id": 2,
-            "name": "PIETRO CONTE",
-            "job":"Founder",
-            "photo":"./assests/images/team-3.jpg"
-            
-        },
-        {
-            "id": 4,
-            "name": "IMMA SAVASTANO",
-            "job": "General Director",
-            "photo":"./assests/images/team-4.jpg"
-
-        },
-        {
-            "id": 3,
-            "name": "PATRIZIA LEVANTE",
-            "job":"Sommelier",
-            "photo":"./assests/images/team-5.jpg"
-
-        },
-        {
-            "id": 5,
-            "name": "AZZURRA MARCIO",
-            "job":"Sommelier",
-            "photo":"./assests/images/team-2.jpg"
-
-        },
-        {
-            "id": 6,
-            "name": "PAOLO ARDITTO",
-            "job":"Sommelier",
-            "photo":"./assests/images/team-2.jpg"
-
-        },
-        {
-            "id": 7,
-            "name": "AZZURRA MARCIO",
-            "job":"Sommelier",
-            "photo":"./assests/images/team-2.jpg"
-
-        },
-        {
-            "id": 8,
-            "name": "AZZURRA MARCIO",
-            "job":"Sommelier",
-            "photo":"./assests/images/team-2.jpg"
-
-        }
- 
-    ],
-    "favorites":[
-        {
-            "id":17,
-            "name": "Brandy",
-            "type": "Tequila",
-            "price": 69.00,
-            "photo": "./assests/images/prod-2.jpg"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Brandy",
+      "type": "Rum",
+      "price": 69,
+      "newPrice": 49,
+      "photo": "./assests/images/prod-5.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Brandy",
+      "type": "Rum",
+      "price": 59,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Brandy",
+      "type": "Rum",
+      "price": 60,
+      "newPrice": 49,
+      "photo": "./assests/images/prod-4.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Rum",
+      "type": "Rum",
+      "price": 69,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Brandy",
+      "type": "Rum",
+      "price": 69,
+      "newPrice": 50,
+      "photo": "./assests/images/prod-2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Brandy",
+      "type": "Brandy",
+      "price": 69,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Brandy",
+      "type": "Brandy",
+      "price": 80,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Gin",
+      "type": "Brandy",
+      "price": 69,
+      "photo": "./assests/images/prod-5.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Brandy",
+      "type": "Brandy",
+      "price": 69,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Brandy",
+      "type": "Gin",
+      "price": 49,
+      "photo": "./assests/images/prod-2.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Brandy",
+      "type": "Gin",
+      "price": 69,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Brandy",
+      "type": "Gin",
+      "price": 67,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Brandy",
+      "type": "Gin",
+      "price": 65,
+      "photo": "./assests/images/prod-4.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Vodka",
+      "type": "Gin",
+      "price": 63,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Gin",
+      "type": "Gin",
+      "price": 69,
+      "photo": "./assests/images/prod-3.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Brandy",
+      "type": "Tequila",
+      "price": 62,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Brandy",
+      "type": "Tequila",
+      "price": 69,
+      "photo": "./assests/images/prod-2.jpg"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "lorem",
+      "content": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, tempore temporibus! Ex fugiat provident delectus impedit natus ea ducimus reprehenderit voluptatem voluptate soluta mollitia animi, autem eligendi eum quaerat enim.",
+      "date": "23 April 2020",
+      "photo": "./assests/images/image_2.jpg"
+    },
+    {
+      "id": 2,
+      "title": "lorem",
+      "content": " cumque repellat omnis nisi sequi debitis lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,",
+      "date": "23 April 2020",
+      "photo": "./assests/images/image_1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "lorem",
+      "content": "Lorem ipsum dolor, sit amet consectetur adip cumque repellat omnis nisi sequi debitis lorem",
+      "date": "23 April 2020",
+      "photo": "./assests/images/image_3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "lorem",
+      "content": " cumque repellatLorem ipsum dolor, sit amet consectetur adip omnis nisi sequi debitis lorem",
+      "date": "23 April 2020",
+      "photo": "./assests/images/image_4.jpg"
+    }
+  ],
+  "team": [
+    {
+      "id": 1,
+      "name": "AZZURRA MARCIO",
+      "job": "Manager",
+      "photo": "./assests/images/team-2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "PIETRO CONTE",
+      "job": "Founder",
+      "photo": "./assests/images/team-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "IMMA SAVASTANO",
+      "job": "General Director",
+      "photo": "./assests/images/team-4.jpg"
+    },
+    {
+      "id": 3,
+      "name": "PATRIZIA LEVANTE",
+      "job": "Sommelier",
+      "photo": "./assests/images/team-5.jpg"
+    },
+    {
+      "id": 5,
+      "name": "AZZURRA MARCIO",
+      "job": "Sommelier",
+      "photo": "./assests/images/team-2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "PAOLO ARDITTO",
+      "job": "Sommelier",
+      "photo": "./assests/images/team-2.jpg"
+    },
+    {
+      "id": 7,
+      "name": "AZZURRA MARCIO",
+      "job": "Sommelier",
+      "photo": "./assests/images/team-2.jpg"
+    },
+    {
+      "id": 8,
+      "name": "AZZURRA MARCIO",
+      "job": "Sommelier",
+      "photo": "./assests/images/team-2.jpg"
+    }
+  ],
+  "favorites": [
+    {
+      "id": 2,
+      "name": "Brandy",
+      "type": "Rum",
+      "price": 59,
+      "photo": "./assests/images/prod-1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Brandy",
+      "type": "Rum",
+      "price": 60,
+      "newPrice": 49,
+      "photo": "./assests/images/prod-4.jpg"
+    }
+  ]
 }
