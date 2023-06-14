@@ -10,14 +10,13 @@
   outline: none;
 }
 
-#sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 300px;
+#dashboard {
+  display: flex;
 }
-#sidebar #dashboard .admin {
+#dashboard #sidebar {
+  width: 25%;
+}
+#dashboard #sidebar .admin {
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
@@ -25,51 +24,79 @@
   flex-direction: column;
   background-color: rgba(223, 173, 135, 0.3);
 }
-#sidebar #dashboard .admin .admin-img {
+#dashboard #sidebar .admin .admin-img {
   width: 80px;
   height: 80px;
 }
-#sidebar #dashboard .admin .admin-img img {
+#dashboard #sidebar .admin .admin-img img {
   width: 100%;
 }
-#sidebar #dashboard .admin .admin-info {
+#dashboard #sidebar .admin .admin-info {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: 0.5rem;
 }
-#sidebar #dashboard .admin .admin-info .admin-name {
+#dashboard #sidebar .admin .admin-info .admin-name {
   color: rgb(245, 244, 240);
   font-weight: bold;
   color: rgb(60, 22, 23);
   font-size: 20px;
   font-style: italic;
 }
-#sidebar #dashboard .sidebar-list {
-  background-image: url("../images/sidebar-bg.jpg");
-  height: 80vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
+#dashboard #sidebar .sidebar-list {
+  height: 100%;
+  background-color: rgb(118, 32, 49);
   padding-left: 0;
 }
-#sidebar #dashboard .sidebar-list li {
-  padding: 1rem;
+#dashboard #sidebar .sidebar-list li {
+  padding: 2rem;
   width: 100%;
   font-size: 25px;
   transition: all 0.3s;
 }
-#sidebar #dashboard .sidebar-list li:hover {
-  background-color: rgba(118, 32, 49, 0.5);
+#dashboard #sidebar .sidebar-list li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
-#sidebar #dashboard .sidebar-list li a {
+#dashboard #sidebar .sidebar-list li a {
   color: rgb(245, 244, 240);
 }
-#sidebar #dashboard .sidebar-list li a i {
+#dashboard #sidebar .sidebar-list li a i {
   margin-right: 1rem;
+}
+#dashboard .statics {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  background-color: rgb(245, 244, 240);
+}
+#dashboard .statics #cards {
+  width: 100%;
+}
+#dashboard .statics #cards .cards {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#dashboard .statics #cards .cards .card {
+  padding: 4rem;
+  background-color: rgb(118, 32, 49);
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+#dashboard .statics #cards .cards .card:hover {
+  transform: scale(1.1);
+  background-color: rgba(118, 32, 49, 0.8);
+}
+#dashboard .statics .chart {
+  margin-top: 1.5rem;
+}
+#dashboard .statics .chart #barchart {
+  width: 700px !important;
+  height: 450px !important;
 }/*# sourceMappingURL=main.css.map */

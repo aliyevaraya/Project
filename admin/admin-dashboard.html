@@ -10,17 +10,67 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="./assets/scss/main.css" />
     <title>Document</title>
   </head>
   <body>
-    <section id="sidebar">
+    <section id="dashboard">
+            <div id="sidebar">
+                <div class="admin">
+                  <div class="admin-img">
+                    <img src="./assets/images/avatar.jpg" alt="" />
+                  </div>
+                  <div class="admin-info">
+                    <span>Welcome</span>
+                    <span class="admin-name">Violet Evergarden</span>
+                  </div>
+                </div>
+                <ul class="sidebar-list">
+                  <li>
+                    <a href="./admin-dashboard.html"
+                      ><i class="fa-solid fa-table-columns"></i>Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./team.html"
+                      ><i class="fa-solid fa-people-group"></i>Our Team</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./product.html"
+                      ><i class="fa-solid fa-wine-bottle"></i>Products</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./blog.html"
+                      ><i class="fa-solid fa-file-lines"></i>Recent Blogs</a
+                    >
+                  </li>
+                </ul>
+            </div>
+           <div class="statics">
+            <div id="cards">
+              <div class="cards">
+                <div class="card our-team">
+                  <h1>Our Team</h1>
+                </div>
+                <div class="card products">
+                  <h1>Our Products</h1>
+                </div>
+                <div class="card blogs">
+                  <h1>Recent Blogs</h1>
+                </div>
+              </div>
+            </div>
+            <div class="chart">
+              <canvas id="barchart" width="300" height="300"></canvas>
+            </div>
+           </div>
+    </section>
+
+
+
+    <!-- <section id="sidebar">
       <div id="dashboard">
         <div class="admin">
           <div class="admin-img">
@@ -54,9 +104,64 @@
           </li>
         </ul>
       </div>
-    </section>
-    <section>
-        
-    </section>
+    </section> -->
+    <!-- <section id="cards">
+        <div class="cards">
+            <div class="our-team">
+                <h1>Our Team</h1>
+            </div>
+            <div class="products">
+                <h1>Our Products</h1>
+            </div>
+            <div class="blogs">
+                <h1>Recent Blogs</h1>
+            </div>
+        </div>
+    </section> -->
+    <!-- <div class="container">
+        <div class="chart">
+            <canvas id="barchart" width="300" height="300"></canvas>
+        </div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script>
+      const ctx = document.getElementById("barchart").getContext("2d");
+      const barchart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Vodka", "Whiskey", "Gin", "Rum", "Tequila", "Others"],
+          datasets: [
+            {
+              label: "Products statics",
+              data: [2, 19, 13, 25, 2, 13],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
