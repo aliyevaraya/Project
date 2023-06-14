@@ -1,0 +1,48 @@
+.statics {
+  .form {
+    @include flexbox;
+    justify-content: center;
+    margin: 1.5rem;
+    border: 1px solid rgba($red-color, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    form {
+      width: 50%;
+      h2 {
+        padding: 1rem;
+        text-align: center;
+        color: $grey-color;
+      }
+      label {
+        color: rgba($red-color, 0.8);
+      }
+      input {
+        border-radius: 8px;
+      }
+      textarea:hover {
+        border: 1px solid $red-color;
+      }
+      .submit {
+        @extend %add-btn;
+        &:hover{
+          background-color: rgba($primary-color,.6);
+          color: $dark-color;
+        }
+      }
+    }
+  }
+
+.blogs{
+  h1{
+      text-align: center;
+        color: $grey-color;
+    }
+    #blog-cards {
+        padding: 2rem;
+        @include flexbox;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+}
+}

@@ -2,9 +2,9 @@
 const menuIcon = document.querySelector(".menu");
 const burgerMenu = document.querySelector(".burger-menu");
 const closeIcon = document.querySelector(".burger-menu-close");
+const headerNav = document.querySelector(".header-nav");
 menuIcon.addEventListener("click", () => {
   burgerMenu.classList.add("show-burger");
-
 });
 closeIcon.addEventListener("click", () => {
   burgerMenu.classList.remove("show-burger");

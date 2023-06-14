@@ -10,11 +10,22 @@
   outline: none;
 }
 
+.statics .form form .submit {
+  padding: 6px 25px;
+  background-color: rgb(223, 173, 135);
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  text-align: center;
+  transition: all 0.4s;
+}
+
 #dashboard {
   display: flex;
 }
 #dashboard #sidebar {
   width: 25%;
+  position: fixed;
 }
 #dashboard #sidebar .admin {
   padding: 2rem 0;
@@ -45,7 +56,7 @@
   font-style: italic;
 }
 #dashboard #sidebar .sidebar-list {
-  height: 100%;
+  height: 100vh;
   background-color: rgb(118, 32, 49);
   padding-left: 0;
 }
@@ -67,10 +78,9 @@
 #dashboard .statics {
   width: 75%;
   padding: 2rem 1rem;
+  position: relative;
+  left: 23rem;
   background-color: rgb(245, 244, 240);
-}
-#dashboard .statics #cards {
-  width: 100%;
 }
 #dashboard .statics #cards .cards {
   margin: 1rem;
@@ -82,8 +92,10 @@
   padding: 4rem;
   background-color: rgb(118, 32, 49);
   border-radius: 8px;
-  color: #fff;
   transition: all 0.5s ease;
+}
+#dashboard .statics #cards .cards .dash-card a {
+  color: #fff;
 }
 #dashboard .statics #cards .cards .dash-card:hover {
   transform: scale(1.1);
@@ -93,7 +105,7 @@
   padding: 2rem;
 }
 #dashboard .statics .chart #barchart {
-  width: 700px !important;
+  width: 900px !important;
   height: 450px !important;
 }
 
@@ -147,4 +159,49 @@
 .statics .search-sort select:hover option {
   color: rgb(223, 173, 135);
   padding: 15px;
+}
+
+.statics .form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+  border: 1px solid rgba(118, 32, 49, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+}
+.statics .form form {
+  width: 50%;
+}
+.statics .form form h2 {
+  padding: 1rem;
+  text-align: center;
+  color: rgb(38, 84, 100);
+}
+.statics .form form label {
+  color: rgba(118, 32, 49, 0.8);
+}
+.statics .form form input {
+  border-radius: 8px;
+}
+.statics .form form textarea:hover {
+  border: 1px solid rgb(118, 32, 49);
+}
+.statics .form form .submit:hover {
+  background-color: rgba(223, 173, 135, 0.6);
+  color: black;
+}
+.statics .blogs h1 {
+  text-align: center;
+  color: rgb(38, 84, 100);
+}
+.statics .blogs #blog-cards {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=main.css.map */
