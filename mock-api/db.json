@@ -216,5 +216,14 @@
 
         }
  
+    ],
+    "favorites":[
+        {
+            "id":17,
+            "name": "Brandy",
+            "type": "Tequila",
+            "price": 69.00,
+            "photo": "./assests/images/prod-2.jpg"
+        }
     ]
 }

@@ -114,9 +114,9 @@ function drawCards(arr) {
       <div class="img">
         <div class="opacity">
           <div class="opacity-icons">
-            <i class="icon fa-solid fa-bag-shopping"></i>
-            <i class="icon fa-regular fa-heart"></i>
-            <i class="icon fa-regular fa-eye"></i>
+            <a href="#"><i class="icon fa-solid fa-bag-shopping"></i></a>
+            <a href="#" onclick=addFav(${el.id})><i class="icon fa-regular fa-heart"></i></a>
+           <a href="./detail.html?id=${el.id}"><i class="icon fa-regular fa-eye"></i></a>
           </div>
         </div>
         <img src="${el.photo}" alt="" />
@@ -136,9 +136,24 @@ function drawCards(arr) {
 }
 
 async function getCard() {
+try {
   const res = await axios(PRODUCTS_URL);
   const data = res.data;
   copyArr = data;
   drawCards(copyArr);
+} catch (error) {
+  console.log(error);
+}
 }
 getCard();
+
+async function addFav(id) {
+  const res = await axios(`${PRODUCTS_URL}/${id}`);
+  const obj = await res.data;
+  let res_fav = await axios(PRODUCTS_URL_FAV);
+  let data_fav = res_fav.data;
+  let bool= data_fav.find(item=>item.id==obj.id);
+  if (!bool) {
+    await axios.post(BASE_URL_fav, obj);
+  } else alert("You already add this to Fav");
+}
