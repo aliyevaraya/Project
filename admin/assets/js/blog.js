@@ -12,24 +12,25 @@ const search = document.querySelector("#search");
 
 let copyArr = [];
 let filtered = [];
-
+let base64;
 async function drawTable(arr) {
   cards.innerHTML = "";
   arr.forEach((blog) => {
     cards.innerHTML += `
     <div class="card" style="width: 13rem">
     <img
-      src="./${blog.photo}"
+      src="${blog.photo}"
       class="card-img-top"
       alt="..."
-      style="width: 100%; height: 200px"
+      style="width: 100%; height: 200px ;  object-fit: cover;
+      object-position: 50% 50%;"
     />
     <div class="card-body">
       <h5 class="card-title">
         ${blog.title}
       </h5>
       <p class="card-text">
-        ${blog.content.slice(0, 50)}...
+        ${blog.content.slice(0,50)}...
       </p>
       <p>${blog.date}</p>
       <a href="#" class="btn btn-danger" onclick=delCard(${blog.id},this)
@@ -88,7 +89,7 @@ form.addEventListener("submit", (e) => {
       title: blogTitle.value,
       content: content.value,
       date: date.value,
-      photo: `../../assets/images/${photo.value.split("\\")[2]}`,
+      photo: base64,
     };
 
     if (status) {
@@ -110,4 +111,28 @@ search.addEventListener("input", async (e) => {
     );
     defaultArr = filtered;
     getData();
+  });
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+  
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+  
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+  
+  const uploadImage = async (event) => {
+    const file = event.target.files[0];
+    base64 = await convertBase64(file);
+  };
+  
+  photo.addEventListener("change", (e) => {
+    uploadImage(e);
   });
