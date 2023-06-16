@@ -16,11 +16,11 @@ let filtered = [];
 let defaultArr = [];
 
 async function drawTable(arr) {
-    tbody.innerHTML="";
+  tbody.innerHTML = "";
   arr.forEach((prod) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-<td><img src="./${prod.photo}"></td>
+<td><img src="${prod.photo}"/></td>
 <td>${prod.name}</td>
 <td>${prod.type}</td>
 <td>${prod.price}</td>
@@ -29,14 +29,14 @@ async function drawTable(arr) {
 <a href="#" class="btn text-danger" onclick=delProd(${prod.id},this)><i class="fa-solid fa-trash-arrow-up fa-bounce"></i></a>
 </td>
 `;
-    tbody.append("tr");
+    tbody.append(tr);
   });
 }
 
 async function getData() {
   try {
-    let res = await axios(`${BASE_URL}`);
-    let data = res.data;
+    const res = await axios(BASE_URL);
+    const data = res.data;
     copyArr = data;
     filtered = filtered.length || search.value ? filtered : data;
     drawTable(filtered);
@@ -51,6 +51,8 @@ async function delProd(id, btn) {
   btn.closest("tr").remove();
 }
 
+let prodId;
+let status;
 async function editProd(id) {
   prodId = id;
   status = true;

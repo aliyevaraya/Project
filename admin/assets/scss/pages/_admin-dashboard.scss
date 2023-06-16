@@ -1,6 +1,5 @@
 #dashboard {
   display: flex;
-  // height: 100%;
   #sidebar {
     width: 25%;
     position: fixed;
@@ -54,13 +53,11 @@
 
   .statics {
     width: 75%;
-    // height: 100%;
     padding: 2rem 1rem;
     position: relative;
     left: 23rem;
     background-color: $bg-color;
     #cards {
-      // width: 100%;
       .cards {
         margin: 1rem;
         @include flexbox;

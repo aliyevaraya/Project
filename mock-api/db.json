@@ -56,29 +56,8 @@
       "id": 8,
       "name": "Gin",
       "type": "Brandy",
-      "price": 69,
-      "photo": "./assests/images/prod-5.jpg"
-    },
-    {
-      "id": 9,
-      "name": "Brandy",
-      "type": "Brandy",
-      "price": 69,
-      "photo": "./assests/images/prod-1.jpg"
-    },
-    {
-      "id": 10,
-      "name": "Brandy",
-      "type": "Gin",
-      "price": 49,
-      "photo": "./assests/images/prod-2.jpg"
-    },
-    {
-      "id": 11,
-      "name": "Brandy",
-      "type": "Gin",
-      "price": 69,
-      "photo": "./assests/images/prod-1.jpg"
+      "price": "60",
+      "photo": "../../assets/images/kind-1.jpg"
     },
     {
       "id": 12,
@@ -123,41 +102,34 @@
       "photo": "./assests/images/prod-2.jpg"
     },
     {
-      "name": "Pandora Todd",
-      "type": "Consequatur Possimu",
-      "price": "935",
-      "photo": "../../assets/images/image_3.jpg",
+      "name": "Vodka",
+      "type": "Odit quis qui id eiu",
+      "price": "43",
+      "photo": "../../assets/images/prod-8.jpg",
       "id": 18
-    },
-    {
-      "name": "Ralph Villarreal",
-      "type": "Asperiores debitis v",
-      "price": "135",
-      "photo": "../../assets/images/kind-3.jpg",
-      "id": 19
     }
   ],
   "blogs": [
     {
       "id": 1,
-      "title": "lorem",
+      "title": "ipsum",
       "content": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, tempore temporibus! Ex fugiat provident delectus impedit natus ea ducimus reprehenderit voluptatem voluptate soluta mollitia animi, autem eligendi eum quaerat enim.",
-      "date": "23 April 2020",
-      "photo": "./assests/images/image_2.jpg"
+      "date": "12 Aprel 2023",
+      "photo": "../../assets/images/kind-3.jpg"
     },
     {
       "id": 2,
-      "title": "lorem",
+      "title": "lori",
       "content": " cumque repellat omnis nisi sequi debitis lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,",
-      "date": "23 April 2020",
-      "photo": "./assests/images/image_1.jpg"
+      "date": "13-December-2020",
+      "photo": "../../assets/images/header-bg.jpg"
     },
     {
       "id": 3,
-      "title": "lorem",
+      "title": "llorem",
       "content": "Lorem ipsum dolor, sit amet consectetur adip cumque repellat omnis nisi sequi debitis lorem",
-      "date": "23 April 2020",
-      "photo": "./assests/images/image_3.jpg"
+      "date": "25-June-2021",
+      "photo": "../../assets/images/image_3.jpg"
     },
     {
       "id": 4,
@@ -223,6 +195,13 @@
       "job": "Consequat Omnis lab",
       "photo": "./assets/images/image_3.jpg",
       "id": 8
+    },
+    {
+      "name": "Laurel Harding",
+      "surname": "Noel",
+      "job": "Temporibus nihil et ",
+      "photo": "./assets/images/image_3.jpg",
+      "id": 9
     }
   ]
 }

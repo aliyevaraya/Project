@@ -8,7 +8,9 @@ const form = document.querySelector("form");
 const tbody = document.querySelector("tbody");
 const submitBtn = document.querySelector(".submit");
 const notification = document.querySelector("#notif");
+const search = document.querySelector("#search");
 let copyArr=[]
+let filtered=[]
 
 function drawTable(arr) {
   tbody.innerHTML = "";
@@ -44,7 +46,8 @@ async function getData() {
     let res = await axios(`${BASE_URL}`);
     let data = res.data;
     copyArr=data
-    drawTable(copyArr);
+    filtered = filtered.length || search.value ? filtered : data;
+    drawTable(filtered);
   } catch (error) {
     console.log(error);
   }
@@ -65,10 +68,10 @@ try {
 async function editWorker(id) {
   workerId = id;
   status = true;
-  copyArr = copyArr.find((el) => el.id == id);
-  name.value = copyArr.name;
-  surname.value = copyArr.surname;
-  job.value = copyArr.job;
+  filtered = copyArr.find((el) => el.id == id);
+  name.value = filtered.name;
+  surname.value = filtered.surname;
+  job.value = filtered.job;
   submitBtn.innerHTML = "Edit";
   title.innerHTML="Edit Worker"
 }
@@ -93,4 +96,12 @@ form.addEventListener("submit", (e) => {
   } else {
     showAlert("please fill all fields", "danger");
   }
+});
+
+search.addEventListener("input", async (e) => {
+  filtered = copyArr;
+  filtered = filtered.filter((el) =>
+    el.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+  );
+  getData();
 });

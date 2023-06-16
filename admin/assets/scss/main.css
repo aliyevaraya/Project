@@ -114,6 +114,7 @@
   padding: 5px 25px;
   border-radius: 8px;
   transition: all 0.2s ease-in;
+  margin-bottom: 1.5rem;
 }
 .statics input:hover {
   border: 1px solid sienna;
