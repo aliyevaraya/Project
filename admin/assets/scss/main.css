@@ -93,9 +93,15 @@
   background-color: rgb(118, 32, 49);
   border-radius: 8px;
   transition: all 0.5s ease;
+  text-align: center;
 }
 #dashboard .statics #cards .cards .dash-card a {
   color: #fff;
+}
+#dashboard .statics #cards .cards .dash-card .data-count {
+  margin-top: 1rem;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.7);
 }
 #dashboard .statics #cards .cards .dash-card:hover {
   transform: scale(1.1);

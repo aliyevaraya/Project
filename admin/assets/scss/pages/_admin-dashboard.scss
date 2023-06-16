@@ -66,8 +66,14 @@
           background-color: $red-color;
           border-radius: 8px;
           transition: all 0.5s ease;
+          text-align: center;
           a {
             color: $white-color;
+          }
+          .data-count{
+            margin-top: 1rem;
+            font-size: 25px;
+            color: rgba($white-color, 0.7);
           }
           &:hover {
             transform: scale(1.1);
