@@ -9,8 +9,12 @@ const tbody = document.querySelector("tbody");
 const submitBtn = document.querySelector(".submit");
 const notification = document.querySelector("#notif");
 const search = document.querySelector("#search");
-let copyArr=[]
-let filtered=[]
+
+let copyArr = [];
+let filtered = [];
+let status = false;
+let userId;
+let base64;
 
 function drawTable(arr) {
   tbody.innerHTML = "";
@@ -38,14 +42,11 @@ function showAlert(massage, className) {
   }, 9000);
 }
 
-let status = false;
-let userId;
-let base64
 async function getData() {
   try {
     let res = await axios(`${BASE_URL}`);
     let data = res.data;
-    copyArr=data
+    copyArr = data;
     filtered = filtered.length || search.value ? filtered : data;
     drawTable(filtered);
   } catch (error) {
@@ -55,14 +56,13 @@ async function getData() {
 getData();
 
 async function delWorker(id) {
-try {
-  await axios.delete(`${BASE_URL}/${id}`);
-  btn.closest("tr").remove();
-  showAlert(`user succesfully deleted`, `danger`);
-} catch (error) {
-  console.log(error);
-}
-
+  try {
+    await axios.delete(`${BASE_URL}/${id}`);
+    btn.closest("tr").remove();
+    showAlert(`user succesfully deleted`, `danger`);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 async function editWorker(id) {
@@ -73,7 +73,7 @@ async function editWorker(id) {
   surname.value = filtered.surname;
   job.value = filtered.job;
   submitBtn.innerHTML = "Edit";
-  title.innerHTML="Edit Worker"
+  title.innerHTML = "Edit Worker";
 }
 
 const emptyInput = () => {
@@ -89,16 +89,16 @@ form.addEventListener("submit", (e) => {
       name: name.value,
       surname: surname.value,
       job: job.value,
-      photo: base64
+      photo: base64,
     };
 
     if (status) {
       axios.patch(`${BASE_URL}/${workerId}`, obj);
-      emptyInput()
+      emptyInput();
       showAlert(`New product succesfully added`, `success`);
     } else {
       axios.post(BASE_URL, obj);
-      emptyInput()
+      emptyInput();
       showAlert(`Product succesfully undated`, `primary`);
     }
   } else {

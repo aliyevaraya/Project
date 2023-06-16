@@ -14,6 +14,9 @@ const submitBtn = document.querySelector(".submit");
 let copyArr = [];
 let filtered = [];
 let defaultArr = [];
+let prodId;
+let status = false;
+let base64;
 
 async function drawTable(arr) {
   tbody.innerHTML = "";
@@ -51,8 +54,6 @@ async function delProd(id, btn) {
   btn.closest("tr").remove();
 }
 
-let prodId;
-let status=false;
 async function editProd(id) {
   prodId = id;
   status = true;
@@ -77,15 +78,15 @@ form.addEventListener("submit", (e) => {
       name: name.value,
       type: type.value,
       price: price.value,
-      photo: `../../assets/images/${photo.value.split("\\")[2]}`,
+      photo: base64,
     };
 
     if (status) {
       axios.patch(`${BASE_URL}/${prodId}`, obj);
-      emptyInput()
+      emptyInput();
     } else {
       axios.post(BASE_URL, obj);
-      emptyInput()
+      emptyInput();
     }
   } else {
     alert("please fill all fields", "danger");
@@ -110,4 +111,28 @@ sortBtn.addEventListener("change", () => {
     filtered = defaultArr;
   }
   getData();
+});
+
+const convertBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
+
+const uploadImage = async (event) => {
+  const file = event.target.files[0];
+  base64 = await convertBase64(file);
+};
+
+photo.addEventListener("change", (e) => {
+  uploadImage(e);
 });
