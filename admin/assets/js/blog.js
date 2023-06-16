@@ -63,7 +63,7 @@ async function delCard(id, btn) {
 }
 
 let blogId;
-let status;
+let status=false;
 
 async function editCard(id) {
   blogId = id;

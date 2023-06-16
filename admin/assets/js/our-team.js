@@ -76,6 +76,12 @@ async function editWorker(id) {
   title.innerHTML="Edit Worker"
 }
 
+const emptyInput = () => {
+  name.innerHTML = "";
+  surname.innerHTML = "";
+  job.innerHTML = "";
+};
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (name.value && surname.value && job.value && photo.value) {
@@ -88,9 +94,11 @@ form.addEventListener("submit", (e) => {
 
     if (status) {
       axios.patch(`${BASE_URL}/${workerId}`, obj);
+      emptyInput()
       showAlert(`New product succesfully added`, `success`);
     } else {
       axios.post(BASE_URL, obj);
+      emptyInput()
       showAlert(`Product succesfully undated`, `primary`);
     }
   } else {

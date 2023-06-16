@@ -52,7 +52,7 @@ async function delProd(id, btn) {
 }
 
 let prodId;
-let status;
+let status=false;
 async function editProd(id) {
   prodId = id;
   status = true;
