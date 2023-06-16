@@ -18,7 +18,7 @@ function drawTable(arr) {
     const tr = document.createElement("tr");
     tr.innerHTML = `
         <td><img src="${element.photo}" alt="" /></td>
-        <td>${element.name} ${element.surname}</td>
+        <td style="text-transform:uppercase">${element.name} ${element.surname}</td>
         <td>${element.job}</td>
         <td>
           <a href="#"  class="btn text-success" onclick=editWorker(${element.id}) ><i class="fa-solid fa-pen-to-square fa-bounce"></i></a>
@@ -40,7 +40,7 @@ function showAlert(massage, className) {
 
 let status = false;
 let userId;
-
+let base64
 async function getData() {
   try {
     let res = await axios(`${BASE_URL}`);
@@ -89,7 +89,7 @@ form.addEventListener("submit", (e) => {
       name: name.value,
       surname: surname.value,
       job: job.value,
-      photo: `./assets/images/${photo.value.split("\\")[2]}`
+      photo: base64
     };
 
     if (status) {
@@ -112,4 +112,28 @@ search.addEventListener("input", async (e) => {
     el.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
   );
   getData();
+});
+
+const convertBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
+
+const uploadImage = async (event) => {
+  const file = event.target.files[0];
+  base64 = await convertBase64(file);
+};
+
+photo.addEventListener("change", (e) => {
+  uploadImage(e);
 });
