@@ -1,35 +1,26 @@
-const FAV_URL = "http://localhost:8080/favorites";
+let favs = JSON.parse(localStorage.getItem("Favorites"));
 const cards = document.querySelector(".favs");
 
- function drawFav(arr) {
+function drawFav() {
   cards.innerHTML = "";
-  arr.forEach((el) => {
+  favs.forEach((fav) => {
     cards.innerHTML += `
     <div class="card fav" style="width: 15rem">
-    <img src="${el.photo}" class="card-img-top fav-img" alt="product"/>
+    <img src="${fav.photo}" class="card-img-top fav-img" alt="product"/>
     <div class="card-body fav-content">
-      <h5 class="card-title">${el.name}</h5>
-      <h6>${el.type}</h6>
-      <p class="price">$${el.price}</p>
-      <a href="#" onclick=delFav(${el.id},this) class="btn remove">Remove Fav</a>
+      <h5 class="card-title">${fav.name}</h5>
+      <h6>${fav.type}</h6>
+      <p class="price">$${fav.price}</p>
+      <a href="#" onclick=delFav(${fav.id},this) class="btn remove">Remove Fav</a>
     </div>
   </div>
         `;
   });
 }
-
-async function getFav() {
-try {
-    let res = await axios(FAV_URL);
-    let data = await res.data;
-    drawFav(data);
-} catch (error) {
-    console.log(error);
-}
-}
-getFav()
-
-async function delFav(id, btn) {
-  await axios.delete(`${FAV_URL}/${id}`);
+drawFav()
+function delFav(id, btn) {
+  favs = favs.filter((user) => user.id != id);
+  localStorage.setItem("Favorites", JSON.stringify(favs));
   btn.closest(".fav").remove();
+  drawFav();
 }

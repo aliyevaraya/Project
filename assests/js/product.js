@@ -148,13 +148,16 @@ try {
 }
 getCard();
 
+
+let favs = JSON.parse(localStorage.getItem("Favorites")) || [];
+let fav;
 async function addFav(id) {
-  const res = await axios(`${PRODUCTS_URL}/${id}`);
-  const obj = await res.data;
-  let res_fav = await axios(FAV_URL);
-  let data_fav = res_fav.data;
-  let bool= data_fav.find(item=>item.id==obj.id);
-  if (!bool) {
-    await axios.post(FAV_URL, obj);
-  } else alert("You already add this to Fav");
+  fav=copyArr.find((product)=>product.id==id)
+  let check=favs.includes(fav)
+  if (check) {
+    alert("Product already added to Favorites");
+  } else {
+    favs.push(fav);
+    localStorage.setItem("Favorites", JSON.stringify(favs));
+  }
 }

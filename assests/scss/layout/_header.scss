@@ -299,9 +299,8 @@ header {
       top: 18%;
       left: 20%;
       overflow: hidden;
-      opacity: 0;
       transition: opacity 0.2s ease;
-
+      display: none;
       .close-popup {
         font-size: 20px;
         padding: 10px 15px;

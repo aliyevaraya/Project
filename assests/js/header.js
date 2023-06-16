@@ -52,10 +52,10 @@ logIn.addEventListener("click", () => {
   popUp.classList.remove("active");
 });
 closePopUp.addEventListener("click", () => {
-  popUp.style.opacity = 0;
+  popUp.style.display = "none";
 });
 openPopUp.addEventListener("click", () => {
-  popUp.style.opacity = 1;
+  popUp.style.display = "flex";
 });
 
 // BASKET SIDEBAR

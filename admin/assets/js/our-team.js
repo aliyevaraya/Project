@@ -1,0 +1,96 @@
+const BASE_URL = " http://localhost:8080/team";
+const name = document.querySelector("#name");
+const surname = document.querySelector("#surname");
+const job = document.querySelector("#job");
+const photo = document.querySelector("#photo");
+const title = document.querySelector(".title");
+const form = document.querySelector("form");
+const tbody = document.querySelector("tbody");
+const submitBtn = document.querySelector(".submit");
+console.log(job);
+let copyArr=[]
+
+function drawTable(arr) {
+  tbody.innerHTML = "";
+  arr.forEach((element) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+        <td><img src="../${element.photo}" alt="" /></td>
+        <td>${element.name} ${element.surname}</td>
+        <td>${element.job}</td>
+        <td>
+          <a href="#"  class="btn text-success" onclick=editWorker(${element.id}) ><i class="fa-solid fa-pen-to-square fa-bounce"></i></a>
+          <a href="#" class="btn text-danger" onclick=delWorker(${element.id},this)><i class="fa-solid fa-trash-arrow-up fa-bounce"></i></a>
+        </td>
+        `;
+    tbody.append(tr);
+  });
+}
+
+// function showAlert(massage, className) {
+//   notification.innerHTML = massage;
+//   notification.className = `alert alert-${className}`;
+//   notification.removeAttribute("hidden");
+//   setTimeout(() => {
+//     notification.setAttribute("hidden", "");
+//   }, 5000);
+// }
+
+let status = false;
+let userId;
+
+async function getData() {
+  try {
+    let res = await axios(`${BASE_URL}`);
+    let data = res.data;
+    copyArr=data
+    drawTable(copyArr);
+  } catch (error) {
+    console.log(error);
+  }
+}
+getData();
+
+async function delWorker(id) {
+try {
+  await axios.delete(`${BASE_URL}/${id}`);
+  btn.closest("tr").remove();
+  showAlert(`user succesfully deleted`, `danger`);
+} catch (error) {
+  console.log(error);
+}
+
+}
+
+async function editWorker(id) {
+  userId = id;
+  status = true;
+  copyArr = copyArr.find((el) => el.id == id);
+  console.log(copyArr);
+  name.value = copyArr.name;
+  job.value = copyArr.job;
+  submitBtn.value = "Edit";
+  title.innerHTML="Edit Worker"
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (name.value && job.value) {
+    let obj = {
+      name: name.value,
+      surname: surname.value,
+      job: job.value,
+      photo: photo.value
+    };
+
+    if (status) {
+      axios.patch(`${BASE_URL}/${userId}`, obj);
+      // showAlert(`New user succesfully added`, `success`);
+    } else {
+      axios.post(BASE_URL, obj);
+      // showAlert(`New user succesfully undated`, `primary`);
+    }
+  // } else {
+  //   showAlert("please fill all fields", "danger");
+  }
+});
