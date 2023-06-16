@@ -6,14 +6,14 @@
       "type": "Rum",
       "price": 69,
       "newPrice": 49,
-      "photo": "./assests/images/prod-5.jpg"
+      "photo": "../../assests/images/prod-5.jpg"
     },
     {
       "id": 2,
       "name": "Brandy",
       "type": "Rum",
       "price": 59,
-      "photo": "./assests/images/prod-1.jpg"
+      "photo": "../../assests/images/prod-1.jpg"
     },
     {
       "id": 3,
@@ -21,14 +21,14 @@
       "type": "Rum",
       "price": 60,
       "newPrice": 49,
-      "photo": "./assests/images/prod-4.jpg"
+      "photo": "../../assests/images/prod-4.jpg"
     },
     {
       "id": 4,
       "name": "Rum",
       "type": "Rum",
       "price": 69,
-      "photo": "./assests/images/prod-1.jpg"
+      "photo": "../../assests/images/prod-1.jpg"
     },
     {
       "id": 5,
@@ -36,21 +36,21 @@
       "type": "Rum",
       "price": 69,
       "newPrice": 50,
-      "photo": "./assests/images/prod-2.jpg"
+      "photo": "../../assests/images/prod-2.jpg"
     },
     {
       "id": 6,
       "name": "Brandy",
       "type": "Brandy",
       "price": 69,
-      "photo": "./assests/images/prod-1.jpg"
+      "photo": "../../assests/images/prod-1.jpg"
     },
     {
       "id": 7,
       "name": "Brandy",
       "type": "Brandy",
       "price": 80,
-      "photo": "./assests/images/prod-1.jpg"
+      "photo": ".././assests/images/prod-1.jpg"
     },
     {
       "id": 8,
@@ -121,6 +121,20 @@
       "type": "Tequila",
       "price": 69,
       "photo": "./assests/images/prod-2.jpg"
+    },
+    {
+      "name": "Pandora Todd",
+      "type": "Consequatur Possimu",
+      "price": "935",
+      "photo": "../../assets/images/image_3.jpg",
+      "id": 18
+    },
+    {
+      "name": "Ralph Villarreal",
+      "type": "Asperiores debitis v",
+      "price": "135",
+      "photo": "../../assets/images/kind-3.jpg",
+      "id": 19
     }
   ],
   "blogs": [
@@ -164,9 +178,9 @@
     {
       "id": 2,
       "name": "PIETRO ",
-      "surname": "CONTE",
+      "surname": "",
       "job": "Founder",
-      "photo": "../../assests/images/team-7.jpg"
+      "photo": ""
     },
     {
       "id": 4,
@@ -204,19 +218,11 @@
       "photo": "../../assests/images/team-1.jpg"
     },
     {
-      "id": 8,
-      "name": "AZZURRA ",
-      "surname": "MARCIO",
-      "job": "Sommelier",
-      "photo": "../../assests/images/team-5.jpg"
-    },
-    {
-      "name": "Ivory Whitney",
-      "surname": "Robinson",
-      "job": "Facilis ullamco perf",
-      "photo": "C:\\fakepath\\team-5.jpg",
-      "id": 9
+      "name": "Fulton Moss",
+      "surname": "Larson",
+      "job": "Consequat Omnis lab",
+      "photo": "./assets/images/image_3.jpg",
+      "id": 8
     }
   ]
-  
 }

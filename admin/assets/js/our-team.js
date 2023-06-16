@@ -7,7 +7,7 @@ const title = document.querySelector(".title");
 const form = document.querySelector("form");
 const tbody = document.querySelector("tbody");
 const submitBtn = document.querySelector(".submit");
-console.log(job);
+const notification = document.querySelector("#notif");
 let copyArr=[]
 
 function drawTable(arr) {
@@ -15,7 +15,7 @@ function drawTable(arr) {
   arr.forEach((element) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-        <td><img src="../${element.photo}" alt="" /></td>
+        <td><img src="./${element.photo}" alt="" /></td>
         <td>${element.name} ${element.surname}</td>
         <td>${element.job}</td>
         <td>
@@ -27,14 +27,14 @@ function drawTable(arr) {
   });
 }
 
-// function showAlert(massage, className) {
-//   notification.innerHTML = massage;
-//   notification.className = `alert alert-${className}`;
-//   notification.removeAttribute("hidden");
-//   setTimeout(() => {
-//     notification.setAttribute("hidden", "");
-//   }, 5000);
-// }
+function showAlert(massage, className) {
+  notification.innerHTML = massage;
+  notification.className = `alert alert-${className}`;
+  notification.removeAttribute("hidden");
+  setTimeout(() => {
+    notification.setAttribute("hidden", "");
+  }, 9000);
+}
 
 let status = false;
 let userId;
@@ -63,34 +63,34 @@ try {
 }
 
 async function editWorker(id) {
-  userId = id;
+  workerId = id;
   status = true;
   copyArr = copyArr.find((el) => el.id == id);
-  console.log(copyArr);
   name.value = copyArr.name;
+  surname.value = copyArr.surname;
   job.value = copyArr.job;
-  submitBtn.value = "Edit";
+  submitBtn.innerHTML = "Edit";
   title.innerHTML="Edit Worker"
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (name.value && job.value) {
+  if (name.value && surname.value && job.value && photo.value) {
     let obj = {
       name: name.value,
       surname: surname.value,
       job: job.value,
-      photo: photo.value
+      photo: `./assets/images/${photo.value.split("\\")[2]}`
     };
 
     if (status) {
-      axios.patch(`${BASE_URL}/${userId}`, obj);
-      // showAlert(`New user succesfully added`, `success`);
+      axios.patch(`${BASE_URL}/${workerId}`, obj);
+      showAlert(`New product succesfully added`, `success`);
     } else {
       axios.post(BASE_URL, obj);
-      // showAlert(`New user succesfully undated`, `primary`);
+      showAlert(`Product succesfully undated`, `primary`);
     }
-  // } else {
-  //   showAlert("please fill all fields", "danger");
+  } else {
+    showAlert("please fill all fields", "danger");
   }
 });
