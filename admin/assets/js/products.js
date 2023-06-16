@@ -64,6 +64,12 @@ async function editProd(id) {
   title.innerHTML = "Edit Product";
 }
 
+const emptyInput = () => {
+  name.innerHTML = "";
+  type.innerHTML = "";
+  price.innerHTML = "";
+};
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (name.value && type.value && price.value && photo.value) {
@@ -76,8 +82,10 @@ form.addEventListener("submit", (e) => {
 
     if (status) {
       axios.patch(`${BASE_URL}/${prodId}`, obj);
+      emptyInput()
     } else {
       axios.post(BASE_URL, obj);
+      emptyInput()
     }
   } else {
     alert("please fill all fields", "danger");
