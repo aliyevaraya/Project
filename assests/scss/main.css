@@ -352,6 +352,16 @@ header .header-bg .popup .form-box .input-box {
   margin: 30px 0;
   color: rgb(245, 244, 240);
 }
+header .header-bg .popup .form-box .input-box.success input {
+  border: none;
+}
+header .header-bg .popup .form-box .input-box.error input {
+  border: 2px solid red;
+}
+header .header-bg .popup .form-box .input-box .error {
+  height: 13px;
+  font-size: 9px;
+}
 header .header-bg .popup .form-box .input-box input {
   border: none;
   background-color: rgb(94, 90, 84);

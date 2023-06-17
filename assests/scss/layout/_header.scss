@@ -346,6 +346,20 @@ header {
           border-bottom: 2px solid $light-color;
           margin: 30px 0;
           color: $bg-color;
+          &.success{
+            input{
+              border: none;
+            }
+          }
+          &.error{
+            input{
+              border:2px solid red;
+            }
+          }
+          .error{
+            height: 13px;
+            font-size: 9px;
+          }
           input {
             border: none;
             background-color: rgb(94, 90, 84);

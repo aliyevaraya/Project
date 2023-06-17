@@ -36,20 +36,23 @@ window.onscroll = function () {
   scrollFunc();
 };
 
+// VALIDATION
+
 // LOGIN-SIGNUP
 const popUp = document.querySelector(".popup");
 const logInBtn = document.querySelector(".login-link");
 const register = document.querySelector(".register-link");
 const closePopUp = document.querySelector(".icon-close");
 const openPopUp = document.querySelector(".btnLogin-popup");
+const logOut = document.querySelector(".logOut");
 
 register.addEventListener("click", () => {
   popUp.classList.add("active");
-  emptyInput()
+  emptyInput();
 });
 logInBtn.addEventListener("click", () => {
   popUp.classList.remove("active");
-  emptyRgInput()
+  emptyRgInput();
 });
 closePopUp.addEventListener("click", () => {
   popUp.style.display = "none";
@@ -57,6 +60,7 @@ closePopUp.addEventListener("click", () => {
 openPopUp.addEventListener("click", () => {
   popUp.style.display = "flex";
 });
+
 // REGISTER FORM
 const rgForm = document.querySelector("#rgForm");
 const userName = document.querySelector("#userName");
@@ -64,31 +68,31 @@ const rgEmail = document.querySelector("#reg-email");
 const rgPw = document.querySelector("#reg-pw");
 const signUp = document.querySelector(".register-btn");
 const agree = document.querySelector("#agree");
-signUp.disabled = true;
+// signUp.disabled = true;
 
-userName.addEventListener("input", () => {
-  checkAnyInput();
-});
-rgEmail.addEventListener("input", () => {
-  checkAnyInput();
-});
-rgPw.addEventListener("input", () => {
-  checkAnyInput();
-});
+// userName.addEventListener("input", () => {
+//   checkAnyInput();
+// });
+// rgEmail.addEventListener("input", () => {
+//   checkAnyInput();
+// });
+// rgPw.addEventListener("input", () => {
+//   checkAnyInput();
+// });
 
-function checkAnyInput() {
-  if (userName.value && rgEmail.value && rgPw.value) {
-    signUp.removeAttribute("disabled");
-  } else {
-    signUp.setAttribute("disabled", "");
-  }
-}
+// function checkAnyInput() {
+//   if (userName.value && rgEmail.value && rgPw.value) {
+//     signUp.removeAttribute("disabled");
+//   } else {
+//     signUp.setAttribute("disabled", "");
+//   }
+// }
 
 function emptyRgInput() {
   userName.value = "";
   rgEmail.value = "";
   rgPw.value = "";
-  agree.checked=false
+  agree.checked = false;
 }
 
 let usersData = JSON.parse(localStorage.getItem("UsersData")) || [];
@@ -99,53 +103,114 @@ rgForm.addEventListener("submit", (e) => {
     email: rgEmail.value,
     password: rgPw.value,
   };
-  emptyRgInput()
+  emptyRgInput();
   usersData.push(userObj);
   localStorage.setItem("UsersData", JSON.stringify(usersData));
   popUp.classList.remove("active");
 });
 
+const setError = (element, message) => {
+  const inputBox = element.parentElement;
+  const errorDisplay = inputBox.querySelector(".error");
+  errorDisplay.innerText = message;
+  inputBox.classList.add("error");
+  inputBox.classList.remove("success");
+};
+
+const setSuccess = (element) => {
+  const inputBox = element.parentElement;
+  const errorDisplay = inputBox.querySelector(".error");
+  errorDisplay.innerText = "";
+  inputBox.classList.add("success");
+  inputBox.classList.remove("error");
+};
+
+const validateInputs = () => {
+  userName.addEventListener("input", (e) => {
+    if (e.target.value === "") {
+      setError(userName, "Username is required");
+    } else if (e.target.value.length < 3) {
+      setError(userName, "Username must be at least 4 character.");
+    } else {
+      setSuccess(userName);
+    }
+  });
+
+  const isValidEmail = (email) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  rgEmail.addEventListener("input", (e) => {
+    if (e.target.value === "") {
+      setError(rgEmail, "Email is required");
+    } else if (!isValidEmail(e.target.value)) {
+      setError(rgEmail, "Provide a valid email address");
+    } else {
+      setSuccess(rgEmail);
+    }
+  });
+
+  rgPw.addEventListener("input", (e) => {
+    if (e.target.value === "") {
+      setError(rgPw, "Password is required");
+    } else if (e.target.value.length < 8) {
+      setError(rgPw, "Password must be at least 8 character.");
+    } else {
+      setSuccess(rgPw);
+    }
+  });
+};
+validateInputs();
+
 // LOGIN FORM
-const logInForm= document.querySelector("#login-form")
+const logInForm = document.querySelector("#login-form");
 const email = document.querySelector("#email");
 const pw = document.querySelector("#pw");
 const remember = document.querySelector("#remember");
 const logIn = document.querySelector(".login-btn");
-logIn.disabled = true;
+// logIn.disabled = true;
 
-email.addEventListener("input", () => {
-  checkLogInput();
-});
-pw.addEventListener("input", () => {
-  checkLogInput();
-});
+// email.addEventListener("input", () => {
+//   checkLogInput();
+// });
+// pw.addEventListener("input", () => {
+//   checkLogInput();
+// });
 
-function checkLogInput() {
-  if (email.value && pw.value) {
-    logIn.removeAttribute("disabled");
+// function checkLogInput() {
+//   if (email.value && pw.value) {
+//     logIn.removeAttribute("disabled");
+//   } else {
+//     logIn.setAttribute("disabled", "");
+//   }
+// }
+const emptyInput = () => {
+  email.value = "";
+  pw.value = "";
+  remember.checked = false;
+};
+
+logInForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let user = usersData.find(
+    (user) => user.email == email.value && user.password == pw.value
+  );
+  if (user) {
+    alert(`welcome ${user.name}`);
+    popUp.style.display = "none";
   } else {
-    logIn.setAttribute("disabled", "");
+    alert("wrong email or password");
   }
-}
-const emptyInput = ()=>{
-  email.value=''
-  pw.value=''
-  remember.checked=false
-}
-
-logInForm.addEventListener('submit',(e)=>{
-  e.preventDefault()
-  let user=usersData.find(user=>user.email==email.value && user.password==pw.value)
-  if(user){
-   alert(`welcome ${user.name}`)
-   popUp.style.display = "none";
-  }else{
-    alert("wrong email or password")
-  }
-  emptyInput()
-})
-
-
+  emptyInput();
+});
+// logOut.addEventListener("click", ()=>{
+//   console.log('ji');
+//   usersData=usersData.filter(user=>user.email!=email.value)
+//   console.log(usersData);
+//   localStorage.setItem("UsersData", JSON.stringify(usersData));
+// });
 
 // BASKET SIDEBAR
 const openBasket = document.querySelector(".basket");

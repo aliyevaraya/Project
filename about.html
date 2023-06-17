@@ -83,6 +83,7 @@
           </div>
           <div class="registr">
             <a href="#" class="btnLogin-popup">Log in</a>
+            <a href="#" class="logOut"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i></a>
           </div>
         </div>
       </div>
@@ -185,15 +186,18 @@
             <form action="" id="rgForm">
               <div class="input-box">
                 <label for="userName">Username</label>
-                <input type="text" id="userName" />
+                <input type="text" id="userName" name="username"/>
+                <div class="error"></div>
               </div>
               <div class="input-box">
                 <label for="email">Email</label>
-                <input type="email" id="reg-email" />
+                <input type="text" id="reg-email" name="email"/>
+                <div class="error"></div>
               </div>
               <div class="input-box">
                 <label for="pw">Password</label>
-                <input type="password" id="reg-pw" minlength="6"/>
+                <input type="password" id="reg-pw" name="password"/>
+                <div class="error"></div>
               </div>
               <div class="agree">
                 <label

@@ -67,6 +67,7 @@
           </div>
           <div class="registr">
             <a href="#" class="btnLogin-popup">Log in</a>
+            <a href="#" class="logOut"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i></a>
           </div>
         </div>
       </div>
@@ -140,10 +141,10 @@
           ></a>
           <div class="form-box login">
             <h2>Login</h2>
-            <form action="">
+            <form action="" id="login-form">
               <div class="input-box">
                 <label for="email">Email</label>
-                <input type="text" id="email" />
+                <input type="email" id="email" />
               </div>
               <div class="input-box">
                 <label for="pw">Password</label>
@@ -151,7 +152,7 @@
               </div>
               <div class="remember-forget">
                 <label for="remember"
-                  ><input type="checkbox" />Remember me</label
+                  ><input type="checkbox" id="remember"/>Remember me</label
                 >
                 <a href="#">Forgot Password?</a>
               </div>
@@ -166,22 +167,27 @@
           </div>
           <div class="form-box register">
             <h2>Registration</h2>
-            <form action="">
+            <form action="" id="rgForm">
               <div class="input-box">
                 <label for="userName">Username</label>
-                <input type="text" id="userName" />
+                <input type="text" id="userName" name="userName"
+                data-fv-not-empty="true"
+                data-fv-not-empty___message="The username is required"
+                data-fv-string-length="true"
+                data-fv-string-length___min="6"
+                data-fv-string-length___message="The name must be more than 6 characters long" />
               </div>
               <div class="input-box">
                 <label for="email">Email</label>
-                <input type="text" id="reg-email" />
+                <input type="email" id="reg-email" />
               </div>
               <div class="input-box">
                 <label for="pw">Password</label>
-                <input type="password" id="reg-pw" />
+                <input type="password" id="reg-pw" minlength="6"/>
               </div>
               <div class="agree">
                 <label
-                  ><input type="checkbox" required /> I agree to the terms &
+                  ><input type="checkbox" required id="agree"/> I agree to the terms &
                   conditions</label
                 >
               </div>
@@ -678,7 +684,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./assests/js/header.js"></script>
+    <script  src="./assests/js/header.js"></script>
     <script src="./assests/js/single-product.js"></script>
     <script>
       ScrollReveal({
