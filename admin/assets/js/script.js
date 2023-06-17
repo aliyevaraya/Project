@@ -50,11 +50,11 @@ async function getCounts() {
   cards.innerHTML = `
 <div class="dash-card our-team">
     <h1><a href="./our-team.html">OurTeam</a> </h1>
-    <span class="data-count">${data.length}</span>
+    <span class="data-count">${data2.length}</span>
 </div>
 <div class="dash-card products">
     <h1><a href="./product.html">Our Products</a></h1>
-    <span class="data-count">${data2.length}</span>
+    <span class="data-count">${data.length}</span>
 </div>
 <div class="dash-card blogs">
     <h1><a href="./blog.html">Recent Blogs</a></h1>
