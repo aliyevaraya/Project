@@ -115,7 +115,7 @@ function drawCards(arr) {
       <div class="img">
         <div class="opacity">
           <div class="opacity-icons">
-            <a href="#"><i class="icon fa-solid fa-bag-shopping"></i></a>
+            <a href="#" onclick=addCart(${el.id})><i class="icon fa-solid fa-bag-shopping"></i></a>
             <a href="#" onclick=addFav(${el.id})><i class="icon fa-regular fa-heart"></i></a>
            <a href="./detail.html?id=${el.id}"><i class="icon fa-regular fa-eye"></i></a>
           </div>
@@ -137,27 +137,40 @@ function drawCards(arr) {
 }
 
 async function getCard() {
-try {
-  const res = await axios(PRODUCTS_URL);
-  const data = res.data;
-  copyArr = data;
-  drawCards(copyArr);
-} catch (error) {
-  console.log(error);
-}
+  try {
+    const res = await axios(PRODUCTS_URL);
+    const data = res.data;
+    copyArr = data;
+    drawCards(copyArr);
+  } catch (error) {
+    console.log(error);
+  }
 }
 getCard();
-
 
 let favs = JSON.parse(localStorage.getItem("Favorites")) || [];
 let fav;
 async function addFav(id) {
-  fav=copyArr.find((product)=>product.id==id)
-  let check=favs.includes(fav)
+  fav = copyArr.find((product) => product.id == id);
+  let check = favs.find(prod=>prod.id==fav.id);
   if (check) {
     alert("Product already added to Favorites");
   } else {
     favs.push(fav);
     localStorage.setItem("Favorites", JSON.stringify(favs));
+    getCard()
   }
+}
+
+let myCart = JSON.parse(localStorage.getItem("My Cart")) || [];
+let prod;
+async function addCart(id) {
+  prod = copyArr.find((prod) => prod.id == id);
+  console.log(prod);
+  let check = myCart.find(item=>item.id==prod.id);
+  if (!check) {
+    myCart.push(prod);
+    localStorage.setItem("My Cart", JSON.stringify(myCart));
+    getCard()
+  }else alert("Product already added to cart")
 }

@@ -233,7 +233,7 @@ header .header-bg #my-cart {
   z-index: 1;
   top: 3%;
   right: -100%;
-  height: 60vh;
+  height: 65vh;
   width: 300px;
   background-color: rgb(245, 244, 240);
   text-align: center;
@@ -242,7 +242,7 @@ header .header-bg #my-cart {
 header .header-bg #my-cart .close-cart {
   position: absolute;
   right: 0;
-  padding: 5px;
+  padding: 8px;
   color: rgb(245, 244, 240);
   border-bottom-left-radius: 8px;
   background-color: black;
@@ -251,7 +251,7 @@ header .header-bg #my-cart .my-cart {
   padding-left: 0.5rem !important;
 }
 header .header-bg #my-cart .my-cart .incart {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -271,11 +271,19 @@ header .header-bg #my-cart .my-cart .incart .cart-info .img img {
 }
 header .header-bg #my-cart .my-cart .incart .cart-info .info {
   color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
 }
-header .header-bg #my-cart .my-cart .incart .remove-cart {
+header .header-bg #my-cart .my-cart .incart .cart-info .info .prod-name {
+  margin-bottom: 5px;
+}
+header .header-bg #my-cart .my-cart .incart .cart-info .info .prod-type {
+  margin-bottom: 5px;
+}
+header .header-bg #my-cart .my-cart .incart .remove-prod {
   color: rgb(183, 71, 42);
   padding: 5px;
   border-radius: 5px;
+  font-size: 12px;
   background-color: rgb(218, 178, 168);
 }
 header .header-bg #my-cart .view-all {
@@ -283,7 +291,15 @@ header .header-bg #my-cart .view-all {
   font-weight: bold;
   font-size: 18px;
   font-style: italic;
-  padding: 1.5rem 0;
+  padding: 0.8rem;
+  transition: all 0.3s ease;
+}
+header .header-bg #my-cart .view-all:hover {
+  transform: scale(1, 1);
+  font-size: 16px;
+  color: #fff;
+  border-radius: 20%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 header .header-bg .popup {
   position: absolute;
@@ -968,8 +984,14 @@ footer .footer-bottom .copyright p {
 #our-team .team-member .team-member-img {
   position: relative;
 }
+#our-team .team-member .team-member-img .img {
+  height: 350px;
+}
 #our-team .team-member .team-member-img .img img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #our-team .team-member .team-member-img .hover {
   position: absolute;
@@ -1104,13 +1126,13 @@ footer .footer-bottom .copyright p {
 #products {
   padding: 3rem 0;
 }
-#products .prods .select {
+#products .select {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
-#products .prods .select select {
+#products .select select {
   border: none;
   color: rgb(119, 127, 130);
 }

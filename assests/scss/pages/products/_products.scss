@@ -1,14 +1,14 @@
 #products {
   padding: 3rem 0;
-  .prods {
-    .select {
-      @include flexbox;
-      margin-bottom: 2rem;
-      select {
-        border: none;
-        color: $grey-color;
-      }
+  .select {
+    @include flexbox;
+    margin-bottom: 2rem;
+    select {
+      border: none;
+      color: $grey-color;
     }
+  }
+  .prods {
     .prod {
       margin-bottom: 3rem;
 

@@ -68,25 +68,6 @@ const rgEmail = document.querySelector("#reg-email");
 const rgPw = document.querySelector("#reg-pw");
 const signUp = document.querySelector(".register-btn");
 const agree = document.querySelector("#agree");
-// signUp.disabled = true;
-
-// userName.addEventListener("input", () => {
-//   checkAnyInput();
-// });
-// rgEmail.addEventListener("input", () => {
-//   checkAnyInput();
-// });
-// rgPw.addEventListener("input", () => {
-//   checkAnyInput();
-// });
-
-// function checkAnyInput() {
-//   if (userName.value && rgEmail.value && rgPw.value) {
-//     signUp.removeAttribute("disabled");
-//   } else {
-//     signUp.setAttribute("disabled", "");
-//   }
-// }
 
 function emptyRgInput() {
   userName.value = "";
@@ -170,22 +151,7 @@ const email = document.querySelector("#email");
 const pw = document.querySelector("#pw");
 const remember = document.querySelector("#remember");
 const logIn = document.querySelector(".login-btn");
-// logIn.disabled = true;
 
-// email.addEventListener("input", () => {
-//   checkLogInput();
-// });
-// pw.addEventListener("input", () => {
-//   checkLogInput();
-// });
-
-// function checkLogInput() {
-//   if (email.value && pw.value) {
-//     logIn.removeAttribute("disabled");
-//   } else {
-//     logIn.setAttribute("disabled", "");
-//   }
-// }
 const emptyInput = () => {
   email.value = "";
   pw.value = "";
@@ -212,10 +178,14 @@ logInForm.addEventListener("submit", (e) => {
 //   localStorage.setItem("UsersData", JSON.stringify(usersData));
 // });
 
+// usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212){
+// }
+
 // BASKET SIDEBAR
 const openBasket = document.querySelector(".basket");
 const closeBasket = document.querySelector(".close-cart");
 const myBasket = document.querySelector("#my-cart");
+const ul = document.querySelector(".my-cart");
 
 openBasket.addEventListener("click", () => {
   myBasket.style.right = 0;
@@ -223,3 +193,33 @@ openBasket.addEventListener("click", () => {
 closeBasket.addEventListener("click", () => {
   myBasket.style.right = "-100%";
 });
+
+let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
+
+function getMyCart() {
+  ul.innerHTML = "";
+  inCart.slice(0, 3).forEach((prod) => {
+    ul.innerHTML += `
+    <li class="incart">
+              <div class="cart-info">
+                <div class="img">
+                  <img src="${prod.photo}" alt="" />
+                </div>
+                <div class="info">
+                  <p class="prod-name">${prod.name}</p>
+                  <p class="prod-type">${prod.type}</p>
+                  <span class="prod-price">$${prod.price}.00</span>
+                </div>
+              </div>
+              <a href="#" onclick=removerProd(${prod.id})><i class="fa-solid fa-xmark remove-prod"></i></a>
+            </li>
+    `;
+  });
+}
+getMyCart();
+
+function removerProd(id) {
+  inCart = inCart.filter((prod) => prod.id != id);
+  localStorage.setItem("My Cart", JSON.stringify(inCart));
+  getMyCart();
+}
