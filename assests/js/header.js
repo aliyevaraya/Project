@@ -198,6 +198,10 @@ let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
 
 function getMyCart() {
   ul.innerHTML = "";
+  if(inCart.length==0){
+    ul.innerHTML='You cart is empty'
+  }
+ else{
   inCart.slice(0, 3).forEach((prod) => {
     ul.innerHTML += `
     <li class="incart">
@@ -215,6 +219,7 @@ function getMyCart() {
             </li>
     `;
   });
+ }
 }
 getMyCart();
 
@@ -223,3 +228,5 @@ function removerProd(id) {
   localStorage.setItem("My Cart", JSON.stringify(inCart));
   getMyCart();
 }
+const number= document.querySelector(".number")
+number.innerHTML=inCart.length
