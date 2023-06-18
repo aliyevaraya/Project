@@ -35,10 +35,10 @@ function getTableCart() {
 });
 }
 
-// function onInput(id,price,input) {
-//     cart=myCart.find(item=>item.id==id)
-//     price=input*price
-// }
+function onInput(id,price,input) {
+    cart=myCart.find(item=>item.id==id)
+}
+
 window.onload = function () {
     getTableCart();
   };

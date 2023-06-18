@@ -17,7 +17,7 @@ function drawCards(arr) {
           <div class="opacity-icons">
             <a href="#" onclick=addCart(${el.id})><i class="icon fa-solid fa-bag-shopping"></i></a>
             <a href="#" onclick=addFav(${el.id})><i class="icon fa-regular fa-heart"></i></a>
-           <a href="./detail.html?id=${el.id}"><i class="icon fa-regular fa-eye"></i></a>
+           <a href="./single-product.html?id=${el.id}"><i class="icon fa-regular fa-eye"></i></a>
           </div>
         </div>
         <img src="${el.photo}" alt="" />
