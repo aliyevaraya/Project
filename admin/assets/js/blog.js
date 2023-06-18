@@ -77,9 +77,9 @@ async function editCard(id) {
 }
 
 const emptyInput = () => {
-  blogTitle.innerHTML = "";
-  content.innerHTML = "";
-  date.innerHTML = "";
+  blogTitle.value = "";
+  content.value = "";
+  date.value = "";
 };
 
 form.addEventListener("submit", (e) => {

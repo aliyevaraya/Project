@@ -77,9 +77,9 @@ async function editWorker(id) {
 }
 
 const emptyInput = () => {
-  name.innerHTML = "";
-  surname.innerHTML = "";
-  job.innerHTML = "";
+  name.value = "";
+  surname.value = "";
+  job.value = "";
 };
 
 form.addEventListener("submit", async(e) => {

@@ -66,9 +66,9 @@ async function editProd(id) {
 }
 
 const emptyInput = () => {
-  name.innerHTML = "";
-  type.innerHTML = "";
-  price.innerHTML = "";
+  name.value = "";
+  type.value = "";
+  price.value = "";
 };
 
 form.addEventListener("submit", (e) => {

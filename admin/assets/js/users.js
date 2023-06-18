@@ -66,10 +66,10 @@ async function editUser(id) {
   }
 
   const emptyInput = () => {
-    userName.innerHTML = "";
-    email.innerHTML = "";
-    password.innerHTML = "";
-    isAdmin.innerHTML = "";
+    userName.value = "";
+    email.value = "";
+    password.value = "";
+    isAdmin.value = "";
   };
   form.addEventListener("submit", async(e) => {
     e.preventDefault();

@@ -48,32 +48,6 @@ async function getCard() {
 }
 getCard();
 
-// function getMyCart() {
-//   ul.innerHTML = "";
-//   if(inCart.length==0){
-//     ul.innerHTML='You cart is empty'
-//   }
-//  else{
-//   inCart.slice(0, 3).forEach((prod) => {
-//     ul.innerHTML += `
-//     <li class="incart">
-//               <div class="cart-info">
-//                 <div class="img">
-//                   <img src="${prod.photo}" alt="" />
-//                 </div>
-//                 <div class="info">
-//                   <p class="prod-name">${prod.name}</p>
-//                   <p class="prod-type">${prod.type}</p>
-//                   <span class="prod-price">$${prod.price}.00</span>
-//                 </div>
-//               </div>
-//               <a href="#" onclick=removerProd(${prod.id})><i class="fa-solid fa-xmark remove-prod"></i></a>
-//             </li>
-//     `;
-//   });
-//  }
-// }
-
 let favs = JSON.parse(localStorage.getItem("Favorites")) || [];
 let fav;
 async function addFav(id) {
@@ -88,21 +62,19 @@ async function addFav(id) {
   }
 }
 
-let myCart = JSON.parse(localStorage.getItem("My Cart")) || [];
+let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
 let quantity = document.querySelector(".number");
 quantity.innerHTML = myCart.length;
 let prod;
 
 async function addCart(id) {
-  let myCart = JSON.parse(localStorage.getItem("My Cart")) || [];
+  let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
   prod = copyArr.find((prod) => prod.id == id);
-  console.log(copyArr);
-  console.log(prod);
   let check = myCart.find((item) => item.id == prod.id);
   if (!check) {
     myCart.push(prod);
     localStorage.setItem("My Cart", JSON.stringify(myCart));
     quantity.innerHTML = Number(quantity.innerHTML) + 1;
-    getMyCart();
+    getCard();
   } else alert("Product already added to cart");
 }

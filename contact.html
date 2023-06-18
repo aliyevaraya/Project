@@ -30,7 +30,9 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li class="mobile-dropdown">
-            <a href="#" data-action="dropdown-toggle" class="mobilebar-toggle">Products</a>
+            <a href="#" data-action="dropdown-toggle" class="mobilebar-toggle"
+              >Products</a
+            >
             <div class="dropdown-menu">
               <a class="dropdown-item" href="./prducts.html">Products</a>
               <a class="dropdown-item" href="./single-product.html"
@@ -67,7 +69,9 @@
           </div>
           <div class="registr">
             <a href="#" class="btnLogin-popup">Log in</a>
-            <a href="#" class="logOut"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i></a>
+            <a href="#" class="logOut"
+              ><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -144,15 +148,15 @@
             <form action="" id="login-form">
               <div class="input-box">
                 <label for="email">Email</label>
-                <input type="email" id="email" required/>
+                <input type="email" id="email" required />
               </div>
               <div class="input-box">
                 <label for="pw">Password</label>
-                <input type="password" id="pw" required/>
+                <input type="password" id="pw" required />
               </div>
               <div class="remember-forget">
                 <label for="remember"
-                  ><input type="checkbox" id="remember"/>Remember me</label
+                  ><input type="checkbox" id="remember" />Remember me</label
                 >
                 <a href="#">Forgot Password?</a>
               </div>
@@ -170,23 +174,23 @@
             <form action="" id="rgForm">
               <div class="input-box">
                 <label for="userName">Username</label>
-                <input type="text" id="userName" name="username"/>
+                <input type="text" id="userName" name="username" />
                 <div class="error"></div>
               </div>
               <div class="input-box">
                 <label for="email">Email</label>
-                <input type="text" id="reg-email" name="email"/>
+                <input type="text" id="reg-email" name="email" />
                 <div class="error"></div>
               </div>
               <div class="input-box">
                 <label for="pw">Password</label>
-                <input type="password" id="reg-pw" name="password"/>
+                <input type="password" id="reg-pw" name="password" />
                 <div class="error"></div>
               </div>
               <div class="agree">
                 <label
-                  ><input type="checkbox" required id="agree"/> I agree to the terms &
-                  conditions</label
+                  ><input type="checkbox" required id="agree" /> I agree to the
+                  terms & conditions</label
                 >
               </div>
               <button type="submit" class="register-btn">Register</button>
@@ -352,13 +356,18 @@
                   <input type="text" name="" id="fullName" placeholder="Name" />
                 </div>
                 <div class="col-md-6 input-text">
-                  <label for="email">Email Address</label>
-                  <input type="email" name="" id="your-email" placeholder="Email" />
+                  <label for="your-email">Email Address</label>
+                  <input
+                    type="email"
+                    name=""
+                    id="your-email"
+                    placeholder="Email"
+                  />
                 </div>
                 <div class="col-md-12 input-text">
                   <label for="subject">Subject</label>
                   <input
-                    type="email"
+                    type="text"
                     name=""
                     id="subject"
                     placeholder="Subject"
@@ -367,6 +376,7 @@
                 <div class="col-md-12 input-text">
                   <label for="message">Message</label>
                   <textarea
+                    id="message"
                     name=""
                     id=""
                     cols="30"
@@ -375,7 +385,7 @@
                   ></textarea>
                 </div>
                 <div class="col-md-12 input-text">
-                  <button type="submit" class="submit">Send Message</button>
+                  <button type="submit" class="submit send-meassage">Send Message</button>
                 </div>
               </div>
             </form>
@@ -535,18 +545,19 @@
       </div>
     </footer>
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
-    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./assests/js/header.js"></script>
+    <script src="./assests/js/contact.js"></script>
     <script>
       ScrollReveal({
         distance: "60px",
