@@ -1,9 +1,18 @@
 const BASE_URL = " http://localhost:8080/users";
 const tbody = document.querySelector("tbody");
 const search = document.querySelector("#search");
+const userName = document.querySelector("#username");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
+const isAdmin = document.querySelector("#isAdmin");
+const title = document.querySelector(".title");
+const form = document.querySelector("form");
+const submitBtn = document.querySelector(".submit");
 
 let copyArr = [];
 let filtered = [];
+let status = false;
+let userId;
 
 function drawData(arr) {
   tbody.innerHTML = "";
@@ -44,6 +53,45 @@ async function delUser(id) {
     console.log(error);
   }
 }
+async function editUser(id) {
+    userId = id;
+    status = true;
+    filtered = copyArr.find((user) => user.id == id);
+    userName.value = filtered.username;
+    email.value = filtered.email;
+    password.value = filtered.password;
+    isAdmin.value=filtered.isAdmin
+    submitBtn.innerHTML = "Edit";
+    title.innerHTML = "Edit User";
+  }
+
+  const emptyInput = () => {
+    userName.innerHTML = "";
+    email.innerHTML = "";
+    password.innerHTML = "";
+    isAdmin.innerHTML = "";
+  };
+  form.addEventListener("submit", async(e) => {
+    e.preventDefault();
+    if (userName.value && email.value && password.value && isAdmin.value) {
+      let obj = {
+        userName: userName.value,
+        email: email.value,
+        password: password.value,
+        isAdmin: isAdmin.value,
+      };
+  
+      if (status) {
+        await axios.patch(`${BASE_URL}/${userId}`, obj);
+        emptyInput();
+      } else {
+       await axios.post(BASE_URL, obj);
+        emptyInput();
+      }
+    } else {
+      alert("please fill all fields");
+    }
+  });
 search.addEventListener("input", async (e) => {
   filtered = copyArr;
   filtered = filtered.filter((el) =>

@@ -13,7 +13,7 @@ const search = document.querySelector("#search");
 let copyArr = [];
 let filtered = [];
 let status = false;
-let userId;
+let workerId;
 let base64;
 
 function drawTable(arr) {

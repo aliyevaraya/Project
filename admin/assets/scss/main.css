@@ -62,9 +62,9 @@
   padding-left: 0;
 }
 #dashboard #sidebar .sidebar-list li {
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
-  font-size: 25px;
+  font-size: 23px;
   transition: all 0.3s;
 }
 #dashboard #sidebar .sidebar-list li:hover {
