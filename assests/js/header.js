@@ -36,7 +36,6 @@ window.onscroll = function () {
   scrollFunc();
 };
 
-// VALIDATION
 
 // LOGIN-SIGNUP
 const popUp = document.querySelector(".popup");
@@ -160,26 +159,24 @@ const emptyInput = () => {
 
 logInForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let user = usersData.find(
+  let userData = usersData.find(
     (user) => user.email == email.value && user.password == pw.value
   );
-  if (user) {
-    alert(`welcome ${user.name}`);
+  if (userData) {
     popUp.style.display = "none";
+    alert(`welcome ${user.name}`);
   } else {
     alert("wrong email or password");
   }
   emptyInput();
 });
-// logOut.addEventListener("click", ()=>{
-//   console.log('ji');
-//   usersData=usersData.filter(user=>user.email!=email.value)
-//   console.log(usersData);
-//   localStorage.setItem("UsersData", JSON.stringify(usersData));
-// });
+logOut.addEventListener("click", ()=>{
+  localStorage.clear("UsersData", JSON.stringify(usersData));
+});
 
-// usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212){
-// }
+usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212)
+  // user.style.display="block"
+
 
 // BASKET SIDEBAR
 const openBasket = document.querySelector(".basket");
@@ -195,8 +192,12 @@ closeBasket.addEventListener("click", () => {
 });
 
 let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
+let numberOf= document.querySelector(".number")
+numberOf.innerHTML=inCart.length
 
 function getMyCart() {
+  console.log('hi');
+let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
   ul.innerHTML = "";
   if(inCart.length==0){
     ul.innerHTML='You cart is empty'
@@ -215,18 +216,22 @@ function getMyCart() {
                   <span class="prod-price">$${prod.price}.00</span>
                 </div>
               </div>
-              <a href="#" onclick=removerProd(${prod.id})><i class="fa-solid fa-xmark remove-prod"></i></a>
+              <button onclick=removerProd(${prod.id})><i class="fa-solid fa-xmark remove-prod"></i></button>
             </li>
     `;
   });
  }
 }
-getMyCart();
 
+window.onload = function () {
+  getMyCart();
+};
 function removerProd(id) {
+let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
   inCart = inCart.filter((prod) => prod.id != id);
   localStorage.setItem("My Cart", JSON.stringify(inCart));
+  numberOf.innerHTML-=1
   getMyCart();
+  console.log(inCart);
+  console.log(id);
 }
-const number= document.querySelector(".number")
-number.innerHTML=inCart.length

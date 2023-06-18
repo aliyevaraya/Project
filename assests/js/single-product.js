@@ -15,7 +15,6 @@ function showDescContent(btn) {
   review.classList.remove("active-btn");
   manfContent.style.display = "none";
   reviewContent.style.display = "none";
-  console.log(descContent);
 }
 function showManfContent(btn) {
   manfContent.style.display = "block";
@@ -25,7 +24,6 @@ function showManfContent(btn) {
   review.classList.remove("active-btn");
   descContent.style.display = "none";
   reviewContent.style.display = "none";
-  console.log(manfContent);
 }
 function showReviewContent(btn) {
   reviewContent.style.display = "flex";
@@ -35,5 +33,10 @@ function showReviewContent(btn) {
   desc.classList.remove("active-btn");
   manfContent.style.display = "none";
   descContent.style.display = "none";
-  console.log(reviewContent);
+}
+
+let myCart = JSON.parse(localStorage.getItem("My Cart")) || [];
+
+function addToMyCart() {
+
 }

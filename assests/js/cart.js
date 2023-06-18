@@ -1,13 +1,12 @@
-const tbody =document.querySelector("tbody")
+const tbody = document.querySelector("tbody");
 
-let myCart = JSON.parse(localStorage.getItem("My Cart"))||[];
-console.log(myCart);
+let myCart = JSON.parse(localStorage.getItem("My Cart")) || [];
 
-function getMyCart() {
-    tbody.innerHTML=''
-    myCart.forEach(item => {
-        const tr= document.createElement("tr")
-        tr.innerHTML=`
+function getTableCart() {
+  tbody.innerHTML = "";
+  myCart.forEach((item) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
         <td><input type="checkbox" class="check" /></td>
         <td>
           <img src="${item.photo}" alt="" srcset="" />
@@ -23,23 +22,29 @@ function getMyCart() {
           <input
             type="number"
             class="input-number"
+            oninput=onInput(${item.id},${item.price},this)
             value="1"
             min="1"
             max="50"
           />
         </td>
         <td class="price total">$${item.price}</td>
-        <td><i class="fa-solid fa-xmark"></i></td>
-        `
-        tbody.append(tr)
-      
-    });
+        <td><i class="fa-solid fa-xmark" onclick=deleteProd(${item.id})></i></td>
+        `;
+    tbody.append(tr);
+});
 }
-getMyCart()
 
-const totalNumber=document.querySelector(".input-number")
-const totalPrice=document.querySelector(".total")
-const price=document.querySelector(".price")
-totalNumber.addEventListener("input",(e)=>{
-totalPrice.innerHTML=`$${e.target.value*price.innerHTML.slice(1)}`
-})
+function onInput(id,price,input) {
+    cart=myCart.find(item=>item.id==id)
+
+}
+window.onload = function () {
+    getTableCart();
+  };
+
+function deleteProd(id) {
+  myCart = myCart.filter((prod) => prod.id != id);
+  localStorage.setItem("My Cart", JSON.stringify(myCart));
+  getTableCart()
+}
