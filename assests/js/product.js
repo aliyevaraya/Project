@@ -106,4 +106,3 @@ async function addCart(id) {
     getMyCart();
   } else alert("Product already added to cart");
 }
-console.log(typeof (+quantity.innerHTML + 1));

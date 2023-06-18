@@ -82,7 +82,7 @@ const emptyInput = () => {
   job.innerHTML = "";
 };
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async(e) => {
   e.preventDefault();
   if (name.value && surname.value && job.value && photo.value) {
     let obj = {
@@ -93,11 +93,11 @@ form.addEventListener("submit", (e) => {
     };
 
     if (status) {
-      axios.patch(`${BASE_URL}/${workerId}`, obj);
+      await axios.patch(`${BASE_URL}/${workerId}`, obj);
       emptyInput();
       showAlert(`New product succesfully added`, `success`);
     } else {
-      axios.post(BASE_URL, obj);
+     await axios.post(BASE_URL, obj);
       emptyInput();
       showAlert(`Product succesfully undated`, `primary`);
     }

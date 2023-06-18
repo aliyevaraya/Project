@@ -61,6 +61,8 @@ openPopUp.addEventListener("click", () => {
 });
 
 // REGISTER FORM
+const USERS_URL="http://localhost:8080/users"
+
 const rgForm = document.querySelector("#rgForm");
 const userName = document.querySelector("#userName");
 const rgEmail = document.querySelector("#reg-email");
@@ -75,17 +77,16 @@ function emptyRgInput() {
   agree.checked = false;
 }
 
-let usersData = JSON.parse(localStorage.getItem("UsersData")) || [];
-rgForm.addEventListener("submit", (e) => {
+rgForm.addEventListener("submit", async(e) => {
   e.preventDefault();
   let userObj = {
-    name: userName.value,
+    username: userName.value,
     email: rgEmail.value,
     password: rgPw.value,
+    isAdmin: false,
   };
+  await axios.post(USERS_URL,userObj)
   emptyRgInput();
-  usersData.push(userObj);
-  localStorage.setItem("UsersData", JSON.stringify(usersData));
   popUp.classList.remove("active");
 });
 
@@ -174,7 +175,7 @@ logOut.addEventListener("click", ()=>{
   localStorage.clear("UsersData", JSON.stringify(usersData));
 });
 
-usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212)
+// usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212)
   // user.style.display="block"
 
 
