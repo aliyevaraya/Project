@@ -18,15 +18,18 @@ function drawData(arr) {
           <td>${user.username}</td>
           <td>${user.email}</td>
           <td>${user.password}</td>
-          <td>${user.isAdmin}</td>
           <td>
+          <button class="btn" onclick=editAdmin(${user.id},${user.isAdmin},this)>${user.isAdmin}</button>
+          </td>     
+           <td>
             <a href="#" class="btn text-danger" onclick=delUser(${user.id},this)><i class="fa-solid fa-trash-arrow-up fa-bounce"></i></a>
-            <a href="#"  class="btn text-success" onclick=editUser(${user.id}) ><i class="fa-solid fa-pen-to-square fa-bounce"></i></a>
             </td>
+      
           `;
     tbody.append(tr);
   });
 }
+
 
 async function getData() {
   try {
@@ -41,6 +44,25 @@ async function getData() {
 }
 getData();
 
+async function editAdmin(id,isAdmin, btn) {
+  if (isAdmin) {
+    let obj={
+      isAdmin: false
+    }
+  await axios.patch(`${BASE_URL}/${id}`,obj)
+  }else {
+    let obj={
+      isAdmin: true
+    }
+  await axios.patch(`${BASE_URL}/${id}`,obj)
+
+  }
+  console.log(isAdmin);
+
+  // console.log(user);
+  // getData()
+}
+
 async function delUser(id) {
   try {
     await axios.delete(`${BASE_URL}/${id}`);
@@ -49,43 +71,8 @@ async function delUser(id) {
     console.log(error);
   }
 }
-async function editUser(id) {
-    userId = id;
-    status = true;
-    filtered = copyArr.find((user) => user.id == id);
-    userName.value = filtered.username;
-    email.value = filtered.email;
-    password.value = filtered.password;
-    isAdmin.value=filtered.isAdmin
-  }
 
-  const emptyInput = () => {
-    userName.value = "";
-    email.value = "";
-    password.value = "";
-    isAdmin.value = "";
-  };
-  form.addEventListener("submit", async(e) => {
-    e.preventDefault();
-    if (userName.value && email.value && password.value && isAdmin.value) {
-      let obj = {
-        userName: userName.value,
-        email: email.value,
-        password: password.value,
-        isAdmin: isAdmin.value,
-      };
-  
-      if (status) {
-        await axios.patch(`${BASE_URL}/${userId}`, obj);
-        emptyInput();
-      } else {
-       await axios.post(BASE_URL, obj);
-        emptyInput();
-      }
-    } else {
-      alert("please fill all fields");
-    }
-  });
+
 search.addEventListener("input", async (e) => {
   filtered = copyArr;
   filtered = filtered.filter((el) =>

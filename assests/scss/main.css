@@ -122,6 +122,9 @@ header .header-top .top-right .icons {
 header .header-top .top-right .icons a .fa-brands {
   color: #fff;
 }
+header .header-top .top-right .registr {
+  display: flex;
+}
 header .header-top .top-right .registr a {
   text-transform: uppercase;
   font-size: 13px;
