@@ -84,16 +84,16 @@ rgForm.addEventListener("submit", async (e) => {
     password: rgPw.value,
     isAdmin: false,
   };
-  let res=await axios(USERS_URL)
-  let users=res.data
+  let res = await axios(USERS_URL);
+  let users = res.data;
   console.log(users);
-  let check=users.find(user=>user.email==userObj.email)
+  let check = users.find((user) => user.email == userObj.email);
   console.log(check);
-  if(!check){
+  if (!check) {
     await axios.post(USERS_URL, userObj);
     emptyRgInput();
     popUp.classList.remove("active");
-  }else alert('this email already used')
+  } else alert("this email already used");
 });
 
 const setError = (element, message) => {
@@ -163,7 +163,6 @@ const emptyInput = () => {
   pw.value = "";
   remember.checked = false;
 };
-let userData = JSON.parse(localStorage.getItem("User_Data"));
 
 logInForm.addEventListener("submit", async (e) => {
   let res = await axios(USERS_URL);
@@ -174,9 +173,8 @@ logInForm.addEventListener("submit", async (e) => {
   );
   if (user) {
     popUp.style.display = "none";
-    userData.push(user);
-    localStorage.setItem("User_Data",JSON.stringify(userData))
-    alert(`welcome ${user.username}`);
+    localStorage.setItem("User_Data", JSON.stringify(user));
+    window.location.reload()
   } else {
     alert("wrong email or password");
   }
@@ -187,12 +185,16 @@ logOut.addEventListener("click", () => {
   localStorage.clear();
 });
 
-console.log(userData);
-// let check=userData.find(user=>user.isAdmin===true)
-// console.log(check);
-// if(check){
-//   window.location="./admin/admin-dashboard.html"
-// }
+const admin= document.querySelector(".admin")
+admin.style.display="none"
+
+let userData = JSON.parse(localStorage.getItem("User_Data"));
+if(userData.isAdmin){
+  admin.style.display="flex"
+  console.log(userData);
+  console.log(userData.isAdmin);
+}else admin.style.display="none"
+
 
 // BASKET SIDEBAR
 const openBasket = document.querySelector(".basket");

@@ -18,9 +18,7 @@
         background: $bg-color;
         box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
         transition: transform 1s;
-
         .img {
-          position: relative;
           overflow: hidden;
           img {
             height: 400px;
@@ -66,9 +64,9 @@
           }
         }
         &:hover {
-            img {
-              transform: skew(0deg);
-            }
+          img {
+            transform: skew(0deg);
+          }
         }
       }
     }

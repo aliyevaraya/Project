@@ -772,7 +772,6 @@ footer .footer-bottom .copyright p {
   transition: transform 1s;
 }
 #our-offering .our-offering .our-offering-body .prod .img {
-  position: relative;
   overflow: hidden;
 }
 #our-offering .our-offering .our-offering-body .prod .img img {
