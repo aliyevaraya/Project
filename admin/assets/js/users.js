@@ -19,7 +19,7 @@ function drawData(arr) {
           <td>${user.email}</td>
           <td>${user.password}</td>
           <td>
-          <button class="btn" onclick=editAdmin(${user.id},${user.isAdmin},this)>${user.isAdmin}</button>
+          <button class="btn" onclick=editAdmin(${user.id},${user.isAdmin})>${user.isAdmin}</button>
           </td>     
            <td>
             <a href="#" class="btn text-danger" onclick=delUser(${user.id},this)><i class="fa-solid fa-trash-arrow-up fa-bounce"></i></a>
@@ -44,7 +44,8 @@ async function getData() {
 }
 getData();
 
-async function editAdmin(id,isAdmin, btn) {
+async function editAdmin(id,isAdmin) {
+  user=copyArr.find(user=>user.id==id)
   if (isAdmin) {
     let obj={
       isAdmin: false
@@ -57,10 +58,6 @@ async function editAdmin(id,isAdmin, btn) {
   await axios.patch(`${BASE_URL}/${id}`,obj)
 
   }
-  console.log(isAdmin);
-
-  // console.log(user);
-  // getData()
 }
 
 async function delUser(id) {

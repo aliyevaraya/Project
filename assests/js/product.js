@@ -1,10 +1,12 @@
 //////////
 
 const prods = document.querySelector(".prods");
+const sort = document.querySelector("#select");
 const PRODUCTS_URL = "http://localhost:8080/products";
 const FAV_URL = "http://localhost:8080/favorites";
 
 let copyArr = [];
+let defaultArr = [];
 
 function drawCards(arr) {
   prods.innerHTML = "";
@@ -49,7 +51,6 @@ async function getCard() {
 getCard();
 
 const rgs = document.querySelector(".popup");
-
 async function addFav(id) {
   let favs = JSON.parse(localStorage.getItem("Favorites")) || [];
   let user = JSON.parse(localStorage.getItem("User_Data"));
@@ -114,3 +115,16 @@ async function addCart(id) {
     // localStorage.setItem("My_Cart", JSON.stringify(myCart));
   }
 }
+
+sort.addEventListener("change", () => {
+  if (sort.value == "asc") {
+    copyArr = copyArr.sort((a, b) => a.price - b.price);
+    console.log(copyArr);
+  } else if (sort.value == "dsc") {
+    copyArr = copyArr.sort((a, b) => b.price - a.price);
+  } else {
+    defaultArr = copyArr;
+    console.log(defaultArr);
+  }
+  getCard();
+});

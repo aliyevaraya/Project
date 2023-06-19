@@ -1,39 +1,20 @@
-const descContent = document.querySelector(".desc-content");
-const manfContent = document.querySelector(".manf-content");
-const reviewContent = document.querySelector(".review-content");
-const desc = document.querySelector(".desc");
-const manf = document.querySelector(".manf");
-const review = document.querySelector(".review");
+const tabs = document.querySelectorAll("[data-tab-target]");
+const tabContents = document.querySelectorAll("[data-tab-content]");
 
-manfContent.style.display = "none";
-reviewContent.style.display = "none";
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.tabTarget);
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("active");
+    });
+    tabs.forEach((tab) => {
+      tab.classList.remove("active");
+    });
+    tab.classList.add("active");
+    target.classList.add("active");
+  });
+});
 
-function showDescContent(btn) {
-  descContent.style.display = "block";
-  btn.classList.add("active-btn");
-  manf.classList.remove("active-btn");
-  review.classList.remove("active-btn");
-  manfContent.style.display = "none";
-  reviewContent.style.display = "none";
-}
-function showManfContent(btn) {
-  manfContent.style.display = "block";
-  manfContent.style.opacity = 1;
-  btn.classList.add("active-btn");
-  desc.classList.remove("active-btn");
-  review.classList.remove("active-btn");
-  descContent.style.display = "none";
-  reviewContent.style.display = "none";
-}
-function showReviewContent(btn) {
-  reviewContent.style.display = "flex";
-  reviewContent.style.opacity = 1;
-  btn.classList.add("active-btn");
-  manf.classList.remove("active-btn");
-  desc.classList.remove("active-btn");
-  manfContent.style.display = "none";
-  descContent.style.display = "none";
-}
 let id = new URLSearchParams(window.location.search).get("id");
 const PRODUCTS_URL = "http://localhost:8080/products";
 const row = document.querySelector(".prod-detail");
@@ -142,5 +123,3 @@ async function addToMyCart(id) {
     getMyCart();
   } else alert("Product already added to cart");
 }
-
-

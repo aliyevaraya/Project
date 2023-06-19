@@ -99,8 +99,8 @@ search.addEventListener("input", async (e) => {
     el.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
   );
   defaultArr = filtered;
-  getData();
 });
+getData();
 
 sortBtn.addEventListener("change", () => {
   if (sortBtn.value == "asc") {

@@ -69,7 +69,9 @@
           </div>
           <div class="registr">
             <a href="#" class="btnLogin-popup">Log in</a>
-            <a href="./admin/admin-dashboard.html"> <i class="fa-solid fa-user text-light admin"></i></a>
+            <a href="./admin/admin-dashboard.html">
+              <i class="fa-solid fa-user text-light admin"></i
+            ></a>
             <a href="#" class="logOut"
               ><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i
             ></a>
@@ -277,166 +279,168 @@
     <!-- DESCRIPTION -->
     <section id="desc">
       <div class="container">
-        <div class="btns">
-          <button class="desc active-btn" onclick="showDescContent(this)">
+        <div class="btns tabs">
+          <button class="desc active tab" data-tab-target="#home">
             Description
           </button>
-          <button class="manf" onclick="showManfContent(this)">
+          <button class="manf tab" data-tab-target="#pricing">
             Manufacturer
           </button>
-          <button class="review" onclick="showReviewContent(this)">
-            Reviews
-          </button>
+          <button class="review tab" data-tab-target="#about">Reviews</button>
         </div>
-        <div class="desc-content text">
-          <h3>Bacardi 151 Degree</h3>
-          <p>
-            On her way she met a copy. The copy warned the Little Blind Text,
-            that where it came from it would have been rewritten a thousand
-            times and everything that was left from its origin would be the word
-            "and" and the Little Blind Text should turn around and return to its
-            own, safe country. But nothing the copy said could convince her and
-            so it didn't take long until a few insidious Copy Writers ambushed
-            her, made her drunk with Longe and Parole and dragged her into their
-            agency, where they abused her for their.
-          </p>
-        </div>
-        <div class="manf-content text">
-          <h3>Manufactured By Liquor Store</h3>
-          <p>
-            On her way she met a copy. The copy warned the Little Blind Text,
-            that where it came from it would have been rewritten a thousand
-            times and everything that was left from its origin would be the word
-            "and" and the Little Blind Text should turn around and return to its
-            own, safe country. But nothing the copy said could convince her and
-            so it didn't take long until a few insidious Copy Writers ambushed
-            her, made her drunk with Longe and Parole and dragged her into their
-            agency, where they abused her for their.
-          </p>
-        </div>
-        <div class="review-content text row align-items-baseline">
-          <div class="col-md-8">
-            <h3>23 Reviews</h3>
-            <div class="review">
-              <img src="./assests/images/person_1.jpg" alt="" />
-              <div class="comment">
-                <div class="user">
-                  <h6>Jacob Webb</h6>
-                  <span class="date"> 25 April 2020</span>
-                </div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p>
-                  When she reached the first hills of the Italic Mountains, she
-                  had a last view back on the skyline of her hometown
-                  Bookmarksgrov
-                </p>
-              </div>
-            </div>
-            <div class="review bold">
-              <img src="./assests/images/person_2.jpg" alt="" />
-              <div class="comment">
-                <div class="user">
-                  <h6>Jacob Webb</h6>
-                  <span class="date"> 25 April 2020</span>
-                </div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p>
-                  When she reached the first hills of the Italic Mountains, she
-                  had a last view back on the skyline of her hometown
-                  Bookmarksgrov
-                </p>
-              </div>
-            </div>
-            <div class="review">
-              <img src="./assests/images/person_3.jpg" alt="" />
-              <div class="comment">
-                <div class="user">
-                  <h6>Jacob Webb</h6>
-                  <span class="date"> 25 April 2020</span>
-                </div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p>
-                  When she reached the first hills of the Italic Mountains, she
-                  had a last view back on the skyline of her hometown
-                  Bookmarksgrov
-                </p>
-              </div>
-            </div>
+
+        <div class="tab-content">
+          <div class="active" id="home" data-tab-content>
+            <h3>Bacardi 151 Degree</h3>
+            <p>
+              On her way she met a copy. The copy warned the Little Blind Text,
+              that where it came from it would have been rewritten a thousand
+              times and everything that was left from its origin would be the
+              word "and" and the Little Blind Text should turn around and return
+              to its own, safe country. But nothing the copy said could convince
+              her and so it didn't take long until a few insidious Copy Writers
+              ambushed her, made her drunk with Longe and Parole and dragged her
+              into their agency, where they abused her for their.
+            </p>
           </div>
-          <div class="col-md-4">
-            <h4>Give a Review</h4>
-            <div class="give-review">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <span>(98%)</span>
+          <div id="pricing" data-tab-content>
+            <h3>Manufactured By Liquor Store</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              sunt totam alias, minus omnis, quam quisquam veritatis fugiat cum
+              cupiditate culpa illum assumenda modi soluta, quasi illo
+              reiciendis nihil eligendi. Quae unde molestias error aliquid
+              explicabo eius, modi nam a.
+            </p>
+          </div>
+          <div
+            class="review-content row align-items-baseline"
+            id="about"
+            data-tab-content
+          >
+            <div class="col-md-8">
+              <h3>23 Reviews</h3>
+              <div class="review">
+                <img src="./assests/images/person_1.jpg" alt="" />
+                <div class="comment">
+                  <div class="user">
+                    <h6>Jacob Webb</h6>
+                    <span class="date"> 25 April 2020</span>
+                  </div>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p>
+                    When she reached the first hills of the Italic Mountains,
+                    she had a last view back on the skyline of her hometown
+                    Bookmarksgrov
+                  </p>
+                </div>
               </div>
-              <span>20 Reviews</span>
+              <div class="review bold">
+                <img src="./assests/images/person_2.jpg" alt="" />
+                <div class="comment">
+                  <div class="user">
+                    <h6>Jacob Webb</h6>
+                    <span class="date"> 25 April 2020</span>
+                  </div>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p>
+                    When she reached the first hills of the Italic Mountains,
+                    she had a last view back on the skyline of her hometown
+                    Bookmarksgrov
+                  </p>
+                </div>
+              </div>
+              <div class="review">
+                <img src="./assests/images/person_3.jpg" alt="" />
+                <div class="comment">
+                  <div class="user">
+                    <h6>Jacob Webb</h6>
+                    <span class="date"> 25 April 2020</span>
+                  </div>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p>
+                    When she reached the first hills of the Italic Mountains,
+                    she had a last view back on the skyline of her hometown
+                    Bookmarksgrov
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="give-review">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <span>(85%)</span>
+            <div class="col-md-4">
+              <h4>Give a Review</h4>
+              <div class="give-review">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(98%)</span>
+                </div>
+                <span>20 Reviews</span>
               </div>
-              <span> 10 Reviews</span>
-            </div>
-            <div class="give-review">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <span>(98%)</span>
+              <div class="give-review">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(85%)</span>
+                </div>
+                <span> 10 Reviews</span>
               </div>
-              <span> 6 Reviews</span>
-            </div>
-            <div class="give-review">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <span>(98%)</span>
+              <div class="give-review">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(98%)</span>
+                </div>
+                <span> 6 Reviews</span>
               </div>
-              <span> 0 Reviews</span>
-            </div>
-            <div class="give-review">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <span>(98%)</span>
+              <div class="give-review">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(98%)</span>
+                </div>
+                <span> 0 Reviews</span>
               </div>
-              <span> 0 Reviews</span>
+              <div class="give-review">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(98%)</span>
+                </div>
+                <span> 0 Reviews</span>
+              </div>
             </div>
           </div>
         </div>

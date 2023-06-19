@@ -78,7 +78,7 @@
       padding: 15px 25px;
       font-size: 25px;
       margin-bottom: 2rem;
-      &.active-btn {
+      &.active {
         background-color: $secondary-color;
         color: $white-color;
       }
@@ -88,44 +88,54 @@
       }
     }
   }
-  .text {
+  .tab-content {
     padding: 2rem 4rem 2rem 2rem;
     background-color: $bg-color;
-    h3 {
-      margin-bottom: 2rem;
-    }
-    &.review-content {
-      padding-right: 2rem;
-      .review {
-        display: flex;
-        gap: 20px;
+    [data-tab-content] {
+      display: none;
+      h3 {
         margin-bottom: 2rem;
-        img {
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
+      }
+      &.active{
+        display: block;
+        &.review-content.active{
+          display: flex;
         }
-        .comment {
-          padding-right: 2rem;
-          .user {
-            @include flexbox;
-            h6 {
-              margin-bottom: 0;
+      }
+      &.review-content {
+        padding-right: 2rem;
+        .review {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 2rem;
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+          .comment {
+            padding-right: 2rem;
+            .user {
+              @include flexbox;
+              h6 {
+                margin-bottom: 0;
+              }
+              span {
+                color: $grey-color;
+                padding-left: 5px;
+              }
             }
-            span {
-              color: $grey-color;
-              padding-left: 5px;
+            .stars {
+              color: $secondary-color;
             }
           }
-          .stars {
-            color: $secondary-color;
+          &.bold {
+            margin: 3rem 0;
           }
-        }
-        &.bold {
-          margin: 3rem 0;
         }
       }
     }
+   
   }
   .give-review {
     @include flexbox;

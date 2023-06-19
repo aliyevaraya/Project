@@ -1355,7 +1355,7 @@ footer .footer-bottom .copyright p {
   font-size: 25px;
   margin-bottom: 2rem;
 }
-#desc .btns button.active-btn {
+#desc .btns button.active {
   background-color: rgb(183, 71, 42);
   color: #fff;
 }
@@ -1363,45 +1363,54 @@ footer .footer-bottom .copyright p {
   background-color: rgb(162, 63, 37);
   color: #fff;
 }
-#desc .text {
+#desc .tab-content {
   padding: 2rem 4rem 2rem 2rem;
   background-color: rgb(245, 244, 240);
 }
-#desc .text h3 {
+#desc .tab-content [data-tab-content] {
+  display: none;
+}
+#desc .tab-content [data-tab-content] h3 {
   margin-bottom: 2rem;
 }
-#desc .text.review-content {
+#desc .tab-content [data-tab-content].active {
+  display: block;
+}
+#desc .tab-content [data-tab-content].active.review-content.active {
+  display: flex;
+}
+#desc .tab-content [data-tab-content].review-content {
   padding-right: 2rem;
 }
-#desc .text.review-content .review {
+#desc .tab-content [data-tab-content].review-content .review {
   display: flex;
   gap: 20px;
   margin-bottom: 2rem;
 }
-#desc .text.review-content .review img {
+#desc .tab-content [data-tab-content].review-content .review img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
 }
-#desc .text.review-content .review .comment {
+#desc .tab-content [data-tab-content].review-content .review .comment {
   padding-right: 2rem;
 }
-#desc .text.review-content .review .comment .user {
+#desc .tab-content [data-tab-content].review-content .review .comment .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#desc .text.review-content .review .comment .user h6 {
+#desc .tab-content [data-tab-content].review-content .review .comment .user h6 {
   margin-bottom: 0;
 }
-#desc .text.review-content .review .comment .user span {
+#desc .tab-content [data-tab-content].review-content .review .comment .user span {
   color: rgb(119, 127, 130);
   padding-left: 5px;
 }
-#desc .text.review-content .review .comment .stars {
+#desc .tab-content [data-tab-content].review-content .review .comment .stars {
   color: rgb(183, 71, 42);
 }
-#desc .text.review-content .review.bold {
+#desc .tab-content [data-tab-content].review-content .review.bold {
   margin: 3rem 0;
 }
 #desc .give-review {

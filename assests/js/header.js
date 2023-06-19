@@ -174,7 +174,7 @@ logInForm.addEventListener("submit", async (e) => {
   if (user) {
     popUp.style.display = "none";
     localStorage.setItem("User_Data", JSON.stringify(user));
-    window.location.reload()
+    window.location.reload();
   } else {
     alert("wrong email or password");
   }
@@ -183,18 +183,16 @@ logInForm.addEventListener("submit", async (e) => {
 
 logOut.addEventListener("click", () => {
   localStorage.clear();
+  admin.style.display = "none";
 });
 
-const admin= document.querySelector(".admin")
-admin.style.display="none"
+const admin = document.querySelector(".admin");
+admin.style.display = "none";
 
 let userData = JSON.parse(localStorage.getItem("User_Data"));
-if(userData.isAdmin){
-  admin.style.display="flex"
-  console.log(userData);
-  console.log(userData.isAdmin);
-}else admin.style.display="none"
-
+if (userData.isAdmin) {
+  admin.style.display = "flex";
+} else admin.style.display = "none";
 
 // BASKET SIDEBAR
 const openBasket = document.querySelector(".basket");
