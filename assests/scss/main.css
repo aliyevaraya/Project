@@ -193,7 +193,7 @@ header .header-bg .header-nav .nav-basket nav .nav-ul {
 }
 header .header-bg .header-nav .nav-basket nav .nav-ul li a {
   text-transform: uppercase;
-  color: rgb(119, 127, 130);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
 }
 header .header-bg .header-nav .nav-basket nav .nav-ul li a:hover {
@@ -212,6 +212,9 @@ header .header-bg .header-nav .nav-basket nav .nav-ul li:hover .dropdown .dropdo
 }
 header .header-bg .header-nav .nav-basket .basket {
   position: relative;
+  background-color: rgb(245, 244, 240);
+  border-radius: 8px;
+  padding: 3px;
   margin: 0 15px;
   cursor: pointer;
 }
@@ -219,7 +222,7 @@ header .header-bg .header-nav .nav-basket .basket .number {
   position: absolute;
   bottom: 20%;
   left: 55%;
-  color: rgb(119, 127, 130);
+  color: rgba(255, 255, 255, 0.8);
   background-color: rgba(51, 51, 51, 0.6);
   border-radius: 50%;
   padding: 2% 25%;

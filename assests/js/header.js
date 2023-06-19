@@ -36,7 +36,6 @@ window.onscroll = function () {
   scrollFunc();
 };
 
-
 // LOGIN-SIGNUP
 const popUp = document.querySelector(".popup");
 const logInBtn = document.querySelector(".login-link");
@@ -61,7 +60,7 @@ openPopUp.addEventListener("click", () => {
 });
 
 // REGISTER FORM
-const USERS_URL="http://localhost:8080/users"
+const USERS_URL = "http://localhost:8080/users";
 
 const rgForm = document.querySelector("#rgForm");
 const userName = document.querySelector("#userName");
@@ -77,7 +76,7 @@ function emptyRgInput() {
   agree.checked = false;
 }
 
-rgForm.addEventListener("submit", async(e) => {
+rgForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   let userObj = {
     username: userName.value,
@@ -85,9 +84,16 @@ rgForm.addEventListener("submit", async(e) => {
     password: rgPw.value,
     isAdmin: false,
   };
-  await axios.post(USERS_URL,userObj)
-  emptyRgInput();
-  popUp.classList.remove("active");
+  let res=await axios(USERS_URL)
+  let users=res.data
+  console.log(users);
+  let check=users.find(user=>user.email==userObj.email)
+  console.log(check);
+  if(!check){
+    await axios.post(USERS_URL, userObj);
+    emptyRgInput();
+    popUp.classList.remove("active");
+  }else alert('this email already used')
 });
 
 const setError = (element, message) => {
@@ -157,27 +163,32 @@ const emptyInput = () => {
   pw.value = "";
   remember.checked = false;
 };
+let userData = JSON.parse(localStorage.getItem("User_Data"));
 
-logInForm.addEventListener("submit", (e) => {
+logInForm.addEventListener("submit", async (e) => {
+  let res = await axios(USERS_URL);
+  let usersData = res.data;
   e.preventDefault();
-  let userData = usersData.find(
+  let user = usersData.find(
     (user) => user.email == email.value && user.password == pw.value
   );
-  if (userData) {
+  if (user) {
     popUp.style.display = "none";
-    alert(`welcome ${user.name}`);
+    userData.push(user);
+    localStorage.setItem("User_Data",JSON.stringify(userData))
+    alert(`welcome ${user.username}`);
   } else {
     alert("wrong email or password");
   }
   emptyInput();
 });
-logOut.addEventListener("click", ()=>{
-  localStorage.clear("UsersData", JSON.stringify(usersData));
+
+logOut.addEventListener("click", () => {
+  localStorage.clear("User_Data", JSON.stringify(userData));
 });
 
 // usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212)
-  // user.style.display="block"
-
+// user.style.display="block"
 
 // BASKET SIDEBAR
 const openBasket = document.querySelector(".basket");
@@ -192,20 +203,18 @@ closeBasket.addEventListener("click", () => {
   myBasket.style.right = "-100%";
 });
 
-let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
-let numberOf= document.querySelector(".number")
-numberOf.innerHTML=inCart.length
+let inCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
+let numberOf = document.querySelector(".number");
+numberOf.innerHTML = inCart.length;
 
 function getMyCart() {
-  console.log('hi');
-let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
+  let inCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
   ul.innerHTML = "";
-  if(inCart.length==0){
-    ul.innerHTML='You cart is empty'
-  }
- else{
-  inCart.slice(0, 3).forEach((prod) => {
-    ul.innerHTML += `
+  if (inCart.length == 0) {
+    ul.innerHTML = "You cart is empty";
+  } else {
+    inCart.slice(0, 3).forEach((prod) => {
+      ul.innerHTML += `
     <li class="incart">
               <div class="cart-info">
                 <div class="img">
@@ -220,19 +229,17 @@ let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
               <button onclick=removerProd(${prod.id})><i class="fa-solid fa-xmark remove-prod"></i></button>
             </li>
     `;
-  });
- }
+    });
+  }
 }
 
 window.onload = function () {
   getMyCart();
 };
 function removerProd(id) {
-let inCart = JSON.parse(localStorage.getItem("My Cart"))||[];
+  let inCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
   inCart = inCart.filter((prod) => prod.id != id);
-  localStorage.setItem("My Cart", JSON.stringify(inCart));
-  numberOf.innerHTML-=1
+  localStorage.setItem("My_Cart", JSON.stringify(inCart));
+  numberOf.innerHTML -= 1;
   getMyCart();
-  console.log(inCart);
-  console.log(id);
 }

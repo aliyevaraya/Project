@@ -181,7 +181,7 @@ header {
             li {
               a {
                 text-transform: uppercase;
-                color: $grey-color;
+                color: rgba($white-color, 0.8);
                 font-size: 14px;
                 &:hover {
                   color: $primary-color;
@@ -210,13 +210,16 @@ header {
 
         .basket {
           position: relative;
+          background-color: $bg-color;
+          border-radius: 8px;
+          padding: 3px;
           margin: 0 15px;
           cursor: pointer;
           .number {
             position: absolute;
             bottom: 20%;
             left: 55%;
-            color: $grey-color;
+            color: rgba($white-color, 0.8);
             background-color: rgba(51, 51, 51, 0.6);
             border-radius: 50%;
             padding: 2% 25%;

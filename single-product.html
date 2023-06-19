@@ -30,7 +30,9 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li class="mobile-dropdown">
-            <a href="#" data-action="dropdown-toggle" class="mobilebar-toggle">Products</a>
+            <a href="#" data-action="dropdown-toggle" class="mobilebar-toggle"
+              >Products</a
+            >
             <div class="dropdown-menu">
               <a class="dropdown-item" href="./prducts.html">Products</a>
               <a class="dropdown-item" href="./single-product.html"
@@ -67,7 +69,9 @@
           </div>
           <div class="registr">
             <a href="#" class="btnLogin-popup">Log in</a>
-            <a href="#" class="logOut"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i></a>
+            <a href="#" class="logOut"
+              ><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -144,15 +148,15 @@
             <form action="" id="login-form">
               <div class="input-box">
                 <label for="email">Email</label>
-                <input type="email" id="email" required/>
+                <input type="email" id="email" required />
               </div>
               <div class="input-box">
                 <label for="pw">Password</label>
-                <input type="password" id="pw" required/>
+                <input type="password" id="pw" required />
               </div>
               <div class="remember-forget">
                 <label for="remember"
-                  ><input type="checkbox" id="remember"/>Remember me</label
+                  ><input type="checkbox" id="remember" />Remember me</label
                 >
                 <a href="#">Forgot Password?</a>
               </div>
@@ -170,23 +174,23 @@
             <form action="" id="rgForm">
               <div class="input-box">
                 <label for="userName">Username</label>
-                <input type="text" id="userName" name="username"/>
+                <input type="text" id="userName" name="username" />
                 <div class="error"></div>
               </div>
               <div class="input-box">
                 <label for="email">Email</label>
-                <input type="text" id="reg-email" name="email"/>
+                <input type="text" id="reg-email" name="email" />
                 <div class="error"></div>
               </div>
               <div class="input-box">
                 <label for="pw">Password</label>
-                <input type="password" id="reg-pw" name="password"/>
+                <input type="password" id="reg-pw" name="password" />
                 <div class="error"></div>
               </div>
               <div class="agree">
                 <label
-                  ><input type="checkbox" required id="agree"/> I agree to the terms &
-                  conditions</label
+                  ><input type="checkbox" required id="agree" /> I agree to the
+                  terms & conditions</label
                 >
               </div>
               <button type="submit" class="register-btn">Register</button>
@@ -201,44 +205,7 @@
         </div>
         <div id="my-cart">
           <a href="#"><i class="fa-solid fa-xmark close-cart"></i></a>
-          <ul class="my-cart">
-            <li class="incart">
-              <div class="cart-info">
-                <div class="img">
-                  <img src="./assests/images/prod-1.jpg" alt="" />
-                </div>
-                <div class="info">
-                  <p class="prod-name">Tequila</p>
-                  <span class="prod-price">$56</span>
-                </div>
-              </div>
-              <a href="#"><i class="fa-solid fa-xmark remove-cart"></i></a>
-            </li>
-            <li class="incart">
-              <div class="cart-info">
-                <div class="img">
-                  <img src="./assests/images/prod-1.jpg" alt="" />
-                </div>
-                <div class="info">
-                  <p class="prod-name">Tequila</p>
-                  <span class="prod-price">$56</span>
-                </div>
-              </div>
-              <a href="#"><i class="fa-solid fa-xmark remove-cart"></i></a>
-            </li>
-            <li class="incart">
-              <div class="cart-info">
-                <div class="img">
-                  <img src="./assests/images/prod-1.jpg" alt="" />
-                </div>
-                <div class="info">
-                  <p class="prod-name">Tequila</p>
-                  <span class="prod-price">$56</span>
-                </div>
-              </div>
-              <a href="#"><i class="fa-solid fa-xmark remove-cart"></i></a>
-            </li>
-          </ul>
+          <ul class="my-cart"></ul>
           <a href="./cart.html" class="view-all">View All</a>
         </div>
         <div class="about title">
@@ -303,59 +270,7 @@
     <!-- PRODUCT-SINGLE -->
     <section id="product-single">
       <div class="container">
-        <div class="row prod-detail">
-          <!-- <div class="col-md-5 prod-img">
-            <img src="./assests/images/prod-1.jpg" alt="" />
-          </div>
-          <div class="col-md-7 prod-info">
-            <h2>Bacardi 151 Degree</h2>
-            <div class="score">
-              <div class="stars">
-                <span class="stars-num">5.0</span>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div>
-                <span>100</span>
-                <span class="text">Rating</span>
-              </div>
-              <div>
-                <span>500</span>
-                <span class="text">Sold</span>
-              </div>
-            </div>
-            <h3>$120.00</h3>
-            <p>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia. It is a paradisematic country, in
-              which roasted parts of sentences fly into your mouth.
-            </p>
-            <p>
-              On her way she met a copy. The copy warned the Little Blind Text,
-              that where it came from it would have been rewritten a thousand
-              times and everything that was left from its origin would be the
-              word "and" and the Little Blind Text should turn around and return
-              to its own, safe country. But nothing the copy said could convince
-              her and so it didn't take long until a few insidious Copy Writers
-              ambushed her, made her drunk with Longe and Parole and dragged her
-              into their agency, where they abused her for their.
-            </p>
-            <div class="order-count">
-              <button class="minus"><i class="fa-solid fa-minus"></i></button>
-              <input type="number" value="1" />
-              <button class="plus"><i class="fa-solid fa-plus"></i></button>
-            </div>
-            <p class="pieces">80 pieces available</p>
-            <div class="btns">
-              <a href="#" class="add-cart" onclick="addToMyCart()">Add to Cart</a>
-              <a href="./cart.html" class="buy">Buy now</a>
-            </div>
-          </div> -->
-        
-        </div>
+        <div class="row prod-detail"></div>
       </div>
     </section>
     <!-- DESCRIPTION -->
@@ -677,20 +592,20 @@
         </div>
       </div>
     </footer>
-        <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
-    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
       integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script  src="./assests/js/header.js"></script>
     <script src="./assests/js/single-product.js"></script>
+    <script src="./assests/js/header.js"></script>
     <script>
       ScrollReveal({
         distance: "60px",

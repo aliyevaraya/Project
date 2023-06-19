@@ -34,17 +34,41 @@ function showReviewContent(btn) {
   manfContent.style.display = "none";
   descContent.style.display = "none";
 }
-
 let id = new URLSearchParams(window.location.search).get("id");
 const PRODUCTS_URL = "http://localhost:8080/products";
 const row = document.querySelector(".prod-detail");
 
+function getMyCart() {
+  let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
+  ul.innerHTML = "";
+  if (myCart.length == 0) {
+    ul.innerHTML = "You cart is empty";
+  } else {
+    myCart.slice(0, 3).forEach((prod) => {
+      ul.innerHTML += `
+      <li class="incart">
+                <div class="cart-info">
+                  <div class="img">
+                    <img src="${prod.photo}" alt="" />
+                  </div>
+                  <div class="info">
+                    <p class="prod-name">${prod.name}</p>
+                    <p class="prod-type">${prod.type}</p>
+                    <span class="prod-price">$${prod.price}.00</span>
+                  </div>
+                </div>
+                <button onclick=removerProd(${prod.id})><i class="fa-solid fa-xmark remove-prod"></i></button>
+              </li>
+      `;
+    });
+  }
+}
 
 async function drawDetail() {
   try {
-      const res= await  axios(`${PRODUCTS_URL}/${id}`)
-  const data= res.data
-      row.innerHTML = `
+    const res = await axios(`${PRODUCTS_URL}/${id}`);
+    const data = res.data;
+    row.innerHTML = `
       <div class="col-md-5 prod-img">
       <img src="${data.photo}" alt="" />
     </div>
@@ -86,18 +110,37 @@ async function drawDetail() {
       </p>
       <div class="order-count">
         <button class="minus"><i class="fa-solid fa-minus"></i></button>
-        <input type="number" value="1" />
+        <input type="number" value="${data.quantity}" min="1"/>
         <button class="plus"><i class="fa-solid fa-plus"></i></button>
       </div>
       <p class="pieces">80 pieces available</p>
       <div class="btns">
-        <a href="#" class="add-cart" onclick="addToMyCart()">Add to Cart</a>
+        <a href="#" class="add-cart" onclick="addToMyCart(${data.id},${data.quantity})">Add to Cart</a>
         <a href="./cart.html" class="buy">Buy now</a>
       </div>
     </div>
     `;
   } catch (error) {
-      console.log(error);
+    console.log(error);
   }
-    }
-  drawDetail();
+}
+drawDetail();
+
+let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
+let basketNumber = document.querySelector(".number");
+basketNumber.innerHTML = myCart.length;
+
+async function addToMyCart(id) {
+  let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
+  const res = await axios(`${PRODUCTS_URL}/${id}`);
+  const data = res.data;
+  let check = myCart.find((item) => item.id == data.id);
+  if (!check) {
+    myCart.push(data);
+    localStorage.setItem("My_Cart", JSON.stringify(myCart));
+    basketNumber.innerHTML = Number(basketNumber.innerHTML) + 1;
+    getMyCart();
+  } else alert("Product already added to cart");
+}
+
+
