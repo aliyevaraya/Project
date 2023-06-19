@@ -1,11 +1,7 @@
 const BASE_URL = " http://localhost:8080/users";
 const tbody = document.querySelector("tbody");
 const search = document.querySelector("#search");
-const userName = document.querySelector("#username");
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
 const isAdmin = document.querySelector("#isAdmin");
-const title = document.querySelector(".title");
 const form = document.querySelector("form");
 const submitBtn = document.querySelector(".submit");
 
@@ -61,8 +57,6 @@ async function editUser(id) {
     email.value = filtered.email;
     password.value = filtered.password;
     isAdmin.value=filtered.isAdmin
-    submitBtn.innerHTML = "Edit";
-    title.innerHTML = "Edit User";
   }
 
   const emptyInput = () => {

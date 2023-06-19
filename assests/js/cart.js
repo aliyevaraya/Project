@@ -47,7 +47,7 @@ function countOfProd(id, price, total, input) {
   console.log(input.value);
   console.log(price);
   console.log(cart.total);
-  // localStorage.setItem("My_Cart", JSON.stringify(myCart));
+  localStorage.setItem("My_Cart", JSON.stringzify(myCart));
 }
 // getTableCart();
 

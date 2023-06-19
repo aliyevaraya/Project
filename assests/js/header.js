@@ -163,7 +163,7 @@ const emptyInput = () => {
   pw.value = "";
   remember.checked = false;
 };
-let userData = JSON.parse(localStorage.getItem("User_Data"))||[];
+let userData = JSON.parse(localStorage.getItem("User_Data"));
 
 logInForm.addEventListener("submit", async (e) => {
   let res = await axios(USERS_URL);
@@ -187,8 +187,12 @@ logOut.addEventListener("click", () => {
   localStorage.clear();
 });
 
-// usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212)
-// user.style.display="block"
+console.log(userData);
+// let check=userData.find(user=>user.isAdmin===true)
+// console.log(check);
+// if(check){
+//   window.location="./admin/admin-dashboard.html"
+// }
 
 // BASKET SIDEBAR
 const openBasket = document.querySelector(".basket");

@@ -56,8 +56,6 @@ async function addFav(id) {
   let fav = copyArr.find((product) => product.id == id);
   let check = favs.find((prod) => prod.id == fav.id);
   if (user) {
-    // rgs.style.display = "flex";
-    // alert("u have to login");
     if (!check) {
       favs.push(fav);
       localStorage.setItem("Favorites", JSON.stringify(favs));
@@ -67,7 +65,6 @@ async function addFav(id) {
     }
   } else {
     rgs.style.display = "flex";
-    // alert("u have to login");
   }
 }
 
