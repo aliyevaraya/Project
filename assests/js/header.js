@@ -142,7 +142,7 @@ const validateInputs = () => {
   rgPw.addEventListener("input", (e) => {
     if (e.target.value === "") {
       setError(rgPw, "Password is required");
-    } else if (e.target.value.length < 8) {
+    } else if (e.target.value.length < 6) {
       setError(rgPw, "Password must be at least 8 character.");
     } else {
       setSuccess(rgPw);
@@ -163,7 +163,7 @@ const emptyInput = () => {
   pw.value = "";
   remember.checked = false;
 };
-let userData = JSON.parse(localStorage.getItem("User_Data"));
+let userData = JSON.parse(localStorage.getItem("User_Data"))||[];
 
 logInForm.addEventListener("submit", async (e) => {
   let res = await axios(USERS_URL);
@@ -184,7 +184,7 @@ logInForm.addEventListener("submit", async (e) => {
 });
 
 logOut.addEventListener("click", () => {
-  localStorage.clear("User_Data", JSON.stringify(userData));
+  localStorage.clear();
 });
 
 // usersData.find(user=>user.email==="raya@gmail.com" && user.password==12121212)

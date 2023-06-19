@@ -48,18 +48,26 @@ async function getCard() {
 }
 getCard();
 
-let userData = JSON.parse(localStorage.getItem("User_Data"));
-let favs = JSON.parse(localStorage.getItem("Favorites")) || [];
-let fav;
+const rgs = document.querySelector(".popup");
+
 async function addFav(id) {
-  fav = copyArr.find((product) => product.id == id);
+  let favs = JSON.parse(localStorage.getItem("Favorites")) || [];
+  let user = JSON.parse(localStorage.getItem("User_Data"));
+  let fav = copyArr.find((product) => product.id == id);
   let check = favs.find((prod) => prod.id == fav.id);
-  if (check) {
-    alert("Product already added to Favorites");
+  if (user) {
+    // rgs.style.display = "flex";
+    // alert("u have to login");
+    if (!check) {
+      favs.push(fav);
+      localStorage.setItem("Favorites", JSON.stringify(favs));
+      getCard();
+    } else {
+      alert("Product already added to Favorites");
+    }
   } else {
-    favs.push(fav);
-    localStorage.setItem("Favorites", JSON.stringify(favs));
-    getCard();
+    rgs.style.display = "flex";
+    // alert("u have to login");
   }
 }
 
@@ -96,16 +104,16 @@ let prod;
 async function addCart(id) {
   let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
   prod = copyArr.find((prod) => prod.id == id);
-console.log(prod);
+  console.log(prod);
   let check = myCart.find((item) => item.id == prod.id);
   if (!check) {
     myCart.push(prod);
     localStorage.setItem("My_Cart", JSON.stringify(myCart));
     quantity.innerHTML = Number(quantity.innerHTML) + 1;
     // getCard();
-    getMyCart()
+    getMyCart();
   } else {
-    prod.quantity+=1
+    prod.quantity += 1;
     // localStorage.setItem("My_Cart", JSON.stringify(myCart));
-  };
+  }
 }
