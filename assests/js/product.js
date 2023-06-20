@@ -49,7 +49,6 @@ async function getCard() {
 }
 getCard();
 
-
 const rgs = document.querySelector(".popup");
 async function addFav(id) {
   let favs = JSON.parse(localStorage.getItem("Favorites")) || [];
@@ -101,15 +100,20 @@ let prod;
 
 async function addCart(id) {
   let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
+  let user = JSON.parse(localStorage.getItem("User_Data"));
   prod = copyArr.find((prod) => prod.id == id);
   console.log(prod);
   let check = myCart.find((item) => item.id == prod.id);
-  if (!check) {
-    myCart.push(prod);
-    localStorage.setItem("My_Cart", JSON.stringify(myCart));
-    quantity.innerHTML = Number(quantity.innerHTML) + 1;
-    getMyCart();
-  } else {
-    prod.quantity += 1;
+  if (user) {
+    if (!check) {
+      myCart.push(prod);
+      localStorage.setItem("My_Cart", JSON.stringify(myCart));
+      quantity.innerHTML = Number(quantity.innerHTML) + 1;
+      getMyCart();
+    } else {
+      prod.quantity += 1;
+    }
+  }else{
+    rgs.style.display = "flex";
   }
 }

@@ -14,7 +14,6 @@ let copyArr = [];
 let filtered = [];
 let status = false;
 let workerId;
-let base64;
 
 function drawTable(arr) {
   tbody.innerHTML = "";
@@ -116,6 +115,9 @@ search.addEventListener("input", async (e) => {
   );
   getData();
 });
+
+let base64;
+
 const convertBase64 = (file) => {
   return new Promise((resolve, reject) => {
     const fileReader = new FileReader();
