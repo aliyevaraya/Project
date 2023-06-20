@@ -1,4 +1,5 @@
 #not-found {
+  display: none;
   height: 100vh;
   text-align: center;
   img {
@@ -6,100 +7,162 @@
     object-fit: cover;
   }
 }
-#dashboard {
-  display: flex;
-  #sidebar {
-    width: 25%;
-    position: fixed;
-    z-index: 1;
-    .admin {
-      padding: 2rem 0;
-      @include flexbox;
-      flex-direction: column;
-      background-color: rgb(223, 173, 135, 0.3);
-      .admin-img {
-        width: 80px;
-        height: 80px;
-        img {
-          width: 100%;
-        }
-      }
-      .admin-info {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 0.5rem;
-        .admin-name {
-          color: $bg-color;
-          font-weight: bold;
-          color: $secondary-color;
-          font-size: 20px;
-          font-style: italic;
-        }
-      }
-    }
-    .sidebar-list {
-      height: 100vh;
-      background-color: $red-color;
-      padding-left: 0;
-      li {
-        padding: 1rem;
-        width: 100%;
-        font-size: 23px;
-        transition: all 0.3s;
-        &:hover {
-          background-color: rgba($white-color, 0.5);
-        }
-        a {
-          color: $bg-color;
-          i {
-            margin-right: 1rem;
-          }
-        }
-      }
-    }
+body {
+  &.dark {
+    background-color: $dark-color;
   }
+  #dashboard {
+    display: flex;
 
-  .statics {
-    width: 75%;
-    padding: 2rem 1rem;
-    position: relative;
-    left: 23rem;
-    #search {
-      background-color: $bg-color;
-    }
-    #cards {
-      .cards {
-        margin: 1rem;
+    #sidebar {
+      width: 25%;
+      position: fixed;
+      z-index: 1;
+      .admin {
+        padding: 2rem 0;
         @include flexbox;
-        flex-wrap: wrap;
-        .dash-card {
-          padding: 1rem;
-          width: 200px;
-          background-color: $red-color;
-          border-radius: 8px;
-          transition: all 0.5s ease;
+        flex-direction: column;
+        background-color: rgb(223, 173, 135, 0.3);
+        .admin-img {
+          width: 80px;
+          height: 80px;
+          img {
+            width: 100%;
+          }
+        }
+        .admin-info {
+          display: flex;
+          flex-direction: column;
           text-align: center;
-          a {
-            color: $white-color;
-          }
-          .data-count {
-            margin-top: 1rem;
+          margin-top: 0.5rem;
+          .admin-name {
+            color: $bg-color;
+            font-weight: bold;
+            color: $secondary-color;
             font-size: 20px;
-            color: rgba($white-color, 0.7);
+            font-style: italic;
           }
+        }
+        #checkbox {
+          &:checked {
+            ~ {
+              .label {
+                &:hover {
+                  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+                }
+                &::before {
+                  left: 25px;
+                  background-image: linear-gradient(
+                    315deg,
+                    $dark-color 0%,
+                    #414141 70%
+                  );
+                  transition: 0.4s;
+                }
+              }
+            }
+          }
+          display: none;
+        }
+        .label {
+          height: 30px;
+          width: 50px;
+          background-color: #ffffff;
+          border-radius: 30px;
+          box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+            inset 0 0 20px 1px rgba(0, 0, 0, 0.488),
+            10px 20px 30px rgba(0, 0, 0, 0.096),
+            inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+          @include flexbox;
+          cursor: pointer;
+          position: relative;
+          transition: transform 0.4s;
           &:hover {
-            transform: scale(1.1);
-            background-color: rgba($red-color, 0.8);
+            transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: #000000;
+            background-image: linear-gradient(
+              130deg,
+              #757272 10%,
+              #ffffff 11%,
+              #726f6f 62%
+            );
+            left: 10px;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),
+              10px 10px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.4s;
+          }
+        }
+      }
+      .sidebar-list {
+        height: 100vh;
+        background-color: $red-color;
+        padding-left: 0;
+        li {
+          padding: 1rem;
+          width: 100%;
+          font-size: 23px;
+          transition: all 0.3s;
+          &:hover {
+            background-color: rgba($white-color, 0.5);
+          }
+          a {
+            color: $bg-color;
+            i {
+              margin-right: 1rem;
+            }
           }
         }
       }
     }
-    .chart {
-      padding: 2rem;
-      #barchart {
-        width: 900px !important;
-        height: 450px !important;
+
+    .statics {
+      width: 75%;
+      padding: 2rem 1rem;
+      position: relative;
+      left: 23rem;
+      #search {
+        background-color: $bg-color;
+      }
+      #cards {
+        .cards {
+          margin: 1rem;
+          @include flexbox;
+          flex-wrap: wrap;
+          .dash-card {
+            padding: 1rem;
+            width: 200px;
+            background-color: $red-color;
+            border-radius: 8px;
+            transition: all 0.5s ease;
+            text-align: center;
+            a {
+              color: $white-color;
+            }
+            .data-count {
+              margin-top: 1rem;
+              font-size: 20px;
+              color: rgba($white-color, 0.7);
+            }
+            &:hover {
+              transform: scale(1.1);
+              background-color: rgba($red-color, 0.8);
+            }
+          }
+        }
+      }
+      .chart {
+        padding: 2rem;
+        #barchart {
+          width: 900px !important;
+          height: 450px !important;
+        }
       }
     }
   }

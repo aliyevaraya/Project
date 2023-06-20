@@ -27,10 +27,14 @@
         .table {
           tbody {
             td {
+              color: $white-color;
               img {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
+              }
+              .btn{
+                color: $white-color;
               }
             }
           }

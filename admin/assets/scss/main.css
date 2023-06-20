@@ -21,6 +21,7 @@
 }
 
 #not-found {
+  display: none;
   height: 100vh;
   text-align: center;
 }
@@ -30,15 +31,18 @@
      object-fit: cover;
 }
 
-#dashboard {
+body.dark {
+  background-color: black;
+}
+body #dashboard {
   display: flex;
 }
-#dashboard #sidebar {
+body #dashboard #sidebar {
   width: 25%;
   position: fixed;
   z-index: 1;
 }
-#dashboard #sidebar .admin {
+body #dashboard #sidebar .admin {
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
@@ -46,63 +50,102 @@
   flex-direction: column;
   background-color: rgba(223, 173, 135, 0.3);
 }
-#dashboard #sidebar .admin .admin-img {
+body #dashboard #sidebar .admin .admin-img {
   width: 80px;
   height: 80px;
 }
-#dashboard #sidebar .admin .admin-img img {
+body #dashboard #sidebar .admin .admin-img img {
   width: 100%;
 }
-#dashboard #sidebar .admin .admin-info {
+body #dashboard #sidebar .admin .admin-info {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: 0.5rem;
 }
-#dashboard #sidebar .admin .admin-info .admin-name {
+body #dashboard #sidebar .admin .admin-info .admin-name {
   color: rgb(245, 244, 240);
   font-weight: bold;
   color: rgb(60, 22, 23);
   font-size: 20px;
   font-style: italic;
 }
-#dashboard #sidebar .sidebar-list {
+body #dashboard #sidebar .admin #checkbox {
+  display: none;
+}
+body #dashboard #sidebar .admin #checkbox:checked ~ .label:hover {
+  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+body #dashboard #sidebar .admin #checkbox:checked ~ .label::before {
+  left: 25px;
+  background-image: linear-gradient(315deg, black 0%, #414141 70%);
+  transition: 0.4s;
+}
+body #dashboard #sidebar .admin .label {
+  height: 30px;
+  width: 50px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: inset 0 0 5px 4px rgb(255, 255, 255), inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096), inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s;
+}
+body #dashboard #sidebar .admin .label:hover {
+  transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+body #dashboard #sidebar .admin .label::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #000000;
+  background-image: linear-gradient(130deg, #757272 10%, #ffffff 11%, #726f6f 62%);
+  left: 10px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+}
+body #dashboard #sidebar .sidebar-list {
   height: 100vh;
   background-color: rgb(118, 32, 49);
   padding-left: 0;
 }
-#dashboard #sidebar .sidebar-list li {
+body #dashboard #sidebar .sidebar-list li {
   padding: 1rem;
   width: 100%;
   font-size: 23px;
   transition: all 0.3s;
 }
-#dashboard #sidebar .sidebar-list li:hover {
+body #dashboard #sidebar .sidebar-list li:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
-#dashboard #sidebar .sidebar-list li a {
+body #dashboard #sidebar .sidebar-list li a {
   color: rgb(245, 244, 240);
 }
-#dashboard #sidebar .sidebar-list li a i {
+body #dashboard #sidebar .sidebar-list li a i {
   margin-right: 1rem;
 }
-#dashboard .statics {
+body #dashboard .statics {
   width: 75%;
   padding: 2rem 1rem;
   position: relative;
   left: 23rem;
 }
-#dashboard .statics #search {
+body #dashboard .statics #search {
   background-color: rgb(245, 244, 240);
 }
-#dashboard .statics #cards .cards {
+body #dashboard .statics #cards .cards {
   margin: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-#dashboard .statics #cards .cards .dash-card {
+body #dashboard .statics #cards .cards .dash-card {
   padding: 1rem;
   width: 200px;
   background-color: rgb(118, 32, 49);
@@ -110,22 +153,22 @@
   transition: all 0.5s ease;
   text-align: center;
 }
-#dashboard .statics #cards .cards .dash-card a {
+body #dashboard .statics #cards .cards .dash-card a {
   color: #fff;
 }
-#dashboard .statics #cards .cards .dash-card .data-count {
+body #dashboard .statics #cards .cards .dash-card .data-count {
   margin-top: 1rem;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
 }
-#dashboard .statics #cards .cards .dash-card:hover {
+body #dashboard .statics #cards .cards .dash-card:hover {
   transform: scale(1.1);
   background-color: rgba(118, 32, 49, 0.8);
 }
-#dashboard .statics .chart {
+body #dashboard .statics .chart {
   padding: 2rem;
 }
-#dashboard .statics .chart #barchart {
+body #dashboard .statics .chart #barchart {
   width: 900px !important;
   height: 450px !important;
 }
@@ -156,10 +199,16 @@
   width: 120px;
   margin-top: 5px;
 }
+.statics .table-card .table tbody td {
+  color: #fff;
+}
 .statics .table-card .table tbody td img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+.statics .table-card .table tbody td .btn {
+  color: #fff;
 }
 
 .statics .search-sort {

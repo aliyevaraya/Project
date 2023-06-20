@@ -15,8 +15,7 @@
   </head>
   <body>
     <section id="not-found">
-      <img src="./assets/images/error.png" alt="" srcset="">
-
+      <img src="./assets/images/error.png" alt="" srcset="" />
     </section>
     <section id="dashboard">
       <div id="sidebar">
@@ -27,6 +26,10 @@
           <div class="admin-info">
             <span>Welcome</span>
             <span class="admin-name">Violet Evergarden</span>
+          </div>
+          <div>
+            <input id="checkbox" name="checkbox" type="checkbox" />
+            <label class="label dark-mode" for="checkbox"> </label>
           </div>
         </div>
         <ul class="sidebar-list">
@@ -69,8 +72,7 @@
       </div>
       <div class="statics">
         <div id="cards">
-          <div class="cards">
-          </div>
+          <div class="cards"></div>
         </div>
         <div class="chart">
           <canvas id="barchart" width="300" height="200"></canvas>
@@ -85,5 +87,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/common.js"></script>
   </body>
 </html>

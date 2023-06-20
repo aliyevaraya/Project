@@ -1,14 +1,5 @@
-const notFound= document.querySelector("#not-found")
 const dashboard= document.querySelector("#dashboard")
 
-let userData = JSON.parse(localStorage.getItem("User_Data"));
-if(userData&& userData.isAdmin){
-  dashboard.style.display="block"
-  notFound.style.display="none"
-}else{
-  notFound.style.display="block"
-  dashboard.style.display="none"
-}
 const PRODUCT_URL = "http://localhost:8080/products";
 const BLOG_URL = "http://localhost:8080/blogs";
 const TEAM_URL = "http://localhost:8080/team";
