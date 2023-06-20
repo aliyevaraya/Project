@@ -24,13 +24,13 @@ function getTableCart() {
           <input
             type="number"
             class="input-number"
-            oninput=countOfProd(${item.id},${item.price},${item.total},this)
+            oninput=countOfProd(${item.price},this)
             value="1"
             min="1"
             max="50"
           />
         </td>
-        <td class="price total">$${item.total}</td>
+        <td class="price ">$<span class="total">${item.total}</span></td>
         <td><i class="fa-solid fa-xmark" onclick=deleteProd(${item.id})></i></td>
         `;
     tbody.append(tr);
@@ -38,18 +38,12 @@ function getTableCart() {
 }
 getTableCart();
 
-function countOfProd(id, price, total, input) {
-  let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
-  cart = myCart.find((item) => item.id == id);
-  total = input.value * price;
-  cart.total = total;
+
+function countOfProd(price, input) {
+  totalPrice = input.value * price;
+  input.closest("tr").querySelector(".total").innerText=totalPrice
   input.value = Number(input.value) + 0;
-  console.log(input.value);
-  console.log(price);
-  console.log(cart.total);
-  localStorage.setItem("My_Cart", JSON.stringzify(myCart));
 }
-// getTableCart();
 
 function deleteProd(id) {
   myCart = myCart.filter((prod) => prod.id != id);

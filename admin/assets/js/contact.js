@@ -36,8 +36,11 @@ async function drawTable(arr) {
 
   getData();
   async function delMessage(id, btn) {
+   let result= confirm("Are you sure?")
+   if(result){
     await axios.delete(`${BASE_URL}/${id}`);
     btn.closest("tr").remove();
+   }
   }
   
   search.addEventListener("input", async (e) => {

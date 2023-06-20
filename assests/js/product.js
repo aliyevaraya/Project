@@ -1,7 +1,6 @@
 //////////
 
 const prods = document.querySelector(".prods");
-const sort = document.querySelector("#select");
 const PRODUCTS_URL = "http://localhost:8080/products";
 const FAV_URL = "http://localhost:8080/favorites";
 
@@ -49,6 +48,7 @@ async function getCard() {
   }
 }
 getCard();
+
 
 const rgs = document.querySelector(".popup");
 async function addFav(id) {
@@ -108,23 +108,8 @@ async function addCart(id) {
     myCart.push(prod);
     localStorage.setItem("My_Cart", JSON.stringify(myCart));
     quantity.innerHTML = Number(quantity.innerHTML) + 1;
-    // getCard();
     getMyCart();
   } else {
     prod.quantity += 1;
-    // localStorage.setItem("My_Cart", JSON.stringify(myCart));
   }
 }
-
-sort.addEventListener("change", () => {
-  if (sort.value == "asc") {
-    copyArr = copyArr.sort((a, b) => a.price - b.price);
-    console.log(copyArr);
-  } else if (sort.value == "dsc") {
-    copyArr = copyArr.sort((a, b) => b.price - a.price);
-  } else {
-    defaultArr = copyArr;
-    console.log(defaultArr);
-  }
-  getCard();
-});

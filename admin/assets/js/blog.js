@@ -59,8 +59,11 @@ async function getData() {
 getData();
 
 async function delCard(id, btn) {
-  await axios.delete(`${BASE_URL}/${id}`);
+  let result=confirm("are you sure?")
+  if(result){
+    await axios.delete(`${BASE_URL}/${id}`);
   btn.closest(".card").remove();
+  }
 }
 
 let blogId;

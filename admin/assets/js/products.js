@@ -50,8 +50,11 @@ async function getData() {
 getData();
 
 async function delProd(id, btn) {
-  await axios.delete(`${BASE_URL}/${id}`);
-  btn.closest("tr").remove();
+  let result=confirm("are u sure?")
+  if(result){
+    await axios.delete(`${BASE_URL}/${id}`);
+    btn.closest("tr").remove();
+  }
 }
 
 async function editProd(id) {

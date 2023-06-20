@@ -56,6 +56,8 @@ async function getData() {
 getData();
 
 async function delWorker(id) {
+let result=confirm("Are you sure?")
+if(result){
   try {
     await axios.delete(`${BASE_URL}/${id}`);
     btn.closest("tr").remove();
@@ -63,6 +65,7 @@ async function delWorker(id) {
   } catch (error) {
     console.log(error);
   }
+}
 }
 
 async function editWorker(id) {
