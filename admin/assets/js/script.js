@@ -2,7 +2,7 @@ const notFound= document.querySelector("#not-found")
 const dashboard= document.querySelector("#dashboard")
 
 let userData = JSON.parse(localStorage.getItem("User_Data"));
-if(userData.isAdmin){
+if(userData&& userData.isAdmin){
   dashboard.style.display="block"
   notFound.style.display="none"
 }else{

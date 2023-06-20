@@ -1,3 +1,11 @@
+#not-found {
+  height: 100vh;
+  text-align: center;
+  img {
+    padding: 10rem;
+    object-fit: cover;
+  }
+}
 #dashboard {
   display: flex;
   #sidebar {
@@ -57,7 +65,7 @@
     padding: 2rem 1rem;
     position: relative;
     left: 23rem;
-    #search{
+    #search {
       background-color: $bg-color;
     }
     #cards {
@@ -75,7 +83,7 @@
           a {
             color: $white-color;
           }
-          .data-count{
+          .data-count {
             margin-top: 1rem;
             font-size: 20px;
             color: rgba($white-color, 0.7);

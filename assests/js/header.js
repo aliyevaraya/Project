@@ -191,7 +191,7 @@ const admin= document.querySelector(".admin")
 admin.style.display="none"
 
 let userData = JSON.parse(localStorage.getItem("User_Data"));
-if(userData.isAdmin){
+if(userData && userData.isAdmin){
   admin.style.display="flex"
 }else admin.style.display="none"
 

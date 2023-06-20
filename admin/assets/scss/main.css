@@ -20,6 +20,16 @@
   transition: all 0.4s;
 }
 
+#not-found {
+  height: 100vh;
+  text-align: center;
+}
+#not-found img {
+  padding: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #dashboard {
   display: flex;
 }
