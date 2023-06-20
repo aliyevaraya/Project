@@ -61,12 +61,15 @@ async function editAdmin(id,isAdmin) {
 }
 
 async function delUser(id) {
+let result= confirm("Are you sure?")
+if(result){
   try {
     await axios.delete(`${BASE_URL}/${id}`);
     btn.closest("tr").remove();
   } catch (error) {
     console.log(error);
   }
+}
 }
 
 
