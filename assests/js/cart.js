@@ -1,4 +1,6 @@
 const tbody = document.querySelector("tbody");
+const subTotal = document.querySelector(".subtotal");
+const allTotal = document.querySelector(".all");
 
 let myCart = JSON.parse(localStorage.getItem("My_Cart")) || [];
 let numberOfProd = document.querySelector(".number");
@@ -9,7 +11,8 @@ function getTableCart() {
   myCart.forEach((item) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-        <td><input type="checkbox" class="check" /></td>
+        <td><input type="checkbox" class="checkbox" id="id${item.id}" onclick=check(this) 
+        /></td>
         <td>
           <img src="${item.photo}" alt="" srcset="" />
         </td>
@@ -38,11 +41,26 @@ function getTableCart() {
 }
 getTableCart();
 
-
 function countOfProd(price, input) {
   totalPrice = input.value * price;
-  input.closest("tr").querySelector(".total").innerText=totalPrice
+  input.closest("tr").querySelector(".total").innerText = totalPrice;
+  let checkbox = input.closest("tr").querySelector(".checkbox");
   input.value = Number(input.value) + 0;
+  console.log(totalPrice);
+  if (checkbox.checked) {
+    subTotal.innerText = Number(subTotal.innerText) + +price;
+    allTotal.innerText = Number(allTotal.innerText) + +price;
+  }
+}
+function check(checkbox) {
+  let totalPrice =checkbox.closest("tr").querySelector(".total").innerText 
+  if (checkbox.checked) {
+    subTotal.innerText = Number(subTotal.innerText) + +totalPrice;
+    allTotal.innerText = Number(allTotal.innerText) + +totalPrice;
+  } else {
+    subTotal.innerText = Number(subTotal.innerText) - +totalPrice;
+    allTotal.innerText = Number(allTotal.innerText) - +totalPrice;
+  }
 }
 
 function deleteProd(id) {
