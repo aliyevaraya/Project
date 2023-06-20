@@ -14,7 +14,7 @@ function getTableCart() {
         <td><input type="checkbox" class="checkbox" id="id${item.id}" onclick=check(this) 
         /></td>
         <td>
-          <img src="${item.photo}" alt="" srcset="" />
+          <img src="${item.photo}" alt=""/>
         </td>
         <td>
           <div class="product">
